@@ -1,25 +1,18 @@
 # Site settings
-title: Only The Bravest
-email:
+title: Eroica.io
+email: gnu.seba@outlook.com
 description: > # this means to ignore newlines until "baseurl:"
-  Only The Bravest---Coming 2015
+  Developer & designer in Germany and Taiwan.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://eroica.github.io" # the base hostname & protocol for your site
+url: "http://eroica.io" # the base hostname & protocol for your site
 twitter_username: MyEroica
-github_username:  eroica
+github_username:  Eroica
 
 # Build settings
 markdown: kramdown
-
-kramdown:
-  parse_block_html: true
-  auto_ids: false
 
 sass:
   style: :compressed
 
 exclude:
-  - "bower_components"
-  - "bower.json"
   - "feed.xml"
-  - "Makefile"

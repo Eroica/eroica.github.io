@@ -1,0 +1,54 @@
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
+
+.wrapper {
+	color: #eee;
+	color: rgba(255, 255, 255, 0.7);
+	background: #293136;
+	
+	p > a, li > a {
+		@include vendor('transition', 'border-bottom 0.2s ease-in-out');
+		text-decoration: none;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		
+		&:hover {
+			border-bottom: 1px solid #c65f63;
+		}
+	}
+
+	.container {
+		overflow: hidden;
+		padding: 1em 5em 1em 5em;
+		background: #445058;
+	}
+
+	header {
+		padding-top: 1.5em;
+
+		h2 {
+			color: #fff;
+		}
+	}
+
+	img {
+		display: block;
+		border-radius: 50%;
+	}
+}
+
+.wrapper-style1 {
+	background: #663133;
+
+	.container {
+		background: #c65f63;
+	}
+}
+
+.wrapper-style2 {
+	background: #3D84AE;
+
+	.container {
+		background: #4694C0;
+	}
+}

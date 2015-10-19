@@ -1,0 +1,25 @@
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
+
+
+// MSIE: Required for IEMobile.
+@-ms-viewport { width: device-width; }
+
+// MSIE: Prevents scrollbar from overlapping content.
+body { -ms-overflow-style: scrollbar; }
+
+// Ensures page width is always >=320px.
+@include breakpoint(small) {
+	html, body { min-width: 320px; }
+}
+
+body {
+	background: #293136;
+	color: #353535;
+	font-family: 'Lato', sans-serif;
+	font-size: 14pt;
+	font-weight: 300;
+	line-height: 1.80em;
+//		background: #4d4f5a;
+}

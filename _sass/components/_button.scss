@@ -1,0 +1,30 @@
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
+
+.button {
+	@include vendor('transition', 'background-color 0.25s ease-in-out, color 0.25s ease-in-out');
+	position: relative;
+	display: inline-block;
+	padding: 0.25em 1.5em 0.25em 1.5em;
+	border: 0;
+	border-radius: 6px;
+	background: #65BAE9;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 700;
+	color: #FFF;
+	cursor: pointer;
+
+	&:hover {
+		background: #74bcdd;
+	}
+
+	&.alt {
+		background: #4D4F5A;
+
+		&:hover {
+			background: #5D5F6A;
+		}
+	}
+}
