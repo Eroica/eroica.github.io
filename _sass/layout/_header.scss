@@ -1,0 +1,69 @@
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
+
+#header {
+	> .container { padding: 2em 3em 1em 3em; }
+}
+
+
+#logo {
+	h1 {
+		margin: 0 0 0 1em;
+		
+		a {
+			text-decoration: none;
+			display: block;
+			font-size: 1.3em;
+			font-weight: 900;
+			color: #FFF;
+			outline: 0;
+		}
+	}
+	
+	span { color: #445058; }
+}
+
+
+#nav {
+	text-align: right;
+	
+	> ul > li {
+		display: inline-block;
+
+		&:last-child { padding-right: 0; }
+		> a, > span {
+			@include vendor('transition', 'color 0.2s ease-in-out');
+			display: block;
+			margin-left: 1em;
+			letter-spacing: 0.06em;
+			text-decoration: none;
+			font-weight: 400;
+			font-size: 0.90em;
+			outline: 0;
+			color: #596268;
+			
+			&:hover { color: #fff; }
+			&.icon:before { padding-right: 0.5em; }
+		}
+	}
+
+	li.active a {
+		@include vendor('transition', 'background-color 0.2s ease-in-out, border-color 0.2s ease-in-out');
+		padding: 0.25em 1.5em 0.25em 1.5em;
+		background: #65BAE9;
+		border-radius: 6px;
+		color: #FFF !important;
+		font-weight: 700;
+		
+		&:hover { background: lighten(#65BAE9, 5); }
+	}
+	
+	li.active.flag a {
+		@include vendor('transition', 'background-color 0.2s ease-in-out, border-color 0.2s ease-in-out');
+		background: none;
+		border: 1px solid #596268;
+
+		&:hover { background: rgba(255, 255, 255, 0.05); }
+	}
+}
