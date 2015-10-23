@@ -7,6 +7,11 @@
 	color: rgba(255, 255, 255, 0.7);
 	background: #293136;
 	
+	&.banner > .container {
+		background: #445058;
+		border-radius: 8px 8px 0px 0px;
+	}
+	
 	p > a, li > a {
 		@include vendor('transition', 'border-bottom 0.2s ease-in-out');
 		text-decoration: none;
@@ -18,9 +23,9 @@
 	}
 
 	.container {
+		background: #445058;
 		overflow: hidden;
 		padding: 1em 5em 1em 5em;
-		background: #445058;
 	}
 
 	header {
@@ -38,7 +43,11 @@
 }
 
 .wrapper-style1 {
-	background: #663133;
+//	background: #663133;
+
+li > a:hover {
+	border-bottom: 1px solid #4694C0;
+}
 
 	.container {
 		background: #c65f63;
@@ -46,9 +55,15 @@
 }
 
 .wrapper-style2 {
-	background: #3D84AE;
+//	background: #3D84AE;
 
 	.container {
 		background: #4694C0;
+	}
+}
+
+.wrapper-style3 {
+	.container {
+		background: #9490BD;
 	}
 }
