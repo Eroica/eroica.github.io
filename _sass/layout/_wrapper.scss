@@ -2,68 +2,44 @@
 @import '../libs/functions';
 @import '../libs/mixins';
 
-.wrapper {
-	color: #eee;
-	color: rgba(255, 255, 255, 0.7);
-	background: #293136;
+#work .cols {
+	display: block;
+	vertical-align: top;
+	margin: 0 auto;
+	max-width: 400px;
+	margin-right: .5em;
+}
+
+#work .cell {
+  display: block;
+	border: 1px solid darken(#C0C5CE, 10);
+	border-radius: 4px;
+	background: #353F45;
+	margin: .5em 0;
+	overflow: hidden;
 	
-	&.banner > .container {
-		background: #445058;
-		border-radius: 8px 8px 0px 0px;
+	img {display: block;}
+	span {font-size: 0.8em;}
+	h3 {display: inline;}
+	span.-more {
+		font-family: "Bariol-Regular", serif;
+		text-transform: uppercase;
 	}
 	
-	p > a, li > a {
-		@include vendor('transition', 'border-bottom 0.2s ease-in-out');
-		text-decoration: none;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-		
-		&:hover {
-			border-bottom: 1px solid #c65f63;
-		}
-	}
-
-	.container {
-		background: #445058;
-		overflow: hidden;
-		padding: 1em 5em 1em 5em;
-	}
-
-	header {
-		padding-top: 1.5em;
-
-		h2 {
-			color: #fff;
-		}
-	}
-
-	img {
-		display: block;
-		border-radius: 50%;
+	> article {
+		border-top: 1px solid darken(#C0C5CE, 10);
+		line-height: 1em;
+		padding: .5em;
+		margin: 0;
 	}
 }
 
-.wrapper-style1 {
-//	background: #663133;
-
-li > a:hover {
-	border-bottom: 1px solid #4694C0;
-}
-
-	.container {
-		background: #c65f63;
+@include breakpoint(800px) {
+	.cols {
+		display: inline-block !important;
 	}
-}
-
-.wrapper-style2 {
-//	background: #3D84AE;
-
-	.container {
-		background: #4694C0;
-	}
-}
-
-.wrapper-style3 {
-	.container {
-		background: #9490BD;
-	}
+	
+	#one {display: inline-block; max-width: 240px;}
+	#two {display: inline-block; max-width: 450px;}
+	#three {display: inline-block; max-width: 240px;}
 }

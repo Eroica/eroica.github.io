@@ -3,67 +3,92 @@ layout: default
 title:
 ---
 
-<div class="wrapper banner">
+<section class="banner">
 	<div class="container">
 		<header>
 			<h2>—Hello!</h2>
 		</header>
 		<p>I’m currently employed at the <em>Max-Planck-Institute for Medical Research</em> in Heidelberg, Germany.</p>
 	
-		<p>I studied <em>Computational Linguistics</em> at Heidelberg University. For my Bachelor's thesis, I created a <a href="#"><em>document-specific</em> OCR engine</a> for the recognition of old German Fraktur letters.</p>
+		<p>I studied <em>Computational Linguistics</em> at Heidelberg University. For my Bachelor’s thesis, I created a <a href="https://github.com/Eroica/greedy-ocr"><em>document-specific</em> OCR engine</a> for the recognition of old German Fraktur letters.</p>
+		
+		<p>These days, I mostly develop small projects in <a href="#projects"><em>Lua,</em></a> and <a href="#writings">write about graphic design.</a></p>
 	</div>
-</div>
+</section>
 
-<div class="wrapper wrapper-style1">
+<section id="work">
 	<div class="container">
 		<header>
-			<h2>Work</h2>
+			<h2 class="icon fa-suitcase">Work</h2>
 		</header>
-		<ul class="default">
-			<li><a href="http://www.knossostool.org">KNOSSOS</a> — Web design.</li>
-			<li><a href="#">Brainpuzzler</a> — Coming soon.</li>
-			<li><a href="#">ELEKTRONN</a> — Coming soon.</li>
-		</ul>
-	</div>
-</div>
+		
+		<div class="cols">
+			<div class="cell" id="one">
+				<a href="http://www.knossostool.org"><img src="{{ "/images/knossos_site.png" | prepend: site.baseurl }}" width="240" class="image fit "></a>
+				<article>
+					<h3>KNOSSOS.</h3>
+					<span>A scientific application for 3D image annotation — Web design.</span>
+				</article>
+			</div>
+		</div><!-- cols -->
+				
+		<div class="cols">		
+			<div class="cell" id="two">
+				<img src="http://placehold.it/450x150" class="image fit">
+				<article>
+					<h3>ELEKTRONN.</h3>
+					<span>A new-generation neural network toolkit — Web design (coming soon).</span>
+				</article>
+			</div><!-- cell -->
+					
+			<div class="cell" id="three">
+				<a href="http://brainpuzzler.org"><img src="{{ "/images/brainpuzzler_site.png" | prepend: site.baseurl }}" width="240" class="image fit"></a>
+				<article>
+					<h3>Brainpuzzler.</h3>
+					<span>A research project by the Max-Planck-Institute for Medical Research — Web design.</span>
+				</article>
+			</div><!-- cell -->
+		</div><!-- cols -->
+	</div><!-- container -->
+</section>
 
-<div class="wrapper wrapper-style2">
+<section id="projects">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<header>
+					<h2 class="icon fa-object-ungroup">Projects</h2>
+				</header>
+				<ul class="default">
+					<li><a href="https://github.com/Eroica/unflex">unflex</a> — A simple, flex-based, responsive CSS grid.</li>
+					<li><a href="#">Lunation</a> — Pixel art game development.</li>
+					<!-- <li><a href="#">Infinite Desktop</a> — A desktop metaphor.</li> -->
+				</ul>
+			</div>
+			
+			<div class="col">
+				<header>
+					<h2 class="icon fa-sticky-note">Writings</h2>
+				</header>
+				<ul class="default">
+					<li></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="contact">
 	<div class="container">
 		<header>
-			<h2>Projects</h2>
+			<h2 class="icon fa-envelope-o">Contact</h2>
 		</header>
-		<ul class="default">
-			<li><a href="#">uiCrocodile</a> — Graphic design and user interface blog.</li>
-			<li><a href="#">Lunation</a> — Pixel art game development.</li>
-		</ul>
+
+		<form method="POST" action="//formspree.io/gnu.seba@outlook.com">
+			<input type="text" name="name" id="name" placeholder="Name" />
+			<input type="text" name="email" id="email" placeholder="Email" />
+			<textarea name="message" id="message" placeholder="Message"></textarea>
+			<input class="button" type="submit" value="Send Message">
+		</form>
 	</div>
-</div>
-
-<div class="wrapper">
-	<div class="container">
-	<header id="contact">
-		<h2>Contact</h2>
-	</header>
-
-	<form method="post" action="#">
-		<div class="row 50%">
-			<div class="6u 12u(mobile)">
-				<input type="text" name="name" id="name" placeholder="Name" />
-			</div>
-			<div class="6u 12u(mobile)">
-				<input type="text" name="email" id="email" placeholder="Email" />
-			</div>
-		</div>
-		<div class="row 50%">
-			<div class="12u">
-				<textarea name="message" id="message" placeholder="Message"></textarea>
-			</div>
-		</div>
-		<div class="row 50%">
-			<div class="12u">
-				<a href="#" class="button">Send Message</a>
-			</div>
-		</div>
-	</form>
-</div>
-</div>
+</section>
