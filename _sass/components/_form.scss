@@ -3,26 +3,26 @@
 @import '../libs/mixins';
 
 form {
+	text-align: center;
+	
 	input[type=text],
 	input[type=password],
 	select,
 	textarea {
-		@include vendor('transition', 'background-color 0.25s ease-in-out');
+//		@include vendor('transition', 'background-color 0.25s ease-in-out');
 		-webkit-appearance: none;
-		width: 100%;
-		border: 0;
-		padding: 0.50em;
-		font-size: 1.2em;
-		line-height: 1em;
+		width: 80%;
+		padding: 0.5em;
 		font-family: 'Lato', sans-serif;
 		font-weight: 300;
-		border-radius: 6px;
-		background: #fafafa;
-		border: 1px solid #e8e8e8;
+		border-radius: 4px;
+		border: 1px solid #445058;
+		background: transparent;
 		outline: none;
+		margin-bottom: .5em;
 
 		&:focus {
-			background: #f0f2f5;
+			border: 1px solid #fff;
 		}
 	}
 
