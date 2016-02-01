@@ -1,19 +1,24 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
-title: Eroica.io
+title: Seba Zheng — I like designing & programming
 email: gnu.seba@outlook.com
 description: > # this means to ignore newlines until "baseurl:"
-  —Hello! I like to draw, develop small projects in Lua, and write about
-	graphic design.
-baseurl: "" # the subpath of your site, e.g. /blog/
+  Lua developer disguising as a UI designer. This is my portfolio.
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://eroica.io" # the base hostname & protocol for your site
 twitter_username: MyEroica
-github_username:  Eroica
+github_username: Eroica
+
+github-url: https://github.com/Eroica
+twitter-url: https://twitter.com/MyEroica
+tumblr-url: https://eroicaio.tumblr.com
+dribbble-url: https://dribbble.com/Eroica
 
 # Build settings
 markdown: kramdown
-
-sass:
-  style: :compressed
-
-exclude:
-  - "feed.xml"

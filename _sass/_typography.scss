@@ -1,0 +1,63 @@
+html { font-size: 62.5% }
+
+body, input, select, textarea {
+	font-family: "europa", sans-serif;
+	font-weight: 300;
+	font-size: 1.5rem;
+	line-height: 1.65;
+	//color: #AAB2BE;
+	color: #363431;
+	//background: url("/images/bgl1.png") repeat;
+}
+
+img { border-radius: 3px }
+
+date {
+	@extend .-font-small;
+	@extend .-color-light-grey;
+	white-space: nowrap;
+}
+
+body * + * {
+	margin-top: 1em;
+}
+
+ul * + * {
+	margin-top: .5em;
+}
+
+body section + section {
+	margin-top: 2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+h2 {
+	color: #4687DF;
+	font-size: 1.6rem;
+}
+
+h3 {
+	font-size: 1.2rem;
+	@extend .-color-light-grey;
+}
+
+strong, b {
+	font-weight: bold;
+}
+
+em, i { font-style: italic; }
+
+a {
+	border-bottom: 2px solid rgba(#ee5262,.2);
+	text-decoration: none;
+	color: #ee5262;
+	transition: all .2s linear;
+
+	&:hover {
+		color: darken(#ee5262, 20);
+		border-color: #ee5262;
+	}
+}
