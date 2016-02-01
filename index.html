@@ -1,94 +1,180 @@
 ---
 layout: default
-title:
 ---
 
-<section class="banner">
-	<div class="container">
-		<header>
-			<h2>—Hello!</h2>
-		</header>
-		<p>I’m currently employed at the <em>Max-Planck-Institute for Medical Research</em> in Heidelberg, Germany.</p>
-	
-		<p>I studied <em>Computational Linguistics</em> at Heidelberg University. For my Bachelor’s thesis, I created a <a href="https://github.com/Eroica/greedy-ocr"><em>document-specific</em> OCR engine</a> for the recognition of old German Fraktur letters.</p>
-		
-		<p>These days, I mostly develop small projects in <a href="#projects"><em>Lua,</em></a> and <a href="#writings">write about graphic design.</a></p>
-	</div>
+<section class="container -center -small -text-center">
+	<p class="logo">鄭</p>
 </section>
 
-<section id="work">
-	<div class="container">
-		<header>
-			<h2 class="icon fa-suitcase">Work</h2>
-		</header>
-		
-		<div class="cols">
-			<div class="cell" id="one">
-				<a href="http://www.knossostool.org"><img src="{{ "/images/knossos_site.png" | prepend: site.baseurl }}" width="240" class="image fit "></a>
-				<article>
-					<h3>KNOSSOS.</h3>
-					<span>A scientific application for 3D image annotation — Web design.</span>
-				</article>
-			</div>
-		</div><!-- cols -->
-				
-		<div class="cols">		
-			<div class="cell" id="two">
-				<img src="http://placehold.it/450x150" class="image fit">
-				<article>
-					<h3>ELEKTRONN.</h3>
-					<span>A new-generation neural network toolkit — Web design (coming soon).</span>
-				</article>
-			</div><!-- cell -->
-					
-			<div class="cell" id="three">
-				<a href="http://brainpuzzler.org"><img src="{{ "/images/brainpuzzler_site.png" | prepend: site.baseurl }}" width="240" class="image fit"></a>
-				<article>
-					<h3>Brainpuzzler.</h3>
-					<span>A research project by the Max-Planck-Institute for Medical Research — Web design.</span>
-				</article>
-			</div><!-- cell -->
-		</div><!-- cols -->
-	</div><!-- container -->
+<section class="RowSystem container -center">
+	<div class="row -no-wrap">
+		<aside class="col -text-right Tooltips">
+			<span class="tooltip -right">Taiwanese</span>
+		</aside>
+
+		<article class="col -fixed-width -small -center">
+			<p>My name is <strong>Seba Zheng</strong> (鄭). I currently work as a
+			freelance developer and graphic designer in <em>Heidelberg, Germany.</em></p>
+		</article>
+
+		<aside class="col Tooltips">
+		</aside>
+	</div> <!-- end row -->
+
+	<div class="row -no-wrap">
+		<aside class="col -text-right Tooltips">
+			<span class="tooltip -right">Natural Language Processing</span>
+		</aside>
+
+		<article class="col -fixed-width -small -center">
+			<p>I studied <em>Computational Linguistics</em> at Heidelberg University,
+			which is a mixture of Applied Linguistics and Computer Science. During
+			university, I got interested into graphic design, especially interface
+			design and icon design.</p>
+		</article>
+
+		<aside class="col Tooltips -relative">
+		</aside>
+	</div> <!-- end row -->
+
+	<div class="row -no-wrap">
+		<aside class="col -text-right Tooltips">
+		</aside>
+
+		<article class="col -fixed-width -small -center">
+			<p>I can program in C, Objective-C, Python, Lua, and Javascript. If you have a project involving this kind of work, you can contact me here:</p>
+
+			<p class="-text-center"><a href="mailto:{{ site.email }}"><button>Contact</button></a></p>
+		</article>
+
+		<aside class="col Tooltips">
+			<span class="tooltip">♥ Lua</span>
+		</aside>
+	</div> <!-- end row -->
 </section>
 
-<section id="projects">
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<header>
-					<h2 class="icon fa-object-ungroup">Projects</h2>
-				</header>
-				<ul class="default">
-					<li><a href="https://github.com/Eroica/unflex">unflex</a> — A simple, flex-based, responsive CSS grid.</li>
-					<li><a href="#">Lunation</a> — Pixel art game development.</li>
-					<!-- <li><a href="#">Infinite Desktop</a> — A desktop metaphor.</li> -->
-				</ul>
+
+<section class="container -center -medium">
+			<div class="row PortfolioSystem">
+				<div class="col">
+					<figure class="PortfolioImage">
+						<a href="{{ "images/DarkFinder.png" | prepend: site.baseurl }}">
+							<img src="{{ "images/DarkFinder+Thumb.png" | prepend: site.baseurl }}" width="200" height="150">
+						</a>
+						<div class="row">
+							<span class="col">Dark Finder</span>
+							<!--<span class="col -text-right"><a href="#"><i class="fa
+				 fa-download"></i></a></span>-->
+						</div>
+					</figure>
+				</div>
+
+				<div class="col">
+					<figure class="PortfolioImage">
+						<a href="{{ "images/DropboxIcon.png" | prepend: site.baseurl }}">
+							<img src="{{ "images/DropboxIcon+Thumb.png" | prepend: site.baseurl }}" width="200" height="150">
+						</a>
+						<div class="row">
+							<span class="col">Dropbox Icon</span>
+							<!--<span class="col -text-right"><a href="#"><i class="fa
+				 fa-download"></i></a></span>-->
+						</div>
+					</figure>
+				</div>
+
+				<div class="col">
+					<figure class="PortfolioImage">
+						<a href="{{ "images/BrowserIcon.png" | prepend: site.baseurl }}">
+							<img src="{{ "images/BrowserIcon+Thumb.png" | prepend: site.baseurl }}" width="200" height="150">
+						</a>
+						<div class="row">
+							<span class="col">Browser Icon</span>
+							<!--<span class="col -text-right"><a href="#"><i class="fa
+				 fa-download"></i></a></span>-->
+						</div>
+					</figure>
+				</div>
 			</div>
-			
-			<div class="col">
-				<header>
-					<h2 class="icon fa-sticky-note">Writings</h2>
-				</header>
-				<ul class="default">
-					<li></li>
-				</ul>
+</section>
+
+<section class="container -center">
+
+
+
+	<div class="row">
+
+
+		<div class="col">
+			<span class="tooltip -bottom">Derived from Beethoven’s symphony</span>
+			<div class="row -no-wrap">
+				<article class="col -center">
+					<p>I’m <strong>Eroica</strong> on
+					<a class="-ws-nowrap" href="{{ site.github-url }}"><i class="fa fa-github"></i> GitHub</a>,
+					where I have some open-source projects.</p>
+
+					<p>During my work, I already gained experience with</p>
+
+					<span class="tag">OpenCV</span>
+					<span class="tag">tesseract-ocr</span>
+					<span class="tag">Cocoa/GNUStep</span>
+					<span class="tag">Qt</span>
+					<span class="tag">Love2D</span>
+					<span class="tag">torch7</span>
+					<span class="tag">NumPy</span>
+					<span class="tag">scikit-learn</span>
+					<span class="tag">React.js</span>
+					<span class="tag">React Native</span>
+
+					<!--write about graphic design and programming on <a class="-ws-nowrap"
+			 href="{{ site.tumblr-url }}"><i class="fa fa-tumblr"></i> Tumblr</a> and
+			 occasionally <a class="-ws-nowrap" href="{{ site.twitter-url }}"><i
+			 class="fa fa-twitter"></i> tweet</a>.-->
+				</article>
 			</div>
+
+
 		</div>
-	</div>
-</section>
 
-<section id="contact">
-	<div class="container">
-		<header>
-			<h2 class="icon fa-envelope-o">Contact</h2>
-		</header>
 
-		<form method="POST" action="//formspree.io/gnu.seba@outlook.com">
-			<input type="text" name="name" id="name" placeholder="Name" />
-			<input type="text" name="email" id="email" placeholder="Email" />
-			<textarea name="message" id="message" placeholder="Message"></textarea>
-			<input class="button" type="submit" value="Send Message">
-		</form>
+
+		<div class="col">
+			<div class="TableSystem">
+				<table class="ResumeTable">
+					<tr class="thead">
+						<td>Prior Work</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><date>Aug 2014 – &nbsp;</td>
+						<td>
+							<p><strong>Max-Planck-Institute for Medical Research</strong></p>
+							<p>Working with other developers on KNOSSOS, an application for 3D
+							image visualization and reconstruction.</p>
+						</td>
+						<td><span class="-font-small -color-light-grey">Python, Qt5 (PyQt), Web
+								Design</span></td>
+					</tr>
+
+					<tr class="thead">
+						<td>Experience</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><date>Oct 2011 – Oct 2015</td>
+						<td>
+							<p><strong>Heidelberg University</strong></p>
+							<p>Student of Computational Linguistics, Bachelor of Arts</p>
+						</td>
+						<td><span class="-font-small -color-light-grey">C, C++,
+								Python</span></td>
+					</tr>
+				</table>
+			</div>
+
+			<!--<a href="#"><button>Download CV (.pdf)</button></a>-->
+			<a href="mailto:{{ site.email }}"><button>Contact</button></a>
+		</div>
 	</div>
 </section>
