@@ -23,7 +23,7 @@
 .-relative { position: relative }
 .-absolute { position: absolute }
 
-.-xsmall { width: 200px }
+.-xsmall { width: 280px }
 .-small { @include breakpoint($on-medium) { width: 400px } }
 .-w-420 { width: 420px }
 .-medium { width: 640px }
@@ -33,8 +33,5 @@
 .-top-70 { top: 70% }
 
 .-dropshadow {
-	box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
-	&.-red {
-		box-shadow: 0px 0px 20px 5px rgba(#ee5262,0.5)
-	}
+	box-shadow: 0 0 4px rgba(0,0,0,.3);
 }

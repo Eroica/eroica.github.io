@@ -10,7 +10,16 @@ body, input, select, textarea {
 	//background: url("/images/bgl1.png") repeat;
 }
 
-img { border-radius: 3px }
+img {
+	border-radius: 3px;
+	display: block;
+	@extend .-dropshadow;
+}
+
+svg {
+	vertical-align: middle;
+	fill: #363431;
+}
 
 date {
 	@extend .-font-small;
@@ -20,6 +29,14 @@ date {
 
 body * + * {
 	margin-top: 1em;
+}
+
+ul {
+	margin-left: 2em;
+	
+	&.-no-bullets {
+		list-style: none;
+	}
 }
 
 ul * + * {
@@ -35,7 +52,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-	color: #4687DF;
+//	color: #4687DF;
+	color: #363431;
 	font-size: 1.6rem;
 }
 
