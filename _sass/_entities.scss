@@ -11,17 +11,6 @@
 	}
 }
 
-.circle { width: 128px; height: 128px; @extend .-block; @extend .-bdr-50; }
-
-.logo {
-	@extend .circle;
-	@extend .-bg-red;
-	@extend .-dropshadow.-red;
-	@extend .-center;
-	font-size: 6.4rem;
-	line-height: 1;
-	padding: 3.2rem;
-}
 
 button,
 .button {
@@ -48,45 +37,6 @@ button,
 		border-color: rgba(#ee5262,.8);
 		//outline: none;
 		box-shadow: 0 0 2px rgba(110, 158, 247, 0.5);
-	}
-}
-
-
-.PortfolioSystem {
-	justify-content: space-between;
-}
-
-.PortfolioImage {
-	@extend .-relative;
-	@extend .-dropshadow;
-	display: inline-block;
-	border-radius: 3px;
-	overflow: hidden;
-
-	a {
-		display: block;
-		font-size: 0;
-		border: 0;
-		color: #fff;
-	}
-
-	> img { display: block }
-
-	> div {
-		@extend .-absolute;
-		margin-top: 0;
-		left: 0;
-		top: 100%;
-		padding: 4px 8px;
-		width: 100%;
-		background: rgba(0, 0, 0, .3);
-		color: #fff;
-		text-shadow: 0 -1px 0 #000;
-		transform: translateY(-100%);
-
-		a {
-			font-size: 1.5rem;
-		}
 	}
 }
 
@@ -170,8 +120,6 @@ button,
 }
 
 
-
-
 .Tooltips {
 	.tooltip { display: none }
 
@@ -181,8 +129,31 @@ button,
 }
 
 .RowSystem {
-	.row + .row {
-		margin-top: 1em;
+	.row {
+		flex-wrap: nowrap;
+	}
+	
+	@include breakpoint($on-small) {
+		text-align: right;
+	}
+	
+	@include breakpoint($on-medium) {
+		.row:nth-of-type(2n+1) {
+			flex-direction: row-reverse;
+			text-align: left;
+		}
+	}
+	
+	aside {
+		padding: 1em;
+		
+		* + * {
+			margin-top: 0.5em;
+		}
+		
+		@include breakpoint($on-medium) {
+			align-self: flex-end;
+		}
 	}
 }
 
@@ -193,7 +164,9 @@ button,
 	padding: 4px 5px;
 	font-size: 1.1rem;
 	white-space: nowrap;
-	box-shadow: 4px 4px 8px rgba(0,0,0,.3);
+	//box-shadow: 2px 2px 4px rgba(0,0,0,.3);
+//	box-shadow: 0 0 2px rgba(110, 158, 247, 0.5);
+	@extend .-dropshadow;
 	border-radius: 3px;
 }
 
@@ -204,7 +177,9 @@ button,
 	padding: 8px 10px;
 	font-size: 1.2rem;
 	white-space: nowrap;
-	box-shadow: 4px 4px 8px rgba(0,0,0,.3);
+	//box-shadow: 0 0 2px rgba(110, 158, 247, 0.5);
+	//box-shadow: 2px 2px 4px rgba(0,0,0,.3);
+	@extend .-dropshadow;
 	position: relative;
 
 	&:before {
@@ -215,6 +190,19 @@ button,
 		background: transparent;
 		border: 6px solid transparent;
 		border-right-color: #383838;
+	}
+
+	&.-top {
+		&:before { display: none }
+		&:after {
+			position: absolute;
+			top: -12px;
+			content: '';
+			background: transparent;
+			border: 6px solid transparent;
+			border-bottom-color: #383838;
+			left: calc(50%);
+		}
 	}
 
 	&.-right {
@@ -236,12 +224,12 @@ button,
 		&:after {
 			position: absolute;
 			bottom: -12px;
-			left: 3.0rem;
+			left: calc(50% - 6px);
 			content: '';
 			background: transparent;
 			border: 6px solid transparent;
-		border-top-color: #383838;
-	}
+			border-top-color: #383838;
+		}
 
 	}
 }
