@@ -79,3 +79,16 @@ a {
 		border-color: #ee5262;
 	}
 }
+
+.tooltip a {
+	border-bottom: 0;
+}
+
+.tooltip svg {
+	fill: rgba(#fff, .8);
+	
+	&:hover {
+		fill: #fff;
+		transition: fill .2s linear;
+	}
+}
