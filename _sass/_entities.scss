@@ -191,6 +191,10 @@ button,
 		border: 6px solid transparent;
 		border-right-color: #383838;
 	}
+	
+	&.-left {
+		margin-left: 20px;
+	}
 
 	&.-top {
 		&:before { display: none }
