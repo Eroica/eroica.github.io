@@ -1,17 +1,12 @@
 @media (min-width: $on-small) {
-	.row { display: flex; flex-flow: row wrap; }
-	.col { flex: 1 }
-
-	.-fixed-width { flex-grow: 0; flex-basis: auto; }
-	.-middle { align-content: center; align-items: center }
-	.-no-wrap { flex-wrap: nowrap }
-
-	.col + .col {
-		margin-top: 0;
-	}
-
-	/*.row + .row {
-		margin-top: 0;
-	}*/
+	.row {
+        display: flex;
+        flex-flow: row wrap;
+		
+		&__col {
+			flex: 1;
+		}
+    }
+	.row.row--middle { align-content: center; align-items: center }
+	.row.row--no-wrap { flex-wrap: nowrap }
 }
-

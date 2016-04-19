@@ -1,37 +1,8 @@
 .-text-center { text-align: center }
 .-text-right { text-align: right }
-
 .-center { margin-left: auto; margin-right: auto }
-
-.-fit { width: 100% }
-
-.-block { display: block }
-
-.-font-small { font-size: 1.2rem }
-.-color-light-grey { color: #AAB2BE }
-.-color-dark-grey { color: #656D7A }
-.-color-red { color: #EE5262 }
-.-color-white { color: #ffffff }
-
-.-bg-red { background-color: #ee5262 }
-
-
-.-no-border { border: 0 !important }
-.-bdr-50 { border-radius: 50% }
-.-bdr-light-grey { border: 1px solid #E6E9ED }
-
-.-relative { position: relative }
-.-absolute { position: absolute }
-
-.-xsmall { width: 280px }
-.-small { @include breakpoint($on-medium) { width: 400px } }
-.-w-420 { width: 420px }
-.-medium { width: 640px }
-
-.-ws-nowrap { white-space: nowrap }
-
-.-top-70 { top: 70% }
-
-.-dropshadow {
-	box-shadow: 0 0 4px rgba(0,0,0,.3);
+.-no-rhythm {
+	* + * {
+		margin-top: 0;
+	}
 }

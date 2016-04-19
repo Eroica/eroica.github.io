@@ -2,148 +2,56 @@
 layout: default
 ---
 
-<section class="container -center">
-	<article class="-center -small">
-		<p><span class="tooltip -bottom">Hello!</span></p>
-		
-		<p>You probably found me through my GitHub profile. <a href="#Work">Click here</a> to see some of the things I currently work on.</p>
-		
-		<!--<ul class="-no-bullets">
-			<li><span class="tag">OpenCV</span> <span class="tag">tesseract-ocr</span></li>
-			<li><span class="tag">Cocoa/GNUStep</span> <span class="tag">Qt</span></li>
-			<li><span class="tag">torch7</span> <span class="tag">NumPy</span> <span class="tag">scikit-learn</span></li>
-		</ul>-->
-	</article>
-			
-	<div class="row -no-wrap">
-		<aside class="col -text-right -fixed-width -xsmall Tooltips">
-			<span class="tooltip -right">Taiwanese</span>
-		</aside>
-
-		<article class="col -fixed-width -small">
-			<p>My name is <strong>Seba Zheng</strong> (鄭), and I work as a contractor in Heidelberg, Germany. I currently focus on <strong>Android</strong> and <strong>Lua</strong> development, and UI design.</p>
-		</article>
-	</div> <!-- end row -->
-			
-			
-	<div class="row -no-wrap">
-		<aside class="col -text-right -fixed-width -xsmall Tooltips">
-			<span class="tooltip -right">Natural Language Processing</span>
-		</aside>
-
-		<article class="col -fixed-width -small">
-			<p>I studied Computational Linguistics at Heidelberg University. In my free time, I teach myself drawing, and I develop small Love2D games.</p>
-		</article>
-	</div> <!-- end row -->
+<header class="container--small -center header">
+	<h1><span class="marquee">Writing</span> Android applications and Lua games.</h1>
 	
+	<p><strong>Seba Zh.</strong></p>
+</header>
 
-	<div class="row -no-wrap">
-		<aside class="col -text-right -fixed-width -xsmall Tooltips">
-		</aside>
-		
-		<article class="col -fixed-width -small">
-			<p>Feel free to contact me if you have a project involving my kind of work, or just to get in touch.</p>
+<section class="content container -center">
+	<p>I’m a freelance developer living in Heidelberg, Germany.</p>
 	
-			<p class="-text-center"><a href="mailto:{{ site.email }}"><button>Contact</button></a></p>
-		</article>
-		
-		<aside class="col -fixed-width -xsmall Tooltips">
-			<span class="tooltip -left"><a href="{{ site.github-url }}">{% include ic-social-octocat.html %}</a> <a href="{{ site.tumblr-url }}">{% include ic-social-tumblr.html %}</a> <a href="{{ site.twitter-url }}">{% include ic-social-twitter.html %}</a></span>
-		</aside>
-	</div>
+	<p>I focus on <strong>Android</strong> apps and <strong>2D games.</strong> I develop in <strong>Java</strong> and <strong>Kotlin</strong>, create mockups in Photoshop/Affinity Designer, and write, design and draw my own pixel art games, using <strong>Lua</strong> and the <strong>LÖVE</strong> framework. </p>
+	
+	<p>You can read more about me on my <a href="{{ site.tumblr-url }}">Tumblr blog</a>, follow me on <a href="{{ site.twitter-url }}">Twitter</a> or take a look at my <a href="{{ site.github-url }}">GitHub</a> repository.</p>
 </section>
 
-
-<section class="RowSystem container -center" id="Work">
-	<div class="row">
-		<aside class="col -fixed-width -xsmall">
-			<h2>KNOSSOS</h2>
-			
-			<p>KNOSSOS is a scientific desktop application for 3D image visualization and reconstruction. It is written in C++ with additional Python tools.</p>
-			
-			<p><span class="tag">Python</span> <span class="tag">Qt5 (PyQt)</span> <span class="tag">Web Design</span></p>
-		</aside>
-		
-		<article class="col -fixed-width -small">
-			<img src="{{ "images/KNOSSOS-Thumb.png" | prepend: site.baseurl }}" width="400" height="200" />
-		</article>
-	</div>
-	
-	
-	<div class="row">
-		<aside class="col -fixed-width -xsmall">
-			<h2>Android</h2>
-			
-			<p>I work as a contractor for Android applications together with a group of other developers. I’m responsible for the frontend and some UI design.</p>
-			
-			<p><span class="tag">Android</span> <span class="tag">Java</span> <span class="tag">UI Design</span></p>
-		</aside>
-		
-		<article class="col -fixed-width -small">
-			<img src="{{ "images/Android-Thumb.png" | prepend: site.baseurl }}" width="400" height="200" />
-		</article>
-	</div>
-	
-	
-	<div class="row">
-		<aside class="col -fixed-width -xsmall">
-			<h2>Lunation</h2>
-			
-			<p>A placeholder for my personal Love2D projects.</p>
-			
-			<p>
-				{% include ic-link.html %}
-				
-				<a href="http://lunation.co">lunation.co</a>
-</p>
-			
-			<p><span class="tag">Lua</span> <span class="tag">Love2D</span></p>
-		</aside>
-		
-		<article class="col -fixed-width -small">
-			<img src="{{ "images/Lunation-Thumb.png" | prepend: site.baseurl }}" width="400" height="200" />
-		</article>
-	</div>
+<section class="container -center -text-center">
+	<a class="button" href="mailto:gnu.seba@outlook.com">“Hi!” Seba</a>
 </section>
 
-<!--
-<section class="container -center">
-	<div class="TableSystem">
-		<table class="ResumeTable">
-			<tr class="thead">
-				<td>Prior Work</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td><date>Aug 2014 – &nbsp;</td>
-				<td>
-					<p><strong>Max-Planck-Institute for Medical Research</strong></p>
-					<p>Working with other developers on KNOSSOS, an application for 3D
-					image visualization and reconstruction.</p>
-				</td>
-				<td><span class="-font-small -color-light-grey">Python, Qt5 (PyQt), Web
-						Design</span></td>
-			</tr>
-
-			<tr class="thead">
-				<td>Experience</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td><date>Oct 2011 – Oct 2015</td>
-				<td>
-					<p><strong>Heidelberg University</strong></p>
-					<p>Student of Computational Linguistics, Bachelor of Arts</p>
-				</td>
-				<td><span class="-font-small -color-light-grey">C, C++,
-						Python</span></td>
-			</tr>
-		</table>
-	</div>
-
-	<a href="#"><button>Download CV (.pdf)</button></a>
-	<a href="mailto:{{ site.email }}"><button>Contact</button></a>
+<section class="container--large -center">
+	<ul class="timetable">
+		<li>
+			<date>2016 —&nbsp;.</date>
+			<p>Junior Developer working for LivelyCode<br>
+			Heidelberg, Germany</p>
+		</li>
+		
+		<li>
+			<date>2016.</date>
+			<p>Graduated from Heidelberg University<br>
+			Computational Linguistics, B.A.</p>
+		</li>
+		
+		<li>
+			<date>2015 —&nbsp;.</date>
+			<p>Graphic designer at Max Planck Institute for Medical Research<br>
+			Heidelberg, Germany</p>
+		</li>
+	</ul>
 </section>
--->
+
+<script>
+var $marquee = document.querySelector(".marquee");
+switch(Math.floor(Math.random() * 3) + 1) {
+	case 1:
+		$marquee.innerHTML = "Developing";
+		break;
+	case 2:
+		$marquee.innerHTML = "Desigining";
+		break;
+	default:
+		$marquee.innerHTML = "Writing";
+}
+</script>

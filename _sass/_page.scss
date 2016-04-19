@@ -8,9 +8,7 @@ body { -ms-overflow-style: scrollbar; }
 html, body { min-width: 320px; }
 
 body {
-	//background: #FCFAF8;
-	background: #FAFAFC;
-	padding: 100px 0;
+	background: #fff;
 
 	&.is-loading {
 		*, *:before, *:after {
