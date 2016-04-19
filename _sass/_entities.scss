@@ -68,8 +68,8 @@ button, .button {
 
 .marquee {
 	font-weight: 900;
-	background-image: url(/images/texture.png);
-	background-repeat: repeat;
+	color: #5291DA;
+	background: -webkit-linear-gradient(transparent, transparent), url(/images/texture.png) repeat;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
 	animation-name: texture-animation;
