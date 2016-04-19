@@ -116,7 +116,7 @@ button, .button {
 	margin-top: 2em;
 	list-style: none;
 	font-size: 1.5rem;
-	
+
 	li {
 		position: relative;
 		
@@ -152,17 +152,21 @@ button, .button {
 	}
 	
 	date, p {
-		display: inline-block;
 		vertical-align: top;
 		padding-top: .5em;
+		display: table-cell;
 	}
 	
 	date {
-		width: 80px;
+		width: 100px;
 		text-align: center;
 	}
 	
 	p {
 		margin-left: .5em;
+	}
+	
+	div {
+	  display: table;
 	}
 }
