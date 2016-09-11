@@ -11,27 +11,44 @@
 	}
 }
 
+.taglines {
+	color: rgba(#404040, .5);
+
+	span:first-of-type {
+		color: #404040;
+	}
+}
+
+.-dark .taglines {
+	@extend .-transition;
+	color: #404040;
+	span:first-of-type {
+		color: rgba(#404040, .5);
+	}
+}
 
 button, .button {
 	display: inline-block;
 	border-radius: 3px;
 	padding: .5em 1em;
-	border: 1px solid #5291DA;
-	
+	border: 1px solid #e7e7e9;
+
 	&:hover {
-		background: #5291DA;
-		color: #fff;
-		border-color: #014258;
+		@extend .-transition;
+		border-color: #469DF6;
 	}
 }
 
 
-.header {
-	margin-top: 150px;
+nav {
 	text-align: center;
 }
 
-.content {
+.header {
+	text-align: center;
+}
+
+.box {
 	border: 1px solid #e7e7e9;
 	border-bottom-color: #dfdfe2;
 	box-shadow: 0px 4px 0px #f9f9fa;
@@ -39,10 +56,10 @@ button, .button {
 	background: #fff;
 	border-radius: 3px;
 	position: relative;
-	
+
 	&:before, &:after {
-		bottom: 100%;
-		left: 50%;
+		top: 50%;
+		left: 100%;
 		border: solid transparent;
 		content: " ";
 		height: 0;
@@ -53,119 +70,108 @@ button, .button {
 	
 	&:after {
 		border-color: rgba(255, 255, 255, 0);
-		border-bottom-color: #fff;
+		border-left-color: #fff;
 		border-width: 6px;
-		margin-left: -6px;
+		margin-top: -6px;
 	}
 	
 	&:before {
 		border-color: rgba(223, 223, 226, 0);
-		border-bottom-color: #dfdfe2;
+		border-left-color: #dfdfe2;
+		border-width: 7px;
+		margin-top: -7px;
+	}
+}
+
+.timetable-box {
+	border: 1px solid #e7e7e9;
+	border-bottom-color: #dfdfe2;
+	box-shadow: 0px 4px 0px #f9f9fa;
+	padding: 20px 20px 0 20px;
+	background: #fff;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.-dark .box {
+	&:before, &:after {
+		top: 100%;
+		left: 50%;
+	}
+	
+	&:after {
+		border-color: rgba(255, 255, 255, 0);
+		border-top-color: #fff;
+		border-width: 6px;
+		margin-left: -6px;
+		margin-top: 0;
+	}
+	
+	&:before {
+		border-color: rgba(223, 223, 226, 0);
+		border-top-color: #dfdfe2;
 		border-width: 7px;
 		margin-left: -7px;
-	}
-}
-
-.marquee {
-	font-weight: 900;
-	color: #5291DA;
-	background: -webkit-linear-gradient(transparent, transparent), url(/images/texture.png) repeat;
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
-	animation-name: texture-animation;
-	animation-duration: 120s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-}
-
-@keyframes texture-animation {
-  0% {
-    background-position: left bottom;
-  }
-  100% {
-    background-position: 1200px top;
-  }
-}
-
-
-.strong {
-	&--android {
-		color: #72ba35;
-	}
-	
-	&--love2d {
-		color: #de26f8;
-	}
-	
-	&--java {
-		color: #fc4138;
-	}
-	
-	&--kotlin {
-		color: #208be7;
-	}
-	
-	&--lua {
-		color: darken(#b0dcfe, 10);
+		margin-top: 0;
 	}
 }
 
 
 .timetable {
 	@extend .-no-rhythm;
-	margin-top: 2em;
+	//margin-top: 2em;
 	list-style: none;
 	font-size: 1.5rem;
 
 	li {
 		position: relative;
-		
+
 		&:before, &:after {
 			position: absolute;
 			background: #dfdfe2;
 			content: "";
 			top: 16px;
 		}
-		
+
 		&:first-of-type:before {
 			background: #5291DA;
 		}
-		
+
 		&:last-of-type {
-			padding-bottom: 50px;
+			padding-bottom: 25px;
 		}
-		
+
 		&:before {
 			width: 8px;
 			height: 8px;
 			border-radius: 50%;
-
 			left: -10px;
+			z-index: 2;
 		}
-		
+
 		&:after {
 			width: 1px;
 			height: 100%;
 			left: -6px;
-			z-index: -1;
+			z-index: 1;
 		}
 	}
-	
+
 	date, p {
 		vertical-align: top;
 		padding-top: .5em;
 		display: table-cell;
 	}
-	
+
 	date {
 		width: 100px;
 		text-align: center;
 	}
-	
+
 	p {
 		margin-left: .5em;
 	}
-	
+
 	div {
 	  display: table;
 	}

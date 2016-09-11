@@ -1,7 +1,31 @@
-<header>
-	<nav>
-		<a class="nav-link" href="#">About</a>
-		<a class="nav-link" href="#">Work</a>
-		<a class="nav-link" href="#">Contact</a>
-	</nav>
+
+<header class="header container--small -center -no-rhythm">
+	<p>
+		{% include lua-android-svg.html %}
+	</p>
+
+	<p>
+		<i class="icon ion-ios-sunny"></i>
+
+		<label class="switch no-label">
+			<input type="checkbox" class="switch-input" checked onchange="toggleDarkness(event);">
+			<span class="switch-trough" data-on="On" data-off="Off"></span>
+			<span class="switch-handle"></span>
+		</label>
+
+		<i class="icon ion-ios-moon"></i>
+	</p>
+
+	<p class="taglines">
+		<span class="-active">Android developer by day,</span><br>
+		<span>Lua developer by night.</span>
+	</p>
 </header>
+
+<nav class="-no-rhythm">
+	<a class="button" href="{{ "" | prepend: site.baseurl }}">Home</a>
+	<a class="button" href="{{ "about/" | prepend: site.baseurl }}">About</a>
+	<a class="button" href="{{ site.github-url }}"><i class="ion ion-social-github"></i> GitHub</a>
+	<a class="button" href="{{ site.tumblr-url }}"><i class="ion ion-social-tumblr"></i> Blog</a>
+	<a class="button" href="{{ site.twitter-url }}"><i class="ion ion-social-twitter"></i> Twitter</a>
+</nav>
