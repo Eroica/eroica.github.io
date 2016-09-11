@@ -6,7 +6,13 @@
 		&__col {
 			flex: 1;
 		}
+
+		&__col + &__col {
+			margin-left: 2em;
+			margin-top: 0;
+		}
     }
+    .row.row--align-top { align-items: flex-start }
 	.row.row--middle { align-content: center; align-items: center }
 	.row.row--no-wrap { flex-wrap: nowrap }
 }
