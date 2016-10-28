@@ -21,9 +21,10 @@
 
 .-dark .taglines {
 	@extend .-transition;
-	color: #404040;
+	color: #e6e6e6;
+
 	span:first-of-type {
-		color: rgba(#404040, .5);
+		color: rgba(#e6e6e6, .5);
 	}
 }
 
@@ -39,6 +40,16 @@ button, .button {
 	}
 }
 
+.-dark button, .-dark .button {
+	border-color: rgba(#e7e7e9, .5);
+	color: rgba(#e6e6e6, .5);
+
+	&:hover {
+		border-color: #469DF6;
+		color: #469DF6;
+	}
+}
+
 
 nav {
 	text-align: center;
@@ -51,7 +62,7 @@ nav {
 .box {
 	border: 1px solid #e7e7e9;
 	border-bottom-color: #dfdfe2;
-	box-shadow: 0px 4px 0px #f9f9fa;
+	@extend .-box-shadow;
 	padding: 20px;
 	background: #fff;
 	border-radius: 3px;
@@ -86,14 +97,20 @@ nav {
 .timetable-box {
 	border: 1px solid #e7e7e9;
 	border-bottom-color: #dfdfe2;
-	box-shadow: 0px 4px 0px #f9f9fa;
+	@extend .-box-shadow;
 	padding: 20px 20px 0 20px;
 	background: #fff;
 	border-radius: 3px;
 	overflow: hidden;
 }
 
+.-dark .timetable-box {
+	background: transparent;
+}
+
 .-dark .box {
+	background: transparent;
+
 	&:before, &:after {
 		top: 100%;
 		left: 50%;

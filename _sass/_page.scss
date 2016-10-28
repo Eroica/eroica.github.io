@@ -18,6 +18,10 @@ body {
 		margin-bottom: 150px;
 	}
 
+	&.-dark {
+		background: #353942;
+	}
+
 	&.is-loading {
 		*, *:before, *:after {
 			animation: none !important;
