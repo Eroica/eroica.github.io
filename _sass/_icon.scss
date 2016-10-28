@@ -1,13 +1,19 @@
 path, line, polyline {
-		stroke: #404040;
-		stroke-width: 1px;
-	}
-	path {
-		fill: transparent;
-	}
-	polyline {
-		stroke-width: 1px;
-	}
+	stroke: #404040;
+	stroke-width: 1px;
+}
+
+.-dark path, .-dark line, .-dark polyline {
+	stroke: #fff;
+}
+
+path {
+	fill: transparent;
+}
+
+polyline {
+	stroke-width: 1px;
+}
 
 .icon {
 	font-size: 2.4rem;
