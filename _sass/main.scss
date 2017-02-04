@@ -21,6 +21,7 @@ $on-large:      1200px;
 // Base.
 @import 'page';
 @import 'typography';
+@import 'font_awesome/font-awesome';
 
 // Components.
 @import 'components';
@@ -28,4 +29,6 @@ $on-large:      1200px;
 
 // Entities.
 @import 'entities';
+@import 'header';
+@import 'buttons';
 @import 'switch';

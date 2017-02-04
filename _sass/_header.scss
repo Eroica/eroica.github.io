@@ -1,0 +1,24 @@
+nav {
+	text-align: center;
+}
+
+.header {
+	text-align: center;
+}
+
+.taglines {
+	color: rgba(#404040, .5);
+
+	span:first-of-type {
+		color: #404040;
+	}
+}
+
+.-dark .taglines {
+	@extend .-transition;
+	color: #e6e6e6;
+
+	span:first-of-type {
+		color: rgba(#e6e6e6, .5);
+	}
+}

@@ -18,7 +18,7 @@
 	var date = new Date();
 	var current_hours = date.getHours();
 
-	if(current_hours >= 20 || current_hours < 8) {
+	if(current_hours >= 18 || current_hours < 8) {
 		document.querySelector("body").classList.add("-dark");
 		document.querySelector(".switch > input").checked = true;
 	} else {
