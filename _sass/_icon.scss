@@ -1,6 +1,12 @@
 path, line, polyline {
 	stroke: #404040;
+	// stroke: #469DF6;
 	stroke-width: 1px;
+}
+
+#android path, #android line, #android polyline {
+	stroke: #77c159;
+	stroke-width: 2px;
 }
 
 .-dark path, .-dark line, .-dark polyline {

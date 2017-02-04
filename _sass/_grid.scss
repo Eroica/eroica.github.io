@@ -1,18 +1,19 @@
 @media (min-width: $on-small) {
 	.row {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
 		
-		&__col {
+		> .col {
 			flex: 1;
 		}
 
-		&__col + &__col {
+		> .col + .col {
 			margin-left: 2em;
 			margin-top: 0;
 		}
     }
-    .row.row--align-top { align-items: flex-start }
-	.row.row--middle { align-content: center; align-items: center }
-	.row.row--no-wrap { flex-wrap: nowrap }
+    
+    .row.-align-top { align-items: flex-start }
+	.row.-middle { align-content: center; align-items: center }
+	.row.-no-wrap { flex-wrap: nowrap }
 }

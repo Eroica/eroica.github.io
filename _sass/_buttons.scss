@@ -1,0 +1,21 @@
+button, .button {
+	display: inline-block;
+	border-radius: 3px;
+	padding: .5em 1em;
+	border: 1px solid #e7e7e9;
+
+	&:hover {
+		@extend .-transition;
+		border-color: #469DF6;
+	}
+}
+
+.-dark button, .-dark .button {
+	border-color: rgba(#e7e7e9, .5);
+	color: rgba(#e6e6e6, .5);
+
+	&:hover {
+		border-color: #469DF6;
+		color: #469DF6;
+	}
+}
