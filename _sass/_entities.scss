@@ -7,20 +7,7 @@
 	}
 	
 	&--large {
-		max-width: 720px;
-	}
-}
-
-.project-figure {
-	> img {
-		@extend .-box-shadow;
-		border: 1px solid #e7e7e9;
-	}
-}
-
-.-dark .project-figure {
-	> img {
-		border-color: rgba(#e7e7e9, .5);
+		max-width: 800px;
 	}
 }
 
@@ -39,51 +26,55 @@
 
 .box {
 	@extend .-box-shadow;
+	@extend .-no-rhythm;
 	border: 1px solid #e7e7e9;
 	border-bottom-color: #dfdfe2;
+	border-radius: 3px;
 	padding: 20px;
 	background: #fff;
-	border-radius: 3px;
 	position: relative;
 
-	&:before, &:after {
-		top: 50%;
-		left: 100%;
-		border: solid transparent;
-		content: " ";
-		height: 0;
-		width: 0;
-		position: absolute;
-		pointer-events: none;
-	}
-	
-	&:after {
-		border-color: rgba(255, 255, 255, 0);
-		border-left-color: #fff;
-		border-width: 6px;
-		margin-top: -6px;
-	}
-	
-	&:before {
-		border-color: rgba(223, 223, 226, 0);
-		border-left-color: #dfdfe2;
-		border-width: 7px;
-		margin-top: -7px;
-	}
-}
+	&.-media {
+		padding: 0;
 
-.timetable-box {
-	border: 1px solid #e7e7e9;
-	border-bottom-color: #dfdfe2;
-	@extend .-box-shadow;
-	padding: 20px 20px 0 20px;
-	background: #fff;
-	border-radius: 3px;
-	overflow: hidden;
-}
+		img {
+			display: block;
+			border-radius: 0;
+		}
 
-.-dark .timetable-box {
-	background: transparent;
+		> div {
+			padding: 10px 20px 20px;
+
+			&:first-of-type {
+				margin-top: 0;
+			}
+		}
+	}
+
+	// &:before, &:after {
+	// 	top: 50%;
+	// 	left: 100%;
+	// 	border: solid transparent;
+	// 	content: " ";
+	// 	height: 0;
+	// 	width: 0;
+	// 	position: absolute;
+	// 	pointer-events: none;
+	// }
+	
+	// &:after {
+	// 	border-color: rgba(255, 255, 255, 0);
+	// 	border-left-color: #fff;
+	// 	border-width: 6px;
+	// 	margin-top: -6px;
+	// }
+	
+	// &:before {
+	// 	border-color: rgba(223, 223, 226, 0);
+	// 	border-left-color: #dfdfe2;
+	// 	border-width: 7px;
+	// 	margin-top: -7px;
+	// }
 }
 
 .-dark .box {
@@ -111,6 +102,19 @@
 	}
 }
 
+.timetable-box {
+	@extend .-box-shadow;
+	border: 1px solid #e7e7e9;
+	border-bottom-color: #dfdfe2;
+	border-radius: 3px;
+	padding: 20px 20px 0 20px;
+	background: #fff;
+	overflow: hidden;
+}
+
+.-dark .timetable-box {
+	background: transparent;
+}
 
 .timetable {
 	@extend .-no-rhythm;
