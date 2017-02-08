@@ -3,10 +3,17 @@ button, .button {
 	border-radius: 3px;
 	padding: .5em 1em;
 	border: 1px solid #e7e7e9;
+	color: #404040;
 
 	&:hover {
 		@extend .-transition;
 		border-color: #469DF6;
+	}
+
+	&.-primary {
+		background: #469DF6;
+		border-color: darken(#469DF6, 20);
+		color: #fff;
 	}
 }
 
@@ -17,5 +24,11 @@ button, .button {
 	&:hover {
 		border-color: #469DF6;
 		color: #469DF6;
+	}
+
+	&.-primary {
+		background: #469DF6;
+		border-color: darken(#469DF6, 20);
+		color: #fff;
 	}
 }

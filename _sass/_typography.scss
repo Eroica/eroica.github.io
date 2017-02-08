@@ -1,19 +1,40 @@
 html { font-size: 62.5% }
 
 body, input, select, textarea {
-	font-family: "Lato", sans-serif;
+	font-family: "Nunito", sans-serif;
 	font-size: 1.8rem;
 	font-weight: 300;
 	line-height: 1.65;
-	color: #404040;
+	color: $font-color-dark;
 
 	&.-dark {
 		color: #e6e6e6;
 	}
 }
 
+hr {
+	border: 0;
+	height: 1px;
+	background: #dfdfe2;
+}
+
 img {
 	border-radius: 3px;
+}
+
+.link {
+	i, i:before, span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	i {
+		margin-right: 8px;
+	}
+
+	span {
+		font-size: 1.5rem;
+	}
 }
 
 h2 {
@@ -22,13 +43,17 @@ h2 {
 }
 
 strong, b {
-	font-weight: 400;
+	font-weight: 600;
+}
+
+.-dark strong, .-dark b {
+	color: white;
 }
 
 em, i { font-style: italic; }
 
 a {
-	color: #404040;
+	color: lighten($font-color-blue, 10);
 	text-decoration: none;
 
 	&:hover {
@@ -36,15 +61,3 @@ a {
 		color: #469DF6;
 	}
 }
-
-// a {
-// 	border-bottom: 2px solid rgba(#dfdfe2, .6);
-// 	text-decoration: none;
-// 	color: #5291DA;
-// 	transition: all .2s linear;
-
-// 	&:hover {
-// 		color: #014258;
-// 		border-color: #5291DA;
-// 	}
-// }

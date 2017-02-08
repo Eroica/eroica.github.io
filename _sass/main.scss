@@ -1,12 +1,15 @@
 @charset "utf-8";
 
-$on-xsmall:          480px;
-$on-small:        540px;
-$on-medium:      720px;
-$on-large:      1200px;
+$on-xsmall: 480px;
+$on-small: 540px;
+$on-medium: 720px;
+$on-large: 1200px;
 
+$font-color-dark: #495057;
+$font-color-grey: #adb5bd;
+$font-color-blue: #329af0;
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,900);
+@import url(https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600);
 
 @mixin breakpoint($device) {
 	@media screen and (min-width: $device) {
@@ -21,7 +24,6 @@ $on-large:      1200px;
 // Base.
 @import 'page';
 @import 'typography';
-@import 'font_awesome/font-awesome';
 
 // Components.
 @import 'components';
