@@ -1,14 +1,18 @@
 .container {
 	max-width: 450px;
 	width: 90%;
-	
-	&--small {
+
+	&.-small {
 		max-width: 360px;
 	}
-	
-	&--large {
+
+	&.-large {
 		max-width: 800px;
 	}
+}
+
+.main {
+	margin-top: 2em;
 }
 
 .tag {
@@ -61,14 +65,14 @@
 	// 	position: absolute;
 	// 	pointer-events: none;
 	// }
-	
+
 	// &:after {
 	// 	border-color: rgba(255, 255, 255, 0);
 	// 	border-left-color: #fff;
 	// 	border-width: 6px;
 	// 	margin-top: -6px;
 	// }
-	
+
 	// &:before {
 	// 	border-color: rgba(223, 223, 226, 0);
 	// 	border-left-color: #dfdfe2;
@@ -84,7 +88,7 @@
 		top: 100%;
 		left: 50%;
 	}
-	
+
 	&:after {
 		border-color: rgba(255, 255, 255, 0);
 		border-top-color: #fff;
@@ -92,7 +96,7 @@
 		margin-left: -6px;
 		margin-top: 0;
 	}
-	
+
 	&:before {
 		border-color: rgba(223, 223, 226, 0);
 		border-top-color: #dfdfe2;
@@ -118,7 +122,6 @@
 
 .timetable {
 	@extend .-no-rhythm;
-	//margin-top: 2em;
 	list-style: none;
 	font-size: 1.5rem;
 

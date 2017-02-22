@@ -21,16 +21,24 @@ $font-color-blue: #329af0;
 @import 'reset';
 @import 'grid';
 
-// Base.
-@import 'page';
-@import 'typography';
-
 // Components.
 @import 'components';
 @import 'icon';
+
+// Base.
+@import 'page';
+@import 'typography';
 
 // Entities.
 @import 'entities';
 @import 'header';
 @import 'buttons';
 @import 'switch';
+
+
+.card {
+	background: #fcfcfc;
+	border: 1px solid #ececec;
+	border-radius: 5px;
+	padding: 1em;
+}

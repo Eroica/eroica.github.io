@@ -2,7 +2,7 @@
 ._text-left { text-align: left }
 ._text-center { text-align: center }
 .-text-right { text-align: right }
-.-center { margin-left: auto; margin-right: auto }
+._center { margin-left: auto; margin-right: auto }
 .-no-rhythm {
 	* + * {
 		margin-top: 0;
@@ -11,9 +11,10 @@
 .-box-shadow {
 	@extend .-transition;
 	// box-shadow: 0px 4px 0px #f9f9fa;
-	box-shadow: 0px 3px 0px #e7e8ec;
+	box-shadow: 0px 1px 0px #e7e8ec;
+	// box-shadow: 0px 1px 0px #C8D7E1;
 }
 
 .-dark .-box-shadow {
-	box-shadow: 0px 4px 0px #404040;
+	box-shadow: 0px 2px 0px #404040;
 }

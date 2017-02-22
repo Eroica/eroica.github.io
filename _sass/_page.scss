@@ -16,7 +16,7 @@ body {
 
 	@include breakpoint($on-medium) {
 		margin-top: 100px;
-		margin-bottom: 150px;
+		margin-bottom: 100px;
 	}
 
 	&.-dark {
@@ -29,8 +29,4 @@ body {
 			transition: none !important;
 		}
 	}
-}
-
-body * + * {
-	margin-top: 1em;
 }

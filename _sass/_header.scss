@@ -5,33 +5,26 @@ nav {
 .header {
 	text-align: center;
 
-	.icon {
-		vertical-align: middle;
-
-		&:before {
-			vertical-align: middle;
-		}
-	}
-
-	.switch {
+	.icon, .icon:before, .switch {
 		vertical-align: middle;
 	}
 }
 
 .taglines {
-	color: rgba(#404040, .5);
+	color: rgba(#404040, .25);
 	margin-top: 1em;
+	transition: color .2s ease-in-out;
 
 	span:first-of-type {
+		transition: color .2s ease-in-out;
 		color: #404040;
 	}
 }
 
 .-dark .taglines {
-	@extend .-transition;
 	color: #e6e6e6;
 
 	span:first-of-type {
-		color: rgba(#e6e6e6, .5);
+		color: rgba(#e6e6e6, .25);
 	}
 }
