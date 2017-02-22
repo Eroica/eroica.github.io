@@ -13,9 +13,18 @@ body, input, select, textarea {
 }
 
 hr {
-	border: 0;
-	height: 1px;
-	background: #dfdfe2;
+	@extend .-transition;
+	margin: 2em 0 !important;
+	height: 4px;
+	background-color: #d4d9de;
+	border: 1px solid #b8bcc1;
+	border-radius: 2px;
+	box-shadow: 0px 1px 0px 0px #fff;
+}
+
+.-dark hr {
+	background-color: white;
+	box-shadow: 0px 1px 0px 0px #404040;
 }
 
 img {
@@ -42,12 +51,20 @@ h2 {
 	font-weight: 400;
 }
 
+.-dark h2 {
+	color: white;
+}
+
 strong, b {
 	font-weight: 600;
 }
 
 .-dark strong, .-dark b {
 	color: white;
+}
+
+h2, strong {
+	transition: color .2s ease-in-out;
 }
 
 em, i { font-style: italic; }
@@ -60,4 +77,12 @@ a {
 		@extend .-transition;
 		color: #469DF6;
 	}
+}
+
+.icon {
+	font-size: 2.4rem;
+}
+
+body * + * {
+	margin-top: 1em;
 }

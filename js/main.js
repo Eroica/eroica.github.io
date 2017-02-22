@@ -3,10 +3,12 @@
 
 "use strict";
 
-(function() {
-	var	$window = document.window,
-	$body = document.getElementsByTagName("body")[0];
+var $body = document.querySelector("body");
+var $day = document.querySelector(".day-paragraph");
+const DAY = "Have a nice day!";
+const EVENING = "Have a nice evening!";
 
+(function() {
 	$body.classList.toggle('is-loading');
 
 	window.addEventListener("load", function() {
@@ -21,6 +23,7 @@
 	if(current_hours >= 18 || current_hours < 8) {
 		document.querySelector("body").classList.add("-dark");
 		document.querySelector(".switch > input").checked = true;
+		$day.innerText = EVENING;
 	} else {
 		document.querySelector(".switch > input").checked = false;
 		document.querySelector("body").classList.remove("-dark");
@@ -32,14 +35,11 @@
 
 
 function toggleDarkness(event) {
-	var $body = document.querySelector("body");
 	$body.classList.toggle("-dark");
 
-	var s;
-	if ($body.classList.contains("-dark")) {
-		s = new Walkway("#lua-inner-moon");
-	} else {
-		s = new Walkway("#android");
-	}
+	$day.innerText = $body.classList.contains("-dark") ? EVENING : DAY;
+	var s = $body.classList.contains("-dark")
+			? new Walkway("#lua-inner-moon")
+			: new Walkway("#android");
 	s.draw();
 }

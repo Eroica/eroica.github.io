@@ -1,10 +1,10 @@
 path, line, polyline {
-	stroke: darken(#e7e7e9, 10);
-	stroke-width: 2px;
+	stroke: #d4d9de;
+	stroke-width: 3px;
 }
 
 #android path, #android line, #android polyline {
-	stroke: #77c159;
+	stroke: lighten(#77c159, 15);
 }
 
 .-dark path, .-dark line, .-dark polyline {
@@ -13,14 +13,6 @@ path, line, polyline {
 
 path {
 	fill: transparent;
-}
-
-polyline {
-	stroke-width: 1px;
-}
-
-.icon {
-	font-size: 2.4rem;
 }
 
 #lua-android {
