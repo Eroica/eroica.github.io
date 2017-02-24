@@ -23,7 +23,7 @@ hr {
 }
 
 .-dark hr {
-	background-color: white;
+	background-color: transparent;
 	box-shadow: 0px 1px 0px 0px #404040;
 }
 
@@ -32,17 +32,10 @@ img {
 }
 
 .link {
-	i, i:before, span {
-		display: inline-block;
-		vertical-align: middle;
-	}
+	font-size: 1.5rem;
 
 	i {
 		margin-right: 8px;
-	}
-
-	span {
-		font-size: 1.5rem;
 	}
 }
 
@@ -79,10 +72,11 @@ a {
 	}
 }
 
-.icon {
-	font-size: 2.4rem;
+p + p,
+li ~ li {
+	margin-top: 1em;
 }
 
-body * + * {
-	margin-top: 1em;
+blockquote {
+	font-style: italic;
 }

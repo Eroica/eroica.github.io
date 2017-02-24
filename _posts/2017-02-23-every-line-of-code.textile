@@ -1,0 +1,9 @@
+---
+layout: quote
+title:  "for every line of code a functional programmers writes 5 blog posts and 10 HN comments on why functional programming is better, how currying, functional composition, monads, etc, work etc…"
+cite: https://news.ycombinator.com/item?id=8250646
+---
+
+bq.:{{ page.cite }} “for every line of code a functional programmers writes 5 blog posts and 10 HN comments on why functional programming is better, how currying, functional composition, monads, etc, work etc…”
+
+%(quote-author)—coldtea ("{{ page.cite }}":{{ page.cite }})%
