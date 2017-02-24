@@ -14,11 +14,18 @@ url: "http://eroica.io" # the base hostname & protocol for your site
 twitter_username: MyEroica
 github_username: Eroica
 
-github-url: https://github.com/Eroica
-medium-url: https://medium.com/@eroica
-twitter-url: https://twitter.com/MyEroica
-tumblr-url: https://eroicaio.tumblr.com
-dribbble-url: https://dribbble.com/Eroica
+excerpt_separator: ""
+permalink: pretty
 
 # Build settings
 markdown: kramdown
+sass:
+  style: compressed
+
+gems:
+  - jekyll-feed
+  - jekyll-textile-converter
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
