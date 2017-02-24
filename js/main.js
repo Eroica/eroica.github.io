@@ -9,7 +9,7 @@ const DAY = "Have a nice day!";
 const EVENING = "Have a nice evening!";
 
 (function() {
-	$body.classList.toggle('is-loading');
+	$body.classList.toggle("is-loading");
 
 	window.addEventListener("load", function() {
 		$body.classList.toggle("is-loading");
@@ -32,7 +32,6 @@ const EVENING = "Have a nice evening!";
 	var $lua_android = new Walkway("#lua-android");
 	$lua_android.draw();
 })();
-
 
 function toggleDarkness(event) {
 	$body.classList.toggle("-dark");
