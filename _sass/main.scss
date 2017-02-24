@@ -1,15 +1,16 @@
 @charset "utf-8";
 
+@import url(https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600);
+
 $on-xsmall: 480px;
 $on-small: 540px;
 $on-medium: 720px;
 $on-large: 1200px;
 
-$font-color-dark: #495057;
-$font-color-grey: #adb5bd;
-$font-color-blue: #329af0;
+$accent-color: #419BF9;
 
-@import url(https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600);
+$font-color-dark: #495057;
+$font-color-blue: #329af0;
 
 @mixin breakpoint($device) {
 	@media screen and (min-width: $device) {
@@ -24,6 +25,7 @@ $font-color-blue: #329af0;
 // Components.
 @import 'components';
 @import 'icon';
+@import 'syntax-highlighting';
 
 // Base.
 @import 'page';
@@ -31,14 +33,8 @@ $font-color-blue: #329af0;
 
 // Entities.
 @import 'entities';
+@import 'blog';
 @import 'header';
 @import 'buttons';
 @import 'switch';
-
-
-.card {
-	background: #fcfcfc;
-	border: 1px solid #ececec;
-	border-radius: 5px;
-	padding: 1em;
-}
+@import 'code';

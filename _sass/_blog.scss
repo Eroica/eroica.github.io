@@ -1,0 +1,86 @@
+.post-header {
+	margin-bottom: 2em;
+}
+
+.posts-list {
+	thead {
+		font-size: 3.0rem;
+	}
+
+	td:first-of-type {
+		text-align: center;
+		padding-left: 1em;
+		padding-right: 1em;
+		width: 150px;
+		vertical-align: top;
+	}
+
+	td:nth-of-type(2) {
+		padding-bottom: 1em;
+	}
+
+	date {
+		opacity: .5;
+		font-size: 1.4rem;
+	}
+
+	.type-quote {
+		font-style: italic;
+		position: relative;
+		text-indent: -14px;
+		font-weight: 300;
+
+		&::before {
+			content: "“";
+			position: relative;
+			left: 4px;
+		}
+
+		&::after {
+			content: "”";
+			position: relative;
+			right: 4px;
+		}
+	}
+
+	.type-link {
+		@extend .-box-shadow;
+		border: 1px solid #e7e7e9;
+		border-bottom-color: #dfdfe2;
+		border-radius: 3px;
+		padding: 20px;
+		background: #fff;
+		position: relative;
+	}
+}
+
+.-dark .type-link {
+	background: transparent;
+}
+
+.-dark .posts-list li::after {
+	background: #353942;
+	box-shadow: #353942 0 0 0 5px;
+}
+
+p > code, li > code {
+	font-size: 1.4rem;
+	border: 1px solid grey;
+	border-radius: 4px;
+	padding: 4px;
+}
+
+.post-link {
+
+}
+
+.post-quote {
+	blockquote {
+		font-size: 2.8rem;
+		text-indent: -12px;
+	}
+
+	.quote-author {
+		margin-left: 2em;
+	}
+}

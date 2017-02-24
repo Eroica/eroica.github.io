@@ -1,0 +1,8 @@
+---
+layout: quote
+title:  "Dead trees are also a part of nature."
+---
+
+bq. “Dead trees are also a part of nature.”
+
+%(quote-author)—Bob Ross%

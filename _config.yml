@@ -14,7 +14,7 @@ url: "http://eroica.io" # the base hostname & protocol for your site
 twitter_username: MyEroica
 github_username: Eroica
 
-excerpt_separator: ""
+# excerpt_separator: ""
 permalink: pretty
 
 # Build settings
