@@ -11,6 +11,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Hi! I’m an Android & Lua developer.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://eroica.io" # the base hostname & protocol for your site
+github_url: "https://eroica.github.io"
 twitter_username: MyEroica
 github_username: Eroica
 
@@ -23,7 +24,6 @@ sass:
   style: compressed
 
 gems:
-  - jekyll-feed
   - jekyll-textile-converter
 
 exclude:
