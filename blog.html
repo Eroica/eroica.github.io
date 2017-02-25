@@ -13,20 +13,20 @@ title: Blog
 		<tr>
 			<td><date>{{ post.date | date: "%b %-d, %Y" }}</date></td>
 			<td>
-				{% if post.layout != "link" %}
+				{% unless post.link %}
 				<h2 class="type-{{ post.layout}}">
 					<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
 				</h2>
-				{% endif %}
 
-				{% if post.layout == "link" %}
+					{% if post.layout == "post" %}
+					<p>{{ post.excerpt | remove: '<p>' | remove: '</p>' | truncate: 120 }}</p>
+					{% endif %}
+				{% endunless %}
+
+				{% if post.link %}
 				<a href="{{ post.link }}">
 					<h2 class="box">{{ post.title | escape }} <i class="ion-arrow-right-c"></i></h2>
 				</a>
-				{% endif %}
-
-				{% if post.layout == "post" %}
-				<p>{{ post.excerpt | remove: '<p>' | remove: '</p>' | truncate: 120 }}</p>
 				{% endif %}
 			</td>
 		</tr>

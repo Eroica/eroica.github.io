@@ -1,5 +1,4 @@
 ---
-layout: link
 title: "Things That Turbo Pascal is Smaller Than"
 link: http://prog21.dadgum.com/116.html
 ---
