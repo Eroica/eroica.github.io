@@ -22,3 +22,34 @@
 		padding-right: 1em;
 	}
 }
+
+p > code, li > code {
+	font-size: 1.4rem;
+	border: 1px solid grey;
+	border-radius: 4px;
+	padding: 4px 8px;
+}
+
+pre {
+	position: relative;
+	margin: 2em auto;
+	background: #fff;
+	border: 1px solid #e8edf1;
+	border-radius: 6px;
+	font-size: 1.4rem;
+	line-height: 1.5;
+	overflow: auto;
+	color: $font-color-dark;
+	padding: 1em 1em 1em calc(1em + 32px);
+
+	&::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 32px;
+		background: #f5f7f9;
+		border-right: 1px solid #e8edf1;
+	}
+}

@@ -72,11 +72,19 @@ a {
 	}
 }
 
-p + p,
-li ~ li {
+p + p {
 	margin-top: 1em;
 }
 
 blockquote {
 	font-style: italic;
+}
+
+a > sup, sup > a {
+	font-size: 1.4rem;
+}
+
+a > sup {
+	position: relative;
+	left: 4px;
 }
