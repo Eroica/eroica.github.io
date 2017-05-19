@@ -20,7 +20,7 @@ const EVENING = "Have a nice evening!";
 	var date = new Date();
 	var current_hours = date.getHours();
 
-	if(current_hours >= 18 || current_hours < 8) {
+	if(current_hours >= 21 || current_hours < 8) {
 		document.querySelector("body").classList.add("-dark");
 		document.querySelector(".switch > input").checked = true;
 		if ($day != null) $day.innerText = EVENING;
@@ -29,8 +29,18 @@ const EVENING = "Have a nice evening!";
 		document.querySelector("body").classList.remove("-dark");
 	}
 
-	var $lua_android = new Walkway("#lua-android");
+	var $lua_android = new Walkway({
+		selector: "#lua-android",
+		duration: 1000,
+	});
 	$lua_android.draw();
+
+	var $kotlin = new Walkway({
+		selector: ".kotlin-logo",
+		duration: 1000,
+		easing: "linear",
+	});
+	$kotlin.draw();
 })();
 
 function toggleDarkness(event) {
@@ -39,6 +49,9 @@ function toggleDarkness(event) {
 	if ($day != null) $day.innerText = $body.classList.contains("-dark") ? EVENING : DAY;
 	var s = $body.classList.contains("-dark")
 			? new Walkway("#lua-inner-moon")
-			: new Walkway("#android");
+			: new Walkway({
+				selector: "#android",
+				duration: 1500,
+			});
 	s.draw();
 }

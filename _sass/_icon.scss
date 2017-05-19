@@ -1,18 +1,24 @@
-path, line, polyline {
-	stroke: #d4d9de;
-	stroke-width: 3px;
-}
+svg {
+	path, line, polyline {
+		stroke: #d4d9de;
+		stroke-width: 3px;
+	}
 
-#android path, #android line, #android polyline {
-	stroke: lighten(#77c159, 15);
+	path {
+		fill: transparent;
+	}
 }
 
 .-dark path, .-dark line, .-dark polyline {
 	stroke: #fff;
 }
 
-path {
-	fill: transparent;
+.kotlin-logo path {
+	stroke-width: 5px;
+}
+
+#android path, #android line, #android polyline {
+	stroke: lighten(#77c159, 15);
 }
 
 #lua-android {
