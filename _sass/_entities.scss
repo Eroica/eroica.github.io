@@ -15,6 +15,12 @@
 	margin-top: 2em;
 }
 
+.image-float-left {
+	float: left;
+	height: 72px;
+	margin-right: 1em;
+}
+
 .tag {
 	display: inline-block;
 	font-size: 1.2rem;
@@ -22,6 +28,28 @@
 	color: white;
 	border-radius: 3px;
 	padding: 2px 1em;
+}
+
+.KotlinBox {
+	margin-left: -.5em;
+	min-height: calc(72px + 20px + 1em);
+	margin-right: -.5em;
+	margin-top: 1em;
+	border-color: rgb(245,138,31) !important;
+}
+
+.GitHubBox {
+	overflow: hidden;
+
+	&:after {
+		opacity: .1;
+		font-family: "Ionicons";
+		position: absolute;
+		font-size: 150px;
+		content: "\f232";
+		bottom: -80px;
+		right: -20px;
+	}
 }
 
 .box {
