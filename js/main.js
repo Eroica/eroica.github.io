@@ -11,15 +11,7 @@ const EVENING = "Have a nice evening!";
 (function() {
 	$body.classList.toggle("is-loading");
 
-	window.addEventListener("load", function() {
-		$body.classList.toggle("is-loading");
-	});
-
-	window.addEventListener("unload", function() {});
-
-	var date = new Date();
-	var current_hours = date.getHours();
-
+	var current_hours = (new Date()).getHours();
 	if(current_hours >= 21 || current_hours < 8) {
 		document.querySelector("body").classList.add("-dark");
 		document.querySelector(".switch > input").checked = true;
@@ -29,29 +21,26 @@ const EVENING = "Have a nice evening!";
 		document.querySelector("body").classList.remove("-dark");
 	}
 
-	var $lua_android = new Walkway({
+	(new Walkway({
 		selector: "#lua-android",
 		duration: 1000,
-	});
-	$lua_android.draw();
+	})).draw();
 
-	var $kotlin = new Walkway({
+	(new Walkway({
 		selector: ".kotlin-logo",
 		duration: 1000,
 		easing: "linear",
-	});
-	$kotlin.draw();
+	})).draw();
 })();
 
 function toggleDarkness(event) {
 	$body.classList.toggle("-dark");
 
 	if ($day != null) $day.innerText = $body.classList.contains("-dark") ? EVENING : DAY;
-	var s = $body.classList.contains("-dark")
-			? new Walkway("#lua-inner-moon")
-			: new Walkway({
-				selector: "#android",
-				duration: 1500,
-			});
-	s.draw();
+	$body.classList.contains("-dark")
+		? (new Walkway("#lua-inner-moon")).draw()
+		: (new Walkway({
+			selector: "#android",
+			duration: 1500,
+		})).draw();
 }
