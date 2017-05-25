@@ -31,17 +31,9 @@ img {
 	border-radius: 3px;
 }
 
-.link {
-	font-size: 1.5rem;
-
-	i {
-		margin-right: 8px;
-	}
-}
-
 h2 {
 	font-size: 2.0rem;
-	font-weight: 400;
+	font-weight: 600;
 }
 
 .-dark h2 {
@@ -68,11 +60,13 @@ a {
 
 	&:hover {
 		@extend .-transition;
+		text-decoration: underline;
 		color: #469DF6;
 	}
 }
 
-p + p {
+p + p,
+h2 + p {
 	margin-top: 1em;
 }
 

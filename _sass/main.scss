@@ -25,7 +25,7 @@ $font-color-blue: #329af0;
 // Components.
 @import 'components';
 @import 'icon';
-@import 'syntax-highlighting';
+// @import 'syntax-highlighting';
 
 // Base.
 @import 'page';
@@ -35,7 +35,7 @@ $font-color-blue: #329af0;
 
 // Entities.
 @import 'entities';
-@import 'blog';
+// @import 'blog';
 @import 'header';
-@import 'buttons';
+// @import 'buttons';
 @import 'switch';
