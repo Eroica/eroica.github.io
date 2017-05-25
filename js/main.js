@@ -25,12 +25,6 @@ const EVENING = "Have a nice evening!";
 		selector: "#lua-android",
 		duration: 1000,
 	})).draw();
-
-	(new Walkway({
-		selector: ".kotlin-logo",
-		duration: 1000,
-		easing: "linear",
-	})).draw();
 })();
 
 function toggleDarkness(event) {

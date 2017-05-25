@@ -54,7 +54,6 @@
 
 .box {
 	@extend .-box-shadow;
-	// @extend .-no-rhythm;
 	margin-bottom: 1em;
 	border: 1px solid #e7e7e9;
 	border-bottom-color: #dfdfe2;
@@ -62,6 +61,14 @@
 	padding: 20px;
 	background: #fff;
 	position: relative;
+
+	.link {
+		font-size: 1.5rem;
+
+		i {
+			margin-right: 8px;
+		}
+	}
 
 	&.-primary {
 		border-color: $accent-color;
