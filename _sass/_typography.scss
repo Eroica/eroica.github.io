@@ -31,14 +31,20 @@ img {
 	border-radius: 3px;
 }
 
+h1 {
+	font-size: 1.8rem;
+	font-weight: 300;
+}
+
 h2 {
-	font-size: 2.0rem;
+	font-size: 1.8rem;
 	font-weight: 600;
 }
 
-.-dark h2 {
-	color: white;
-}
+
+// .-dark h2 {
+// 	color: white;
+// }
 
 strong, b {
 	font-weight: 600;
@@ -65,20 +71,10 @@ a {
 	}
 }
 
-p + p,
-h2 + p {
+p + p {
 	margin-top: 1em;
 }
 
 blockquote {
 	font-style: italic;
-}
-
-a > sup, sup > a {
-	font-size: 1.4rem;
-}
-
-a > sup {
-	position: relative;
-	left: 4px;
 }

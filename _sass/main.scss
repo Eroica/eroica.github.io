@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-@import url(https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600);
-
 $on-xsmall: 480px;
 $on-small: 540px;
 $on-medium: 720px;
@@ -25,17 +23,13 @@ $font-color-blue: #329af0;
 // Components.
 @import 'components';
 @import 'icon';
-// @import 'syntax-highlighting';
 
 // Base.
 @import 'page';
 @import 'typography';
 @import 'lists';
-@import 'code';
 
 // Entities.
 @import 'entities';
-// @import 'blog';
 @import 'header';
-// @import 'buttons';
 @import 'switch';
