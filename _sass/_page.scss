@@ -9,14 +9,14 @@ html, body { min-width: 320px; }
 
 body {
 	@extend .-transition;
-	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-top: 25px;
+	margin-bottom: 25px;
 	background: #f6f9fc;
 	background: #fdfeff;
 
 	@include breakpoint($on-medium) {
-		margin-top: 100px;
-		margin-bottom: 100px;
+		margin-top: 50px;
+		margin-bottom: 50px;
 	}
 
 	&.-dark {
