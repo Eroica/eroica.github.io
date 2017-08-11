@@ -20,13 +20,66 @@
 	overflow: hidden;
 
 	&:after {
-		opacity: .1;
+		opacity: .06;
+		// color: #F4F5F5;
+		z-index: 1;
 		font-family: "Ionicons";
 		position: absolute;
 		font-size: 150px;
 		content: "\f232";
 		bottom: -80px;
 		right: -20px;
+	}
+}
+
+.-dark .GitHubBox:after {
+	// color: #3F434C;
+}
+
+.TagList {
+	list-style: none;
+	line-height: 2;
+
+	li {
+		border-radius: 16px;
+		color: #fff;
+		line-height: 1.65;
+		font-size: 1.2rem;
+		display: inline-block;
+		padding: 4px 12px;
+		background-color: rgba(#419BF9, .75);	
+	}
+}
+
+.WorkTable {
+	@extend .-box-shadow;
+	margin-bottom: 1em;
+	border: 1px solid #e7e7e9;
+	border-bottom-color: #dfdfe2;
+	border-radius: 3px;
+	background: #fff;
+	font-size: 1.6rem;
+	border-collapse: collapse;
+
+	tr:nth-of-type(2n) {
+		@extend .-transition;
+		background: #F4F5F5;
+	}
+
+	td {
+		padding: 10px 20px;
+	}
+
+	td:first-of-type:first-line {
+		font-weight: 600;
+	}
+}
+
+.-dark .WorkTable {
+	background: transparent;
+
+	tr:nth-of-type(2n) {
+		background: #3F434C;
 	}
 }
 
@@ -80,19 +133,6 @@
 	// }
 }
 
-a > .box {
-	color: $font-color-dark;
-
-	&:hover {
-		border-color: $accent-color;
-		color: $accent-color !important;
-	}
-}
-
-.-dark a > .box {
-	color: #e6e6e6;
-}
-
 .-dark .box {
 	background: transparent;
 
@@ -117,6 +157,20 @@ a > .box {
 	// 	margin-top: 0;
 	// }
 }
+
+a > .box {
+	color: $font-color-dark;
+
+	&:hover {
+		border-color: $accent-color;
+		color: $accent-color !important;
+	}
+}
+
+.-dark a > .box {
+	color: #e6e6e6;
+}
+
 
 // .timetable-box {
 // 	@extend .-box-shadow;

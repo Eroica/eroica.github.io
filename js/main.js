@@ -11,6 +11,12 @@ const EVENING = "Have a nice evening!";
 (function() {
 	$body.classList.toggle("is-loading");
 
+	window.addEventListener("load", function() {
+		$body.classList.toggle("is-loading");
+	});
+
+	window.addEventListener("unload", function() {});
+
 	var current_hours = (new Date()).getHours();
 	if(current_hours >= 21 || current_hours < 8) {
 		document.querySelector("body").classList.add("-dark");
