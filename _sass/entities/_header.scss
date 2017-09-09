@@ -10,20 +10,20 @@
 }
 
 .taglines {
-	color: rgba(#404040, .25);
 	margin-top: 1em;
+	color: rgba($font-color-dark, .25);
 	transition: color .2s ease-in-out;
 
-	span:first-of-type {
-		transition: color .2s ease-in-out;
-		color: #404040;
+	&:first-line {
+		color: $font-color-dark;
 	}
 }
 
 .-dark .taglines {
 	color: #e6e6e6;
+	transition: color .2s ease-in-out;
 
-	span:first-of-type {
+	&:first-line {
 		color: rgba(#e6e6e6, .25);
 	}
 }

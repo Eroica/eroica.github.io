@@ -1,5 +1,5 @@
 <footer class="footer container _center">
-	<p class="_text-center"><strong>© 2017, {{ site.siteurl }}</strong></p>
+	<p class="_text-center"><strong>© 2017, {% if site.is_github %}{{ site.github_url }}{% else %}{{ site.gitlab_url }}{% endif %}</strong></p>
 
 	<p>The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons</a> 3.0 Attribution License.</p>
 </footer>
