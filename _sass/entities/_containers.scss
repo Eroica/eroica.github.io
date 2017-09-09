@@ -1,0 +1,20 @@
+.container {
+	max-width: 540px;
+	width: 90%;
+
+	&.-small {
+		max-width: 360px;
+	}
+
+	&.-large {
+		max-width: 720px;
+	}
+
+	&.main {
+		margin-top: 50px;
+	}
+}
+
+nav {
+	margin-top: 1em;
+}

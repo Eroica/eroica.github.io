@@ -31,14 +31,14 @@ $on-medium: 720px;
 $on-large: 1200px;
 
 $accent-color: #419BF9;
-
-$font-color-dark: #495057;
+// $font-color-dark: #495057;
+$font-color-dark: rgb(82, 97, 115);
 $font-color-blue: #329af0;
 
 @mixin breakpoint($device) {
-	@media screen and (min-width: $device) {
-		@content;
-	}
+    @media screen and (min-width: $device) {
+        @content;
+    }
 }
 
 // Grid & Reset.
@@ -53,9 +53,13 @@ $font-color-blue: #329af0;
 @import 'page';
 @import 'typography';
 @import 'lists';
+@import 'buttons';
 
 // Entities.
-@import 'entities';
-@import 'header';
-@import 'footer';
-@import 'switch';
+@import 'entities/box';
+@import 'entities/containers';
+@import 'entities/footer';
+@import 'entities/header';
+@import 'entities/switch';
+@import 'entities/terminal';
+@import 'entities/worktable';

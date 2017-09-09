@@ -2,26 +2,128 @@
 layout: default
 ---
 
-<section class="main container -large _center">
+<!-- <section class="main container -large _center">
 
-	<p>I’m a software developer, <strong>specializing in Android apps and UI-related work.</strong> I love to do visual kind of work, like designing mobile apps, websites, or traditional desktop applications.</p>
+	<p>I’m a software developer, <strong>specializing in Android apps and UI-related work.</strong> As a freelancer, I can help you bring your MVP to Android, or port your existing iOS app to Android, creating custom views and interfaces if necessary—<strong>give me a Dribbble design, and I’ll create the Android app for it.</strong></p>
 
-	<p>In my free time, I like to play around in other creative fields, like chatbots or games, for which I mostly use Lua. I publish those projects open-source on my GitHub profile.</p>
+	<p>I love to do visual kind of work, be it Android apps, websites, or traditional desktop applications. Where applicable, I prefer employing reactive and declarative programming patterns, <strong>using Kotlin, Data Binding, and RxJava.</strong> Next to Android, I work with Qt and Gtk+ on desktop applications, where I use <strong>C++, Lua, Python, and Vala.</strong></p>
+
+	<p>At Heidelberg University, I majored in Computational Linguistics with a minor in Chinese Studies, primarily researching optical character recognition. All of my research (mostly written in Lua and Python) is open-source on GitHub.</p>
 
 	<p class="day-paragraph">Have a nice day!</p>
 
 	<hr>
+</section> -->
+
+<section class="main container -large _center">
+	<div class="terminal">
+		{% include terminal-content.html %}
+	</div>
 </section>
 
-<section class="container -large _center">
+{% if site.is_github == false %}
+<!-- <section class="container -large _center">
+	<hr class="Asterism">
+
+	<table class="WorkTable">
+		<tr>
+			<td>Wawibox<br>
+				Freelance for caprimed GmbH
+			</td>
+			<td>
+				<ul class="TagList">
+					<li class="Tag">Android</li>
+					<li class="Tag">Kotlin</li>
+				</ul>
+			</td>
+			<td>Ongoing</td>
+		</tr>
+
+		<tr>
+			<td>KNOSSOS Project<br>
+				Max Planck Institute for Medical Research
+			</td>
+			<td>
+				<ul class="TagList">
+					<li class="Tag">Web Design</li>
+					<li class="Tag">Icon Design</li>
+					<li class="Tag">C++</li>
+					<li class="Tag">Qt</li>
+					<li class="Tag">Python</li>
+				</ul>
+			</td>
+			<td>Since 2012</td>
+		</tr>
+
+		<tr>
+			<td>KliPs ER<br>
+				Freelance for Psychological Institute of Heidelberg University
+			</td>
+			<td>
+				<ul class="TagList">
+					<li class="Tag">Android</li>
+					<li class="Tag">Kotlin</li>
+					<li class="Tag">UI Design</li>
+				</ul>
+			</td>
+			<td>2017</td>
+		</tr>
+
+		<tr>
+			<td>feeba.me<br>
+				Freelance for feebame UG
+			</td>
+			<td>
+				<ul class="TagList">
+					<li class="Tag">Android</li>
+					<li class="Tag">Kotlin</li>
+					<li class="Tag">Web Design</li>
+					<li class="Tag">ClojureScript</li>
+				</ul>
+			</td>
+			<td>2017</td>
+		</tr>
+
+		<tr>
+			<td>MatchRider GO<br>
+				Freelance for MatchRider UG
+			</td>
+			<td>
+				<ul class="TagList">
+					<li class="Tag">Android</li>
+					<li class="Tag">Kotlin</li>
+				</ul>
+			</td>
+			<td>2016</td>
+		</tr>
+
+		<tr>
+			<td>ELEKTRONN Project<br>
+				Max Planck Institute for Medical Research
+			</td>
+			<td>
+				<ul class="TagList">
+					<li class="Tag">Web Design</li>
+				</ul>
+			</td>
+			<td>2016</td>
+		</tr>
+	</table>
+
+	<hr>
+</section> -->
+{% endif %}
+
+<section class="main container -large _center">
 	<div class="row">
 		<div class="col">
-			<div class="box">
-				<ul class="-no-bullets">
-					<li><i class="ion ion-location"></i> Heidelberg, Germany</li>
-					<li><i class="ion ion-university"></i> Computational Linguistics, B.A.</li>
-				</ul>
-			</div>
+			<!-- <div class="box -primary">
+				<h2>Public bookmarks</h2>
+
+				<p>Mostly Android and programming stuff.</p>
+
+				<p><i class="ion ion-social-rss"></i><a href="http://feeds.pinboard.in/rss/u:Eroica/">Bookmarks</a></p>
+			</div> -->
 
 			<div class="GitHubBox box">
 				<h2>GitHub</h2>
@@ -33,14 +135,6 @@ layout: default
 		</div>
 
 		<div class="col">
-			<div class="box -primary">
-				<h2>Public bookmarks</h2>
-
-				<p>Mostly Android and programming stuff.</p>
-
-				<p><i class="ion ion-social-rss"></i><a href="http://feeds.pinboard.in/rss/u:Eroica/">Bookmarks</a></p>
-			</div>
-
 			<div class="box -primary">
 				<h2>Public notes</h2>
 
