@@ -4,23 +4,22 @@
 "use strict";
 
 var $body = document.querySelector("body");
+$body.classList.add("is-loading");
 
 (function() {
-	$body.classList.toggle("is-loading");
-
 	window.addEventListener("load", function() {
-		$body.classList.toggle("is-loading");
+		$body.classList.remove("is-loading");
 	});
 
 	window.addEventListener("unload", function() {});
 
 	var current_hours = (new Date()).getHours();
 	if(current_hours >= 21 || current_hours < 8) {
-		document.querySelector("body").classList.add("-dark");
+		$body.classList.add("-dark");
 		document.querySelector(".switch > input").checked = true;
 	} else {
 		document.querySelector(".switch > input").checked = false;
-		document.querySelector("body").classList.remove("-dark");
+		$body.classList.remove("-dark");
 	}
 
 	(new Walkway({
