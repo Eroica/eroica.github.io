@@ -35,6 +35,10 @@ $accent-color: #419BF9;
 $font-color-dark: rgb(82, 97, 115);
 $font-color-blue: #329af0;
 
+.oc-yellow-4 { color: #ffd43b }
+.oc-yellow-5 { color: #fcc419 }
+
+
 @mixin breakpoint($device) {
     @media screen and (min-width: $device) {
         @content;

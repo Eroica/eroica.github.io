@@ -7,7 +7,7 @@
 	}
 
 	&.-large {
-		max-width: 720px;
+		max-width: 800px;
 	}
 
 	&.main {
@@ -17,4 +17,26 @@
 
 nav {
 	margin-top: 1em;
+}
+
+.skill-col {
+	position: relative;
+
+	& + & {
+		margin-top: 2em;
+
+		@include breakpoint($on-large) {
+			margin-top: 0;
+			margin-left: 4em !important;
+		}
+	}
+
+	.skill-icon {
+		font-size: 2.2rem;
+
+		@include breakpoint($on-large) {
+			position: absolute;
+			transform: translateX(calc(-100% - .5em));
+		}
+	}
 }
