@@ -87,7 +87,7 @@ a > .box {
 	color: #e6e6e6;
 }
 
-.GitHubBox {
+.GitHubBox, .DribbbleBox {
 	overflow: hidden;
 
 	&:after {
@@ -97,10 +97,17 @@ a > .box {
 		font-family: "Ionicons";
 		position: absolute;
 		font-size: 150px;
-		content: "\f232";
 		bottom: -80px;
 		right: -20px;
 	}
+}
+
+.GitHubBox:after {
+	content: "\f232";
+}
+
+.DribbbleBox:after {
+	content: "\f22c";
 }
 
 .-dark .GitHubBox:after {
