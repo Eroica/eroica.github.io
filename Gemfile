@@ -21,6 +21,7 @@ gem "jekyll", "3.4.0"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem 'jekyll-textile-converter'
+   gem 'jekyll-feed'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
