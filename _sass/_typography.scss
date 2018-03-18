@@ -1,112 +1,64 @@
 html { font-size: 62.5% }
 
 body, input, select, textarea {
-	font-family: "Nunito", sans-serif;
+	font-family: "Clear Sans", sans-serif;
 	font-size: 1.7rem;
-	font-weight: 300;
+	letter-spacing: .01rem;
+	font-weight: 400;
 	line-height: 1.65;
 	color: $font-color-dark;
 
 	&.-dark {
-		color: #e6e6e6;
+		color: #f6f6f6;
 	}
-}
-
-hr {
-	@extend .-transition;
-	margin: 2em 0 !important;
-	height: 4px;
-	background-color: #d4d9de;
-	border: 1px solid #b8bcc1;
-	border-radius: 2px;
-	box-shadow: 0px 1px 0px 0px #fff;
-}
-
-.-dark hr {
-	background-color: transparent;
-	box-shadow: 0px 1px 0px 0px #404040;
-}
-
-.Asterism {
-	margin: 2em auto !important;
-	height: 16px;
-	width: 16px;
-	border-radius: 8px;
-	position: relative;
-	overflow: visible;
-
-	&:after {
-		@extend .-transition;
-		content: "";
-		position: absolute;
-		width: 8px;
-		height: 8px;
-		border-radius: 4px;
-		left: 13px;
-		bottom: 13px;
-		background-color: #d4d9de;
-		border: 1px solid #b8bcc1;
-		border-radius: 4px;
-		box-shadow: 0px 1px 0px 0px #fff;
-	}
-}
-
-.-dark hr.Asterism:after {
-	background-color: transparent;
-	box-shadow: 0px 1px 0px 0px #404040;
-}
-
-img {
-	border-radius: 3px;
-}
-
-h1 {
-	font-size: 1.8rem;
-}
-
-h2 {
-	font-size: 1.8rem;
-}
-
-h3 {
-	font-size: 2.2rem;
-}
-
-.-dark h3 { color: #fff }
-
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 400;
 }
 
 strong, b {
 	font-weight: 600;
 }
-
 .-dark strong, .-dark b {
 	color: white;
-}
-
-h2, strong {
-	transition: color .2s ease-in-out;
-}
-
-em, i { font-style: italic; }
-
-a {
-	color: lighten($font-color-blue, 10);
-	text-decoration: none;
-
-	&:hover {
-		@extend .-transition;
-		text-decoration: underline;
-		color: #469DF6;
-	}
 }
 
 p + p {
 	margin-top: 1em;
 }
 
-blockquote {
-	font-style: italic;
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 1.2rem;
+	margin-top: 2em;
+	margin-bottom: .5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #AAB2BD;
+    font-weight: bold;
+}
+
+em, i { font-style: italic; }
+
+a {
+	@extend .-transition;
+	color: lighten($font-color-blue, 10);
+	text-decoration: none;
+
+	&:hover {
+		color: $accent-color;
+	}
+}
+
+hr {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: 1px;
+	background: #dfe4e6;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.-dark hr {
+	background: #404040;
 }

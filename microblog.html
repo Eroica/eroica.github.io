@@ -1,0 +1,16 @@
+---
+title: Microblog
+layout: default
+permalink: blog
+---
+
+<div class="container -small _center">
+	{% for post in site.posts %}
+		<div class="post {% if forloop.index == 1 %}box{% endif %}">
+			<h2>{{ post.title }}</h2>
+			<article>
+			{{ post.content }}
+			</article>
+		</div>
+	{% endfor %}
+</div>

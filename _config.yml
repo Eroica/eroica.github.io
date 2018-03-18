@@ -6,18 +6,16 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-webtitle: Seba.萌え, Android Developer + Designer
+webtitle: Seba.萌え, Graphic design work
 webdescription: > # this means to ignore newlines until "baseurl:"
-  Hi! I’m an Android developer, but I also do lots of other graphics-related
-  work, e.g. design and animation.
-title: A[n] Droid’s Microblog
+  Hi! I’m an Android developer and a designer
+title: Eroica’s Microblog
 description: >
   Posts & images
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://seba.moe" # the base hostname & protocol for your site
 author: Eroica
 
-github_url: eroica.github.io
 github_username: Eroica
 
 # excerpt_separator: ""

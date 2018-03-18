@@ -1,42 +1,43 @@
 @charset "utf-8";
 
-
 @font-face {
-    font-family: 'Nunito';
-    src: url('/fonts/nunito-light-webfont.woff2') format('woff2'),
-         url('/fonts/nunito-light-webfont.woff') format('woff');
+    font-family: 'Clear Sans';
+    src: url('/fonts/ClearSans-Light-webfont.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Nunito';
-    src: url('/fonts/nunito-regular-webfont.woff2') format('woff2'),
-         url('/fonts/nunito-regular-webfont.woff') format('woff');
+    font-family: 'Clear Sans';
+    src: url('/fonts/ClearSans-Regular-webfont.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Nunito';
-    src: url('/fonts/nunito-semibold-webfont.woff2') format('woff2'),
-         url('/fonts/nunito-semibold-webfont.woff') format('woff');
+    font-family: 'Clear Sans';
+    src: url('/fonts/ClearSans-Italic-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Clear Sans';
+    src: url('/fonts/ClearSans-Medium-webfont.woff') format('woff');
     font-weight: 600;
     font-style: normal;
 }
 
-$on-xsmall: 480px;
-$on-small: 540px;
-$on-medium: 720px;
-$on-large: 1200px;
+$xs: 0;
+$sm: 544px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
 
 $accent-color: #419BF9;
-// $font-color-dark: #495057;
+//$font-color-dark: #495057;
 $font-color-dark: rgb(82, 97, 115);
 $font-color-blue: #329af0;
-
-.oc-yellow-4 { color: #ffd43b }
-.oc-yellow-5 { color: #fcc419 }
 
 
 @mixin breakpoint($device) {
@@ -47,7 +48,7 @@ $font-color-blue: #329af0;
 
 // Grid & Reset.
 @import 'reset';
-@import 'grid';
+@import 'flexboxgrid/flexbox-grid';
 
 // Components.
 @import 'components';
@@ -57,7 +58,7 @@ $font-color-blue: #329af0;
 @import 'page';
 @import 'typography';
 @import 'lists';
-@import 'buttons';
+// @import 'buttons';
 
 // Entities.
 @import 'entities/box';
@@ -65,5 +66,3 @@ $font-color-blue: #329af0;
 @import 'entities/footer';
 @import 'entities/header';
 @import 'entities/switch';
-@import 'entities/terminal';
-@import 'entities/worktable';

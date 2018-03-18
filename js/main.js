@@ -4,7 +4,7 @@
 "use strict";
 
 var $body = document.querySelector("body");
-$body.classList.add("is-loading");
+// $body.classList.add("is-loading");
 
 (function() {
 	window.addEventListener("load", function() {

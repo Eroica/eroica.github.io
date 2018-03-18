@@ -1,4 +1,8 @@
 button, .button {
+	@extend .-transition;
+	font-family: inherit;
+	font-size: 1.4rem;
+	cursor: pointer;
 	display: inline-block;
 	border-radius: 3px;
 	padding: .5em 1em;
@@ -6,7 +10,6 @@ button, .button {
 	color: #404040;
 
 	&:hover {
-		@extend .-transition;
 		border-color: #469DF6;
 		text-decoration: none;
 	}
@@ -24,7 +27,7 @@ button, .button {
 
 .-dark button, .-dark .button {
 	border-color: rgba(#e7e7e9, .5);
-	color: rgba(#e6e6e6, .5);
+	color: #fff;
 
 	&:hover {
 		border-color: #469DF6;
