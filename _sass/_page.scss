@@ -9,18 +9,10 @@ html, body { min-width: 320px; }
 
 body {
 	@extend .-transition;
-	margin-top: 25px;
-	margin-bottom: 25px;
-	background: #f6f9fc;
-	background: #fdfeff;
-
-	@include breakpoint($on-medium) {
-		margin-top: 75px;
-		margin-bottom: 50px;
-	}
+	background: #F3F4F8;
 
 	&.-dark {
-		background: #353942;
+		background-color: #353942;
 	}
 
 	&.is-loading {

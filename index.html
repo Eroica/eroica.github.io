@@ -2,94 +2,128 @@
 layout: default
 ---
 
-<section class="_main-margin container -large _center">
-	<div class="row">
-		<div class="col skill-col">
-			<span class="skill-icon"><i class="ion ion-android-star oc-yellow-4"></i>&nbsp;<i class="ion ion-social-android"></i></span>
-			<h3>Android Apps</h3>
-			<p>I can help you bring your MVP to Android, or port your existing iOS app to Android, creating custom views and interfaces if necessary—<strong>give me a Dribbble design, and I’ll create the Android app for it.</strong></p>
-			<ul class="TagList _margin-small">
-				<li>Java</li>
-				<li>Kotlin</li>
-				<li>libGDX</li>
-				<li>Dagger</li>
-				<li>RxJava</li>
-			</ul>
-		</div>
+<!-- <section class="container -large _center">
+	<a class="notification" href="#Contact">
+		<span>Available</span> Currently available for contract work (max. 20 h/week).
+	</a>
+</section> -->
 
-		<div class="col skill-col">
-			<span class="skill-icon"><i class="ion ion-crop"></i></span>
-			<h3>Computer Graphics & UI Design</h3>
-			<p>I’ve been using Lua for many Computer graphics-related tasks, and worked with GUI libraries for all major operating systems.</p>
-			<ul class="TagList _margin-small">
-				<li>Lua</li>
-				<li>C</li>
-				<li>Vala</li>
-				<li>Qt</li>
-				<li>Gtk+</li>
-				<li>WPF</li>
-				<li>OpenCV</li>
-			</ul>
-		</div>
-	</div>
+<section id="Work">
+	<div class="portfolio -animated grid grid--no-gutters container -large _center">
+		<div class="row row--no-gutters">
+			<div class="portfolio-item col col--no-gutters col--sm-6 col--md-4">
+				<img class="_curved-tl" src="{{ "/images/knossos.png" | prepend: site.baseurl }}" title="KNOSSOS Icon">
+			</div>
 
-	<div class="row _row-margin">
-		<div class="col skill-col">
-			<span class="skill-icon"><i class="ion ion-android-color-palette"></i></span>
-			<h3>2D Animation</h3>
-			<p>I love to do visual kind of work, creating prototypes and visualizations in game engines or animation programs.</p>
-			<ul class="TagList _margin-small">
-				<li>LÖVE</li>
-				<li>Allegro</li>
-				<li>MonoGame</li>
-				<li>libGDX</li>
-				<li>Spine</li>
-				<li>Spriter Pro</li>
-			</ul>
-		</div>
+			<div class="portfolio-item -style-black col col--no-gutters col--sm-6 col--md-4">
+				<div class="device-box">
+					<img src="{{ "/images/downpour.gif" | prepend: site.baseurl }}" title="Downpour (WIP)">
+				</div>
+			</div>
 
-		<div class="col skill-col">
-			<span class="skill-icon"><i class="ion ion-android-textsms"></i></span>
-			<h3>Natural Language Processing</h3>
-			<p>At Heidelberg University, I majored in Computational Linguistics (minoring in Chinese Studies), primarily researching optical character recognition.</p>
-			<ul class="TagList _margin-small">
-				<li>Lua</li>
-				<li>Python</li>
-				<li>NLTK</li>
-				<li>Torch</li>
-			</ul>
+			<div class="portfolio-item col col--no-gutters col--sm-6 col--md-4">
+				<img class="_curved-tr" src="{{ "/images/elster.png" | prepend: site.baseurl }}">
+			</div>
+
+			<div class="portfolio-item -style-white col col--no-gutters col--sm-6 col--md-4">
+				<img src="{{ "/images/melon3.gif" | prepend: site.baseurl }}">
+			</div>
+
+			<div class="portfolio-item -style-white col col--no-gutters col--sm-6 col--md-4">
+				<img src="{{ "/images/reshape.png" | prepend: site.baseurl }}">
+			</div>
+
+			<div class="portfolio-item col col--no-gutters col--sm-6 col--md-4">
+				<img src="{{ "/images/ToolbarIcons.png" | prepend: site.baseurl }}">
+			</div>
+
+			<div class="portfolio-item col col--no-gutters col--sm-6 col--md-4">
+				<img class="_curved-bl" src="{{ "/images/toad.png" | prepend: site.baseurl }}">
+			</div>
 		</div>
 	</div>
 </section>
 
-<section class="main container -large _center">
-	<div class="row">
-		<div class="col">
-			<div class="GitHubBox box">
-				<h2>GitHub</h2>
+<section id="About">
+	<div class="container _center">
+		<div class="row">
+			<article class="col col--sm-6">
+				<p>I create visual assets for apps, websites, and print media. For interactive designs, I specialize in Android apps and game engines such as libGDX or LÖVE.</p>
 
-				<p>My private projects. Mainly Lua.</p>
+				<p>These days I partly work as a freelancer, supporting small companies and startups adding unique designs and meaningful animations to their Android apps<strong>—give me a Dribbble design, and I’ll create the Android view for it.</strong></p>
+			</article>
 
-				<p><i class="ion ion-link"></i> <a href="https://github.com/Eroica">github.com/Eroica</a></p>
+			<aside class="col col--sm-5 col--sm-offset-1">
+				<h3>Core Skills</h3>
+
+				<ul class="skill-list">
+					<li>Android Development/Consulting</li>
+					<li>Lua Development</li>
+					<li>Interface Design</li>
+					<li>2D Animation</li>
+				</ul>
+
+				<h3>Frameworks & Libraries</h3>
+
+				<ul class="skill-list">
+					<li>Allegro</li>
+					<li>libGDX</li>
+					<li>LÖVE</li>
+					<li>Spine, Spriter Pro</li>
+				</ul>
+			</aside>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="container _center">
+		<hr>
+
+		<div class="row">
+			<div class="col col--sm-6">
+				<div class="GitHubBox box">
+					<h4 class="box-header">GitHub</h4>
+
+					<p>My private projects. Mainly Lua.</p>
+
+					<p><i class="ion ion-link"></i> <a href="https://github.com/Eroica">github.com/Eroica</a></p>
+				</div>
 			</div>
 
-			<div class="box">
-				<h2>Public reading list</h2>
+			<div class="col col--sm-6">
+				<div class="box">
+					<h4 class="box-header">Microblog</h4>
 
-				<p>Mostly Android and programming stuff.</p>
+					<p>Updates here and there.</p>
 
-				<p><i class="ion ion-social-rss"></i><a href="http://feeds.pinboard.in/rss/u:Eroica/">Bookmarks</a></p>
+					<p><i class="ion ion-social-rss"></i><a href="http://feeds.pinboard.in/rss/u:Eroica/">Posts</a></p>
+				</div>
 			</div>
 		</div>
 
-		<div class="col">
-			<div class="DribbbleBox box">
-				<h2>Dribbble</h2>
+		<div class="row">
+			<div class="col col--sm-6">
+				<div class="DribbbleBox box">
+					<h4 class="box-header">Dribbble</h4>
 
-				<p>My Dribbble profile (UI & Animation design).</p>
+					<p>My Dribbble profile.</p>
 
-				<p><i class="ion ion-social-dribbble"></i><a href="https://dribbble.com/Eroica">dribbble.com/Eroica</a></p>
+					<p><i class="ion ion-link"></i><a href="https://dribbble.com/Eroica">dribbble.com/Eroica</a></p>
+				</div>
+			</div>
+
+			<div class="col col--sm-6">
+				<div class="box">
+					<h4 class="box-header">Public reading list</h4>
+
+					<p>Mostly on Android and design.</p>
+
+					<p><i class="ion ion-social-rss"></i><a href="http://feeds.pinboard.in/rss/u:Eroica/">Bookmarks</a></p>
+				</div>
 			</div>
 		</div>
+
+		<hr>
 	</div>
 </section>
