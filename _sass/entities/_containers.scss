@@ -45,6 +45,7 @@ section + section {
 	margin-top: 25px;
 }
 
+.portfolio img:not(.melon) { width: 100% }
 .portfolio img { display: block }
 .portfolio.-animated {
 	.portfolio-item {
@@ -60,13 +61,17 @@ section + section {
 	.portfolio-item:nth-of-type(6) {animation-delay: .34s; }
 	.portfolio-item:nth-of-type(7) {animation-delay: .4s; }
 	.portfolio-item:nth-of-type(8) {animation-delay: .42s; }
-
-	.portfolio-item:nth-of-type(7) {@extend .-box-shadow; }
-
+}
+.-dark {
 	@include breakpoint($md) {
-		.portfolio-item:nth-of-type(5) {box-shadow: 0px 4px 0px #eeeeec; }
-		.portfolio-item:nth-of-type(6) {box-shadow: 0px 4px 0px #eeeeec; }
+		.portfolio-item:nth-of-type(5) {box-shadow: 0px 2px 0px #404040; }
+		.portfolio-item:nth-of-type(6) {box-shadow: 0px 2px 0px #404040; }
 	}
+}
+.portfolio-item:nth-of-type(7) {@extend .-box-shadow; }
+@include breakpoint($md) {
+	.portfolio-item:nth-of-type(5) {box-shadow: 0px 4px 0px #eeeeec; }
+	.portfolio-item:nth-of-type(6) {box-shadow: 0px 4px 0px #eeeeec; }
 }
 .portfolio-item {
 	&.-style-white {background-color: #fff; }
