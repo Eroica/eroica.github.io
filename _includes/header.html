@@ -14,4 +14,16 @@
 
 		<i class="icon ion-ios-moon"></i>
 	</p>
+
+	<script>
+		var $body = document.querySelector("body");
+		var current_hours = (new Date()).getHours();
+		if(current_hours >= 21 || current_hours < 8) {
+			$body.classList.add("-dark");
+			document.querySelector(".switch > input").checked = true;
+		} else {
+			document.querySelector(".switch > input").checked = false;
+			$body.classList.remove("-dark");
+		}
+	</script>
 </header>
