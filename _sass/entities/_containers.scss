@@ -64,14 +64,14 @@ section + section {
 }
 .-dark {
 	@include breakpoint($md) {
-		.portfolio-item:nth-of-type(5) {box-shadow: 0px 2px 0px #404040; }
-		.portfolio-item:nth-of-type(6) {box-shadow: 0px 2px 0px #404040; }
+		.portfolio-item:nth-of-type(5) {box-shadow: 0px 2px 0px rgba(170, 178, 189, .2); }
+		.portfolio-item:nth-of-type(6) {box-shadow: 0px 2px 0px rgba(170, 178, 189, .2); }
 	}
 }
 .portfolio-item:nth-of-type(7) {@extend .-box-shadow; }
 @include breakpoint($md) {
-	.portfolio-item:nth-of-type(5) {box-shadow: 0px 4px 0px #eeeeec; }
-	.portfolio-item:nth-of-type(6) {box-shadow: 0px 4px 0px #eeeeec; }
+	.portfolio-item:nth-of-type(5) {box-shadow: 0px 4px 0px #e7e8ec; }
+	.portfolio-item:nth-of-type(6) {box-shadow: 0px 4px 0px #e7e8ec; }
 }
 .portfolio-item {
 	&.-style-white {background-color: #fff; }

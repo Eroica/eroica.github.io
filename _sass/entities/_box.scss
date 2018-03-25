@@ -52,7 +52,10 @@
 
 	&.-primary {border-color: $accent-color; }
 }
-.-dark .box {background: transparent; }
+.-dark .box {
+	background: transparent;
+	border-color: rgba(170, 178, 189, .2);
+}
 
 .GitHubBox, .DribbbleBox {
 	overflow: hidden;
