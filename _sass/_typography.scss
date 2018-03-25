@@ -8,25 +8,15 @@ body, input, select, textarea {
 	line-height: 1.65;
 	color: $font-color-dark;
 
-	&.-dark {
-		color: #f6f6f6;
-	}
+	&.-dark {color: #f6f6f6; }
 }
 
-strong, b {
-	font-weight: 600;
-}
-.-dark strong, .-dark b {
-	color: white;
-}
+strong, b {font-weight: 600; }
+.-dark strong, .-dark b {color: white; }
 
-p + p {
-	margin-top: 1em;
-}
+p + p {margin-top: 1em; }
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 600;
-}
+h1, h2, h3, h4, h5, h6 {font-weight: 600; }
 
 h3 {
 	font-size: 1.2rem;
@@ -45,9 +35,7 @@ a {
 	color: lighten($font-color-blue, 10);
 	text-decoration: none;
 
-	&:hover {
-		color: $accent-color;
-	}
+	&:hover {color: $accent-color; }
 }
 
 hr {
@@ -55,10 +43,8 @@ hr {
 	border: 0;
 	width: 100%;
 	height: 1px;
-	background: #dfe4e6;
+	background-color: #dfe4e6;
 	margin-top: 50px;
 	margin-bottom: 50px;
 }
-.-dark hr {
-	background: #404040;
-}
+.-dark hr {background-color: rgba(170, 178, 189, .2) }
