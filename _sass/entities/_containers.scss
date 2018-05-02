@@ -11,7 +11,7 @@
 	}
 }
 
-main {
+#Work {
 	opacity: 0;
 	animation: fadeIn 2s ease;
 	animation-fill-mode: forwards;
@@ -36,7 +36,16 @@ section + section {
 	100% {opacity: 1; }
 }
 
-.post.muted {opacity: .5; }
+.post.box {
+	border: 1px solid #e7e7e9;
+	border-bottom-color: #dfdfe2;
+	background: #fff;
+	color: #526173;
+}
+.post p i { margin-top: 20px }
+.post date { color: #AAB2BD }
+.post article {margin-top: 20px; }
+.post.-muted {opacity: .33; }
 .post + .post {margin-top: 25px; }
 
 .portfolio img:not(.melon) { width: 100% }
