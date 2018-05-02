@@ -3,14 +3,18 @@
 
 {% include head.html %}
 
-<body class="">
+<body class="is-loading">
 	{% include header.html %}
 
 	<div class="container -small _center">
+		<a href="{{ "/blog" | prepend: site.baseurl }}" class="_block up-link"><i class="ion ion-chevron-up"></i></a>
+
 		<div class="post box">
 			<h2>{{ page.title }}</h2>
+			<date class="_block">{{ page.date | date: "%B %d, %Y" }}</date>
+
 			<article>
-			{{ content }}
+				{{ content }}
 			</article>
 		</div>
 
@@ -18,19 +22,21 @@
 		{% for post in site.posts %}
 			{% capture posttime %}{{ post.date | date: "%s" }}{% endcapture %}
 			{% if posttime < pagetime %}
-			<div class="post -muted">
+			<div class="post box -muted">
 				<h2>{{ post.title }}</h2>
+				<date class="_block">{{ post.date | date: "%B %d, %Y" }}</date>
+
 				<article>
-				{{ post.content }}
+					{{ post.content }}
 				</article>
 			</div>
 			{% endif %}
 		{% endfor %}
 	</div>
 
-	<!-- {% include footer.html %} -->
+	{% include footer.html %}
 
-	<!-- <script src="{{ "/js/walkway.min.js" | prepend: site.baseurl }}"></script> -->
-	<!-- <script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script> -->
+	<script src="{{ "/js/walkway.min.js" | prepend: site.baseurl }}"></script>
+	<script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
 </body>
 </html>
