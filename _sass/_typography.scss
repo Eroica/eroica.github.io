@@ -49,29 +49,22 @@ hr {
 }
 .-dark hr {background-color: rgba(170, 178, 189, .2) }
 
-.up-link {
-	@extend ._center;
-	font-size: 36px;
-	height: 64px;
-	width: 64px;
-	border-radius: 50%;
-	border: 1px solid #dfdfe2;
-	text-align: center;
-	margin-bottom: 50px;
+.headline {
 	color: #AAB2BD;
 
-	&:hover {
-		border-color: $accent-color;
-	}
-
-	&:before, &:after {
-		line-height: 64px;
+	&:first-line {
+		font-weight: bold;
+		color: $font-color-dark;
 	}
 }
-.-dark .up-link {
-	border-color: rgba(170, 178, 189, .2);
+.-dark .headline:first-line {
+	color: #fff;
+}
 
-	&:hover {
-		border-color: $accent-color;
-	}
+.title {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #AAB2BD;
+	font-size: 1.4rem;
+	letter-spacing: 2px;
 }
