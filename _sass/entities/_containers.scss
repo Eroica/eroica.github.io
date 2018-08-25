@@ -11,29 +11,8 @@
 	}
 }
 
-#Work {
-	opacity: 0;
-	animation: fadeIn 2s ease;
-	animation-fill-mode: forwards;
-}
-
 section + section {
 	margin-top: 50px;
-}
-
-@keyframes slideToTop {
-	0% {
-		transform: translateY(1000px);
-	}
-
-	100% {
-		transform: translateY(0);
-	}
-}
-
-@keyframes fadeIn {
-	0% {opacity: 0; }
-	100% {opacity: 1; }
 }
 
 .post.box {
@@ -50,21 +29,7 @@ section + section {
 
 .portfolio img:not(.melon) { width: 100% }
 .portfolio img { display: block }
-.portfolio.-animated {
-	.portfolio-item {
-		animation: slideToTop 1s ease;
-		animation-fill-mode: both;
-	}
 
-	.portfolio-item:nth-of-type(1) {animation-delay: .2s; }
-	.portfolio-item:nth-of-type(2) {animation-delay: .22s; }
-	.portfolio-item:nth-of-type(3) {animation-delay: .24s; }
-	.portfolio-item:nth-of-type(4) {animation-delay: .3s; }
-	.portfolio-item:nth-of-type(5) {animation-delay: .32s; }
-	.portfolio-item:nth-of-type(6) {animation-delay: .34s; }
-	.portfolio-item:nth-of-type(7) {animation-delay: .4s; }
-	.portfolio-item:nth-of-type(8) {animation-delay: .42s; }
-}
 .-dark {
 	@include breakpoint($md) {
 		.portfolio-item:nth-of-type(5) {box-shadow: 0px 2px 0px rgba(170, 178, 189, .2); }
