@@ -19,7 +19,7 @@ p + p {margin-top: 1em; }
 h1, h2, h3, h4, h5, h6 {font-weight: 600; }
 
 h3 {
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 	margin-top: 2em;
 	margin-bottom: .5em;
     text-transform: uppercase;
@@ -31,7 +31,7 @@ h3 {
 em, i { font-style: italic; }
 
 a {
-	@extend .-transition;
+	@extend ._transition;
 	color: lighten($font-color-blue, 10);
 	text-decoration: none;
 

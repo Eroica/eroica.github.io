@@ -1,5 +1,5 @@
 .notification {
-	@extend .-transition;
+	@extend ._transition;
 	background-color: #fff;
 	padding: 20px 20px;
 	border-radius: 4px;
@@ -9,7 +9,7 @@
 	border: 2px solid #F5F7FA;
 
 	&:hover {
-		@extend .-box-shadow;
+		@extend ._box-shadow;
 		border: 2px solid #4A89DC;
 		text-decoration: none;
 	}
@@ -28,7 +28,7 @@
 }
 
 .box {
-	@extend .-box-shadow;
+	@extend ._box-shadow;
 	border: 1px solid #e7e7e9;
 	border-bottom-color: #dfdfe2;
 	border-radius: 3px;
@@ -56,6 +56,9 @@
 	background: transparent;
 	border-color: rgba(170, 178, 189, .2);
 }
+.box + .box {
+	margin-top: 12px;
+}
 
 .GitHubBox, .DribbbleBox {
 	overflow: hidden;
@@ -81,8 +84,4 @@
 .box.-muted {
 	border-color: transparent;
 	box-shadow: none;
-}
-
-#About article {
-	padding-top: 6.0rem;
 }

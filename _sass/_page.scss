@@ -8,8 +8,8 @@ body { -ms-overflow-style: scrollbar; }
 html, body { min-width: 320px; }
 
 body {
-	@extend .-transition;
-	background: #F3F4F8;
+	@extend ._transition;
+	background-color: #F3F4F8;
 
 	&.-dark {
 		background-color: #353942;
