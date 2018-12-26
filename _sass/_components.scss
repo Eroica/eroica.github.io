@@ -1,9 +1,6 @@
 ._transition { transition: all .2s ease-in-out }
-// ._text-left { text-align: left }
 ._text-center { text-align: center }
-// ._text-right { text-align: right }
 ._center { margin-left: auto; margin-right: auto }
-// ._right { margin-left: auto; margin-right: 0 }
 ._box-shadow {
 	@extend ._transition;
 	box-shadow: 0px 4px 0px #e7e8ec;
@@ -12,8 +9,6 @@
 .-dark ._box-shadow {
 	box-shadow: 0px 3px 0px rgba(170, 178, 189, .2);
 }
-
-// ._block { display: block }
 
 ._large-text {font-size: 2.4rem;}
 ._sub-text {
