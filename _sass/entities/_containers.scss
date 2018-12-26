@@ -1,13 +1,8 @@
 .container {
-	max-width: 800px;
-	width: 90%;
+	max-width: 960px;
 
 	&.-small {
 		max-width: 540px;
-	}
-
-	&.-large {
-		max-width: 960px;
 	}
 }
 
@@ -15,87 +10,134 @@ section + section {
 	margin-top: 50px;
 }
 
-.post.box {
-	border: 1px solid #e7e7e9;
-	border-bottom-color: #dfdfe2;
-	background: #fff;
-	color: #526173;
+#Introduction p {
+	max-width: 600px;
 }
-.post p i { margin-top: 20px }
-.post date { color: #AAB2BD }
-.post article {margin-top: 20px; }
-.post.-muted {opacity: .33; }
-.post + .post {margin-top: 25px; }
 
-.portfolio img:not(.melon) { width: 100% }
-.portfolio img { display: block }
+.portfolio-item {
+	width: 320px;
+	height: 240px;
+	overflow: hidden;
+	
+	img {display: block; }
 
-.-dark {
-	@include breakpoint($md) {
-		.portfolio-item:nth-of-type(5) {box-shadow: 0px 2px 0px rgba(170, 178, 189, .2); }
-		.portfolio-item:nth-of-type(6) {box-shadow: 0px 2px 0px rgba(170, 178, 189, .2); }
-	}
-}
-.portfolio-item:nth-of-type(1) {
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
-}
-.portfolio-item:last-of-type {
-	@extend .-box-shadow;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
-}
-@include breakpoint($sm) {
-	.portfolio-item:nth-of-type(2) {
-		border-top-right-radius: 0;
-	}
-	.portfolio-item:nth-of-type(2) {
-		border-top-right-radius: 4px;
-	}
-	.portfolio-item:nth-of-type(6) {
-		box-shadow: 0px 4px 0px #e7e8ec;
-		border-bottom-right-radius: 4px;
-	}
-}
-@include breakpoint($md) {
-	.portfolio-item:nth-of-type(1) {
+	&:nth-of-type(1) {
 		border-top-left-radius: 4px;
-		border-top-right-radius: 0;
-	}
-	.portfolio-item:nth-of-type(2) {
-		border-top-right-radius: 0;
-	}
-	.portfolio-item:nth-of-type(3) {
 		border-top-right-radius: 4px;
 	}
-	.portfolio-item:nth-of-type(6) {
-		border-bottom-right-radius: 4px;
-	}
-	.portfolio-item:last-of-type {
+	&:nth-of-type(8) {
 		border-bottom-left-radius: 4px;
 		border-bottom-right-radius: 4px;
+		box-shadow: 0px 4px 0px #e7e8ec;
 	}
-	.portfolio-item:nth-of-type(5) {box-shadow: 0px 4px 0px #e7e8ec; }
-	.portfolio-item:nth-of-type(6) {box-shadow: 0px 4px 0px #e7e8ec; }
-}
-.portfolio-item {
-	overflow: hidden;
+
+	@include breakpoint(664px) {
+		&:nth-of-type(1) {
+			border-top-left-radius: 4px;
+			border-top-right-radius: 0;
+		}
+		&:nth-of-type(2) {
+			border-top-right-radius: 4px;
+		}
+		&:nth-of-type(7) {
+			border-bottom-left-radius: 4px;
+			box-shadow: 0px 4px 0px #e7e8ec;
+		}
+		&:nth-of-type(8) {
+			border-bottom-left-radius: 0;
+		}
+	}
+
+	@include breakpoint(1008px) {
+		&:nth-of-type(2) {
+			border-top-right-radius: 0;
+		}
+		&:nth-of-type(3) {
+			border-top-right-radius: 4px;
+		}
+		&:nth-of-type(6) {
+			border-bottom-right-radius: 4px;
+			box-shadow: 0px 4px 0px #e7e8ec;
+		}
+	}
+
 	&.-style-white {background-color: #fff; }
 	&.-style-black {background-color: #272B24; }
 	&.-style-light-blue {background-color: #D7E1EE; }
 	&.-style-light-green {background-color: #ADDDD5; }
+}
 
-	.device-box {
-		border-top-left-radius: 4px;
-		border-top-right-radius: 4px;
-		max-width: 240px;
-		width: 90%;
-		height: 200px;
-		margin: 40px auto 0;
+.-dark .portfolio-item {
+	&:nth-of-type(8) {box-shadow: 0px 2px 0px rgba(170, 178, 189, .2); }
+
+	@include breakpoint(664px) {
+		&:nth-of-type(7) {box-shadow: 0px 2px 0px rgba(170, 178, 189, .2);}
+	}
+	@include breakpoint(1008px) {
+		&:nth-of-type(6) {box-shadow: 0px 2px 0px rgba(170, 178, 189, .2);}
+	}
+}
+
+.portfolio {
+	padding-left: 12px;
+	padding-right: 12px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	@include breakpoint($sm) {
+		.portfolio-item {
+			width: 320px;
+			height: 240px;
+		}
 	}
 
-	.melon-wrapper {
-		width: 320px;
-		height: 240px;
+	@include breakpoint(1008px) {
+		position: relative;
+		padding-left: 0;
+		padding-right: 0;
+
+		&:after {
+			content: "";
+			flex: auto;
+		}
+	}
+}
+
+#About .container {
+	@include breakpoint($md) {
+		display: flex;
+		
+		p:first-of-type {
+			margin-top: 3.4em;
+		}
+		aside {
+			width: 400px;
+			margin-left: 24px;
+		}
+	}
+}
+
+.box-container + .box-container {
+	margin-top: 12px;
+}
+.box-container {
+	.box {
+		width: 100%;
+	}
+
+	@include breakpoint($sm) {
+		display: flex;
+		justify-content: space-between;
+
+		.box {
+			&:not(:last-of-type) {
+				margin-right: 12px;
+			}
+			width: 394px;
+		}
+		.box + .box {
+			margin-top: 0;
+		}
 	}
 }

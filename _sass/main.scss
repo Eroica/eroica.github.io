@@ -47,7 +47,6 @@ $font-color-blue: #329af0;
 
 // Grid & Reset.
 @import 'reset';
-@import 'flexboxgrid/flexbox-grid';
 
 // Components.
 @import 'components';
@@ -56,12 +55,12 @@ $font-color-blue: #329af0;
 // Base.
 @import 'page';
 @import 'typography';
+@import 'entities/containers';
 @import 'lists';
-@import 'buttons';
+// @import 'buttons';
 
 // Entities.
 @import 'entities/box';
-@import 'entities/containers';
 @import 'entities/footer';
 @import 'entities/header';
 @import 'entities/switch';
