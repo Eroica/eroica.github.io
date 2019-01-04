@@ -16,16 +16,20 @@ strong, b {font-weight: 600; }
 
 p + p {margin-top: 1em; }
 
+.title {
+	color: #AAB2BD;
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
 h1, h2, h3, h4, h5, h6 {font-weight: 600; }
 
 h3 {
-	font-size: 1.4rem;
-	margin-top: 2em;
+	@extend .title;
 	margin-bottom: .5em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #AAB2BD;
-    font-weight: bold;
+	margin-top: 2em;
 }
 
 em, i { font-style: italic; }
@@ -61,10 +65,19 @@ hr {
 	color: #fff;
 }
 
-.title {
+.badge {
 	text-transform: uppercase;
+	font-size: 1.1rem;
+	background-color: #4A89DC;
+	color: white;
 	font-weight: bold;
-	color: #AAB2BD;
-	font-size: 1.4rem;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
+	padding: 6px 10px 5px;
+	border-radius: 2px;
+	border: 1px solid #e03131;
+	margin-right: 5px;
+
+	&.-red {
+		background-color: #fa5252;
+	}
 }
