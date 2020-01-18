@@ -56,9 +56,6 @@ $easing: cubic-bezier(.02,.98,.46,.95);
 .spaceList--medium > * + * {margin-top: 2em;}
 .spaceList--small > * + * {margin-top: .5em;}
 
-.horizontalRow {
-	display: flex;
-}
 .row--small > *:not(:last-child) {margin-right: .5em; }
 .switch-row {
 	> * {height: calc(1em*1.5); }
