@@ -1,12 +1,10 @@
-html { font-size: 62.5% }
-
 body, input, select, textarea {
 	font-family: "Clear Sans", sans-serif;
-	font-size: 1.7rem;
-	letter-spacing: .01rem;
+	font-size: 1.1rem;
 	font-weight: 400;
-	line-height: 1.65;
+	line-height: 1.7;
 	color: $font-color-dark;
+	letter-spacing: .015em;
 
 	&.-dark {color: #f6f6f6; }
 }
@@ -14,32 +12,35 @@ body, input, select, textarea {
 strong, b {font-weight: 600; }
 .-dark strong, .-dark b {color: white; }
 
-p + p {margin-top: 1em; }
+.text--center {text-align: center;}
+.text--right {text-align: right;}
+.text--pale {color: #AAB2BD; }
+.text--large {font-size: 1.4rem; }
+.text--small {font-size: 1.0rem; }
+.text--xsmall {font-size: 15px; }
 
-.title {
+.text--title {
 	color: #AAB2BD;
-	font-size: 15px;
 	font-weight: bold;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	text-transform: uppercase;
 }
 
 h1, h2, h3, h4, h5, h6 {font-weight: 600; }
 
-h3 {
-	@extend .title;
-	margin-bottom: .5em;
-	margin-top: 2em;
-}
-
-em, i { font-style: italic; }
-
 a {
-	@extend ._transition;
+	transition: color .2s $easing;
 	color: lighten($font-color-blue, 10);
-	text-decoration: none;
 
 	&:hover {color: $accent-color; }
+}
+
+blockquote {
+	text-indent: -.5em;
+	margin-left: 24px;
+	margin-right: 24px;
+	&::before {content: "“"; }
+	&::after {content: "”"}
 }
 
 hr {
@@ -53,31 +54,46 @@ hr {
 }
 .-dark hr {background-color: rgba(170, 178, 189, .2) }
 
-.headline {
-	color: #AAB2BD;
-
-	&:first-line {
-		font-weight: bold;
-		color: $font-color-dark;
-	}
-}
-.-dark .headline:first-line {
-	color: #fff;
-}
-
 .badge {
+	font-size: 11px;
 	text-transform: uppercase;
-	font-size: 1.1rem;
 	background-color: #4A89DC;
 	color: white;
 	font-weight: bold;
-	letter-spacing: 1px;
+	letter-spacing: 1.5px;
 	padding: 6px 10px 5px;
 	border-radius: 2px;
 	border: 1px solid #e03131;
-	margin-right: 5px;
 
-	&.-red {
-		background-color: #fa5252;
+	&.-red {background-color: #fa5252; }
+}
+
+
+.headline {
+	color: #AAB2BD;
+	line-height: 1.4;
+
+	&::first-line {
+		font-weight: bold;
+		color: #526173;
 	}
 }
+.-dark .headline::first-line {color: #fff; }
+
+@keyframes blink {
+	0% {color: inherit; }
+	100% {color: #ff9933; }
+}
+.small-link {
+	color: inherit;
+	svg {width: 18px; }
+
+	&:hover {color: inherit; }
+}
+.small-link:hover svg > * {
+	animation: blink .2s $easing;
+	animation-fill-mode: both;
+}
+.small-link:hover svg > circle {animation-delay: 0s; }
+.small-link:hover svg > path:nth-of-type(1) {animation-delay: .1s; }
+.small-link:hover svg > path:nth-of-type(2) {animation-delay: .2s; }

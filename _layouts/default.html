@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 {% include head.html %}
 
-<body class="is-loading">
+<body class="is-loading no-js spaceList--page">
 	{% include header.html %}
 
-	<main>
+	<main class="spaceList--page">
 		{{ content }}
 	</main>
 
 	{% include footer.html %}
 
-	<script src="{{ "/js/walkway.min.js" | prepend: site.baseurl }}"></script>
-	<script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
+	<script>
+		"use strict";
+
+		{% include js/main.js %}
+	</script>
 </body>
 </html>

@@ -1,3 +1,9 @@
-- github-url: https://github.com/Eroica
-- twitter-url: https://twitter.com/MyEroica
-- dribbble-url: https://dribbble.com/Eroica
+github:
+  url: https://github.com/Eroica
+  icon: feather/github.svg
+dribbble:
+  url: https://dribbble.com/Eroica
+  icon: icons/dribbble-ball-mark.svg
+mastodon:
+  url: https://mastodon.gamedev.place/@Eroica
+  icon: icons/mastodon.svg

@@ -1,29 +1,29 @@
-<header class="header container _center _text-center">
-	<p>
-		<a href="/">{% include lua-android-svg.html %}</a>
-	</p>
-
-	<p>
-		<i class="ion ion-ios-sunny"></i>
+<header class="header container strip--center text--center spaceList">
+	<p class="switch-row">
+		{% include feather/sun.svg %}
 
 		<label class="switch no-label">
 			<input type="checkbox" class="switch-input" onchange="toggleDarkness(event);">
-			<span class="switch-trough" data-on="On" data-off="Off"></span>
+			<span class="switch-trough"></span>
 			<span class="switch-handle"></span>
 		</label>
 
-		<i class="ion ion-ios-moon"></i>
+		{% include feather/moon.svg %}
 	</p>
 
 	<script>
-		var $body = document.querySelector("body");
-		var current_hours = (new Date()).getHours();
-		if(current_hours >= 21 || current_hours < 8) {
-			$body.classList.add("-dark");
-			document.querySelector(".switch > input").checked = true;
-		} else {
-			document.querySelector(".switch > input").checked = false;
-			$body.classList.remove("-dark");
-		}
+		(function () {
+			var $body = document.querySelector("body");
+			var currentHours = (new Date()).getHours();
+			var isDarkHours = currentHours >= 21 || currentHours < 8
+			var wantsDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+			if (isDarkHours || wantsDarkMode) {
+				$body.classList.add("-dark");
+				document.querySelector(".switch > input").checked = true;
+			} else {
+				document.querySelector(".switch > input").checked = false;
+			}
+		})();
 	</script>
 </header>

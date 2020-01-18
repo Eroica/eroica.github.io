@@ -1,0 +1,36 @@
+.container {
+	max-width: 100%;
+	width: 50rem;
+
+	&.-small {width: 36rem; }
+	&.-large {width: 60rem; }
+}
+
+.header {
+	margin-top: 24px;
+	transition: margin-top .2s $easing;
+
+	@include breakpoint($md) {
+		margin-top: 50px;
+	}
+}
+
+.footer {
+	opacity: .7;
+	margin-bottom: 50px;
+}
+
+#Introduction > * {
+	@extend .container.-small;
+	max-width: 100%;
+}
+#Introduction > .row--small {
+	line-height: 2;
+}
+#Introduction .badge + * {
+	display: block;
+
+	@include breakpoint(30rem) {
+		display: inline;
+	}
+}
