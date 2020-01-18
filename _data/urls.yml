@@ -4,6 +4,9 @@ github:
 dribbble:
   url: https://dribbble.com/Eroica
   icon: icons/dribbble-ball-mark.svg
+twitter:
+  url: https://twitter.com/MyEroica
+  icon: icons/twitter.svg
 mastodon:
   url: https://mastodon.gamedev.place/@Eroica
   icon: icons/mastodon.svg
