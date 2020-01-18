@@ -1,1 +1,49 @@
-ul.-no-bullets {list-style: none; }
+.articles-list > .article-row {
+	padding: 12px 0 12px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #dfe4e6;
+
+	> *:first-child {
+		flex-basis: 100%;
+	}
+	h2 {
+		text-overflow: ellipsis;
+		overflow-x: hidden;
+		white-space: nowrap;
+	}
+	a {color: inherit; }
+	date {
+		@extend .text--title;
+		text-align: right;
+	}
+}
+.-dark .articles-list > .article-row {border-color: rgba(170, 178, 189, .2) }
+
+.tag-list li {
+	display: inline-block;
+	padding: 2px 6px;
+	border-radius: 8px;
+	background-color: rgba(0, 0, 0, .05);
+}
+.-dark .tag-list li {background-color: rgba(0, 0, 0, .2);}
+h2 + .tag-list {
+	position: relative;
+	left: -6px;
+}
+
+
+.icon-links svg {
+	vertical-align: middle;
+	fill: currentColor;
+	color: #AAB2BD;
+	stroke: none;
+	padding: 2px;
+}
+.-dark .icon-links svg {color: #AAB2BD; opacity: .5;}
+.-dark .icon-links a:hover svg {opacity: 1;}
+.icon-links svg {transition: color .2s $easing, opacity .2s $easing; }
+.icon-links .github:hover svg {color: #171515; }
+.-dark .icon-links .github:hover svg {color: #fff;}
+.icon-links .dribbble:hover svg {color: #ea4c89; }
+.icon-links .mastodon:hover svg {color: #3088d4; }

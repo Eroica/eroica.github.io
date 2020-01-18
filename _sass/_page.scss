@@ -8,12 +8,10 @@ body { -ms-overflow-style: scrollbar; }
 html, body { min-width: 320px; }
 
 body {
-	@extend ._transition;
 	background-color: #F3F4F8;
+	transition: background-color .2s $easing;
 
-	&.-dark {
-		background-color: #353942;
-	}
+	&.-dark {background-color: #353942; }
 
 	&.is-loading {
 		animation: none !important;

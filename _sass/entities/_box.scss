@@ -1,54 +1,15 @@
 .box {
-	@extend ._box-shadow;
 	border: 1px solid #e7e7e9;
 	border-bottom-color: #dfdfe2;
 	border-radius: 3px;
-	font-size: 1.6rem;
 	padding: 20px;
 	background: #fff;
-	position: relative;
-
-	.box-header {
-		font-size: 1.8rem;
-		font-weight: normal;
-		margin-bottom: .5rem;
-	}
-
-	i {
-		width: 20px;
-	}
-
-	a {font-size: 1.5rem; }
 
 	&.-primary {border-color: $accent-color; }
 }
 .-dark .box {
 	background: transparent;
 	border-color: rgba(170, 178, 189, .2);
-}
-.box + .box {
-	margin-top: 12px;
-}
-
-.GitHubBox, .DribbbleBox {
-	overflow: hidden;
-
-	&:after {
-		opacity: .06;
-		// color: #F4F5F5;
-		z-index: 1;
-		font-family: "Ionicons";
-		position: absolute;
-		font-size: 150px;
-		bottom: -80px;
-		right: -20px;
-	}
-}
-.GitHubBox:after {
-	content: "\f239";
-}
-.DribbbleBox:after {
-	content: "\f233";
 }
 
 .box.-muted {
