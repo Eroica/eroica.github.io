@@ -19,18 +19,3 @@
 	opacity: .7;
 	margin-bottom: 50px;
 }
-
-#Introduction > * {
-	@extend .container.-small;
-	max-width: 100%;
-}
-#Introduction > .row--small {
-	line-height: 2;
-}
-#Introduction .badge + * {
-	display: block;
-
-	@include breakpoint(30rem) {
-		display: inline;
-	}
-}
