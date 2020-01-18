@@ -8,13 +8,10 @@
 # Site settings
 title: Seba.萌え
 description: > # this means to ignore newlines until "baseurl:"
-  I’m a programmer working in graphics-related fields. I work on GUIs,
-  renderings, and general 2D art.
+  Programming for graphics and art-related fields.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://seba.moe" # the base hostname & protocol for your site
 author: Eroica
-
-github_username: Eroica
 
 # excerpt_separator: ""
 permalink: pretty

@@ -6,7 +6,7 @@ dribbble:
   icon: icons/dribbble-ball-mark.svg
 twitter:
   url: https://twitter.com/MyEroica
-  icon: icons/twitter.svg
+  icon: feather/twitter.svg
 mastodon:
   url: https://mastodon.gamedev.place/@Eroica
   icon: icons/mastodon.svg
