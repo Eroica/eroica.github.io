@@ -1,22 +1,22 @@
 .articles-list > .article-row {
 	@extend .text--small;
-	padding: 12px 0 12px;
+	padding: 0 0 1em;
 	display: flex;
-	align-items: center;
+	align-items: baseline;
 	border-bottom: 1px solid #dfe4e6;
+	transition: border-color .2s $easing;
 
 	> *:first-child {
-		flex-basis: 100%;
+		@extend .spaceList--small;
+		flex: 1;
 	}
 	h2 {
 		font-size: 1.1rem;
-		text-overflow: ellipsis;
-		overflow-x: hidden;
-		white-space: nowrap;
 	}
 	time {
 		@extend .text--pale;
 		white-space: nowrap;
+		margin-left: 8px;
 		text-align: right;
 	}
 }
