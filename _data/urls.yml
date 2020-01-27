@@ -10,3 +10,6 @@ twitter:
 mastodon:
   url: https://mastodon.gamedev.place/@Eroica
   icon: icons/mastodon.svg
+rss:
+  url: https://seba.moe/feed.xml
+  icon: feather/rss.svg

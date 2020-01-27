@@ -7,8 +7,8 @@
 
 # Site settings
 title: Seba.萌え
-description: > # this means to ignore newlines until "baseurl:"
-  Programming for graphics and art-related fields.
+# description: > # this means to ignore newlines until "baseurl:"
+description: Drawings and programming.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://seba.moe" # the base hostname & protocol for your site
 author: Eroica
@@ -20,3 +20,10 @@ permalink: pretty
 markdown: kramdown
 sass:
   style: compressed
+
+paginate: 10
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-textile-converter

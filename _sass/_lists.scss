@@ -1,36 +1,70 @@
-.articles-list > .article-row {
+.article-row, .post {
 	@extend .text--small;
-	padding: 0 0 1em;
+	position: relative;
+	padding: 0 0 2em;
 	display: grid;
-	grid-gap: 8px;
+	grid-gap: 1em;
+	grid-template-columns: auto 1fr;
 	border-bottom: 1px solid #dfe4e6;
 	transition: border-color .2s $easing;
 
+	> * {
+		grid-column: span 2;
+	}
 	> *:first-child {
 		grid-column: 1;
 		grid-row: 1;
 	}
-	> *:nth-child(2) {
-		grid-column: span 2;
-		grid-row: 2;
-	}
-	h2 {
-		font-size: 1.1rem;
-	}
 	time {
 		@extend .text--pale;
+		grid-row: 1;
 		grid-column: 2;
 		white-space: nowrap;
 		text-align: right;
+		position: relative;
+		top: .2rem;
+	}
+	.article-permalink {
+		position: absolute;
+		top: 2px;
+		left: -18px;
+
+		svg {
+			width: 12px;
+			height: 12px;
+		}
+	}
+	h1, h2, h2, h3, h4, h5, h6 {
+		font-size: 1.1rem;
 	}
 
+	video {
+		display: block;
+	}
+	&.-small {
+		padding-bottom: 1em;
+	}
+}
+.article-row {
 	@include breakpoint($md) {
-		> *:nth-child(2) {
+		> * {
 			grid-column: 1;
 		}
 	}
 }
-.-dark .articles-list > .article-row {border-color: rgba(170, 178, 189, .2) }
+.-dark .article-row,
+.-dark .post {border-color: rgba(170, 178, 189, .2) }
+
+.articles-list .thumbnail {
+	background-color: #000000;
+
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 50%;
+	}
+}
 
 .tag-list li {
 	display: inline-block;
@@ -45,9 +79,7 @@ h2 + .tag-list {
 }
 
 .icon-links svg {
-	fill: currentColor;
 	color: #AAB2BD;
-	stroke: none;
 	padding: 2px;
 }
 .-dark .icon-links svg {color: #AAB2BD; opacity: .5;}
@@ -57,4 +89,9 @@ h2 + .tag-list {
 .-dark .icon-links .github:hover svg {color: #fff;}
 .icon-links .dribbble:hover svg {color: #ea4c89; }
 .icon-links .mastodon:hover svg {color: #3088d4; }
+.icon-links .twitter svg {
+	fill: currentColor;
+	stroke: none;
+}
 .icon-links .twitter:hover svg {color: #1da1f2; }
+.icon-links .rss:hover svg { color: #ff9933  }

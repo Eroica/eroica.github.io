@@ -12,15 +12,19 @@ body, input, select, textarea {
 strong, b {font-weight: 600; }
 .-dark strong, .-dark b {color: white; }
 
+code, .code {
+	font-family: "Consolas", "Inconsolata", monospace;
+}
+
 .text--center {text-align: center;}
 .text--right {text-align: right;}
-.text--pale {color: #AAB2BD; }
+.text--pale {color: $font-color-pale; }
 .text--large {font-size: 1.4rem; }
 .text--small {font-size: 1.0rem; }
 .text--xsmall {font-size: 15px; }
 
 .text--title {
-	color: #AAB2BD;
+	color: $font-color-pale;
 	font-weight: bold;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -32,15 +36,24 @@ a {
 	transition: color .2s $easing;
 	color: lighten($font-color-blue, 10);
 
-	&:hover {color: $accent-color; }
+	&:hover {color: $font-color-blue; }
+}
+
+img, video {
+	max-width: 100%;
 }
 
 blockquote {
-	text-indent: -.5em;
-	margin-left: 24px;
-	margin-right: 24px;
-	&::before {content: "“"; }
-	&::after {content: "”"}
+	@extend .text--pale;
+	@extend .spaceList;
+	margin-left: 2em;
+	margin-right: 2em;
+
+	p:first-of-type {
+		text-indent: -.5em;
+		&::before {content: "“"; }
+	}
+	p:last-of-type::after {content: "”"; }
 }
 
 hr {
@@ -53,6 +66,15 @@ hr {
 	margin-bottom: 50px;
 }
 .-dark hr {background-color: rgba(170, 178, 189, .2) }
+
+.icon-span {
+	svg {
+		width: 1em;
+		height: 1em;
+		position: relative;
+		bottom: -0.125em;
+	}
+}
 
 .badge {
 	font-size: 11px;
@@ -72,7 +94,7 @@ hr {
 }
 
 .headline {
-	color: #AAB2BD;
+	color: $font-color-pale;
 	line-height: 1.4;
 
 	&::first-line {
