@@ -23,6 +23,7 @@ $xl: 1200px;
 $accent-color: #419BF9;
 $font-color-dark: rgb(82, 97, 115);
 $font-color-blue: #329af0;
+$font-color-pale: #AAB2BD;
 
 $easing: cubic-bezier(.02,.98,.46,.95);
 
@@ -57,8 +58,8 @@ $easing: cubic-bezier(.02,.98,.46,.95);
 .spaceList--small > * + * {margin-top: .5em;}
 
 .row--small > *:not(:last-child) {margin-right: .5em; }
+.block--middle > * {vertical-align: middle;}
 .switch-row {
 	> * {height: calc(1em*1.5); }
 	svg {padding: 2px; }
 }
-.block--middle > * {vertical-align: middle;}

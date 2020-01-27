@@ -4,24 +4,22 @@ layout: default
 <h1 class="text--center"><span class="badge -blue">303 See Other</span></h1>
 
 <section class="articles-list spaceList">
+	{% for post in paginator.posts %}
 	<article class="article-row">
-		<a href="https://github.com/Eroica/Paletti"><h2>Paletti</h2></a>
+		<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}"><h2>{{ post.title }}</h2></a>
 
-		<p>Extracting primary colors from images can usually be done in any image editing program, but for some reason Affinity Designer yielded strange results. I found <a href="https://alembicforsketch.com">Alembic</a> and basically put it into a small desktop programm (JavaFX).</p>
+		{{ post.content }}
 
-		<time>January 17, 2020</time>
+		<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+
+		{% if post.link %}<a class="article-permalink" href="{{ post.url }}" title="Permalink to this article">{% include feather/link.svg %}</a>{% endif %}
 	</article>
-
-	<article class="article-row">
-		<a href="https://github.com/Eroica/AnImageViewer"><h2>An Image Viewer</h2></a>
-
-		<p>Windows 10’s built-in Photos app was too slow for me to browse through a series of images, so I made an image viewer (JavaFX).</p>
-
-		<time>December 2019</time>
-	</article>
+	{% endfor %}
 </section>
 
 <ul class="icon-links text--pale spaceList--small text--small">
 	{% assign twitter = site.data.urls.twitter %}
 	<li><a class="twitter block--middle row--small" href="{{ twitter.url }}">{% include {{ twitter.icon }} %}<span>Tweets</span></a></li>
+	{% assign rss = site.data.urls.rss %}
+	<li><a class="rss block--middle row--small" href="{{ rss.url }}">{% include {{ rss.icon }} %}<span>RSS Posts</span></a></li>
 </ul>

@@ -1,0 +1,10 @@
+---
+layout: post
+link: https://github.com/Eroica/Paletti
+---
+
+Affinity Designer for some reason yielded strange results when creating a color palette from an image. I found "Alembic":https://alembicforsketch.com and put it into a small desktop program (JavaFX).
+
+<video controls>
+	<source src="{{ '/videos/Paletti.mp4' | relative_url }}">
+</video>
