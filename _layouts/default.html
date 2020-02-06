@@ -8,6 +8,13 @@
 
 	<main class="container spaceList--medium strip--text strip--center">
 		{{ content }}
+
+		<ul class="icon-links text--pale spaceList--small text--small">
+			{% assign twitter = site.data.urls.twitter %}
+			<li><a class="twitter block--middle row--small" href="{{ twitter.url }}">{% include {{ twitter.icon }} %}<span>Tweets</span></a></li>
+			{% assign rss = site.data.urls.rss %}
+			<li><a class="rss block--middle row--small" href="{{ rss.url }}">{% include {{ rss.icon }} %}<span>RSS Posts</span></a></li>
+		</ul>
 	</main>
 
 	{% include footer.html %}

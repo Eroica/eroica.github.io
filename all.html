@@ -3,20 +3,14 @@ layout: default
 ---
 <h1 class="text--center"><span class="badge -blue">303 See Other</span></h1>
 
-<section class="articles-list spaceList">
-	{% for post in site.categories.program %}
-	<article class="article-row">
+<section class="spaceList">
+	{% for post in site.posts %}
+	<article class="title-row -small">
 		<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}"><h2>{{ post.title }}</h2></a>
-
-		{{ post.content }}
 
 		<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
 
 		{% if post.link %}<a class="article-permalink" href="{{ post.url }}" title="Permalink to this article">{% include feather/link.svg %}</a>{% endif %}
 	</article>
 	{% endfor %}
-
-	<p class="pagination text--small text--center">
-		<a href="{{ '/all' | relative_url }}">Links</a>
-	</p>
 </section>
