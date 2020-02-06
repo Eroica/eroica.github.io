@@ -1,0 +1,4 @@
+---
+layout: post
+link: https://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html
+---
