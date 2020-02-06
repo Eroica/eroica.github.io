@@ -1,10 +1,21 @@
 .article-row, .post {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-gap: 1em;
+
+	time {
+		grid-row: 1;
+		grid-column: 2;
+		white-space: nowrap;
+		text-align: right;
+		position: relative;
+		top: .15rem;
+	}
+}
+.article-row, .post, .title-row {
 	@extend .text--small;
 	position: relative;
-	padding: 0 0 2em;
-	display: grid;
-	grid-gap: 1em;
-	grid-template-columns: auto 1fr;
+	padding: 0 0 1em;
 	border-bottom: 1px solid #dfe4e6;
 	transition: border-color .2s $easing;
 
@@ -17,12 +28,6 @@
 	}
 	time {
 		@extend .text--pale;
-		grid-row: 1;
-		grid-column: 2;
-		white-space: nowrap;
-		text-align: right;
-		position: relative;
-		top: .2rem;
 	}
 	.article-permalink {
 		position: absolute;
@@ -41,14 +46,27 @@
 	video {
 		display: block;
 	}
-	&.-small {
-		padding-bottom: 1em;
-	}
 }
 .article-row {
 	@include breakpoint($md) {
 		> * {
 			grid-column: 1;
+		}
+	}
+}
+.title-row {
+	@include breakpoint($md) {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		grid-gap: 1em;
+
+		time {
+			grid-row: 1;
+			grid-column: 2;
+			white-space: nowrap;
+			text-align: right;
+			position: relative;
+			top: .2rem;
 		}
 	}
 }
