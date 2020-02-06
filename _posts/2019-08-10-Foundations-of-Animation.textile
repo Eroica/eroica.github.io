@@ -1,0 +1,5 @@
+---
+title: "21 Foundations of Animation"
+layout: post
+link: http://www.angryanimator.com/word/2018/04/23/21-foundations-of-animation/
+---

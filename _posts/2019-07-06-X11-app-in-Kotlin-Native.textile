@@ -1,0 +1,5 @@
+---
+title: X11 app in Kotlin/Native
+layout: post
+link: https://victor.kropp.name/blog/x11-app-in-kotlin-native/
+---

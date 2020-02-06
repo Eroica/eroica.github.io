@@ -1,0 +1,5 @@
+---
+title: UIs Are Not Pure Functions of the Model
+layout: post
+link: https://blog.metaobject.com/2018/12/uis-are-not-pure-functions-of-model.html
+---

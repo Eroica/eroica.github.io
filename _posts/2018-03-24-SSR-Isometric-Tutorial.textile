@@ -1,0 +1,7 @@
+---
+title: SSR Isometric Tutorial
+layout: post
+link: https://www.reddit.com/r/Design/comments/82wmb5/is_this_ssr_isometric_tutorial_wrong/
+---
+
+bq.:{{ page.link }} So we are shrinking it vertically in order to regain the original length when skewed. When you skew by 30deg, the line that’s being skewed grows by cosine of 30deg. Which is 0.86602, or 86.602%. Try that!
