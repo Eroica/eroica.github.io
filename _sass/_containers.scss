@@ -7,7 +7,7 @@
 }
 
 .header {
-	margin-top: 24px;
+	margin-top: 10px;
 	transition: margin-top .2s $easing;
 
 	@include breakpoint($md) {
