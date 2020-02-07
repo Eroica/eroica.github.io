@@ -71,7 +71,10 @@
 	}
 }
 .-dark .article-row,
-.-dark .post {border-color: rgba(170, 178, 189, .2) }
+.-dark .post,
+.-dark .title-row {
+	border-color: rgba(170, 178, 189, .2)
+}
 
 .articles-list .thumbnail {
 	background-color: #000000;
