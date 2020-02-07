@@ -13,18 +13,22 @@ strong, b {font-weight: 600; }
 .-dark strong, .-dark b {color: white; }
 
 code, .code {
+	padding: 2px 4px;
 	font-family: "Consolas", "Inconsolata", monospace;
-	background-color: rgba(0, 0, 0, .07);
+	background-color: rgba(0, 0, 0, .05);
 }
 .-dark code, .-dark .code {
 	background-color: rgba(255, 255, 255, .07);
 }
 
 pre {
-	background-color: rgba(0, 0, 0, .07);
+	background-color: rgba(0, 0, 0, .05);
 	padding: 1em;
 
-	code, .code {background-color: transparent; }
+	code, .code {
+		background-color: transparent;
+		padding: 0;
+	}
 }
 .-dark pre {
 	background-color: rgba(255, 255, 255, .07);
