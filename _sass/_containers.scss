@@ -13,6 +13,10 @@
 	@include breakpoint($md) {
 		margin-top: 50px;
 	}
+
+	#HomeLink {
+		font-size: 0;
+	}
 }
 
 .footer {
