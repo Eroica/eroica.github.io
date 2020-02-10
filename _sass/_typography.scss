@@ -55,9 +55,9 @@ h1, h2, h3, h4, h5, h6 {font-weight: 600; }
 
 a {
 	transition: color .2s $easing;
-	color: lighten($font-color-blue, 10);
+	color: lighten($accent-color, 10);
 
-	&:hover {color: $font-color-blue; }
+	&:hover {color: $accent-color; }
 }
 
 img, video {
@@ -97,13 +97,13 @@ hr {
 .badge {
 	font-size: 11px;
 	text-transform: uppercase;
-	background-color: #4A89DC;
+	background-color: $accent-color;
 	color: white;
 	font-weight: bold;
 	letter-spacing: 1.5px;
 	padding: 6px 10px 5px;
 	border-radius: 2px;
-	border: 1px solid darken(#4A89DC, 10);
+	border: 1px solid darken($accent-color, 10);
 
 	&.-red {
 		background-color: #fa5252;

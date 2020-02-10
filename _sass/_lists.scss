@@ -29,14 +29,26 @@
 	time {
 		@extend .text--pale;
 	}
-	.article-permalink {
+	a.article-permalink {
 		position: absolute;
-		top: 2px;
-		left: -18px;
+		color: #fff;
+		top: 4px;
+		left: -30px;
+		width: 24px;
+		height: 24px;
+		text-align: center;
+		line-height: 24px;
+		border-radius: 50%;
+		background-color: lighten($accent-color, 10);
+		transition: background-color $easing .2s;
 
 		svg {
 			width: 12px;
 			height: 12px;
+		}
+
+		&:hover {
+			background-color: $accent-color;
 		}
 	}
 	h1, h2, h2, h3, h4, h5, h6 {
@@ -76,6 +88,15 @@
 	border-color: rgba(170, 178, 189, .2)
 }
 
+.articles-list,
+.titles-list {
+	margin-left: 12px;
+	transition: margin-left .2s $easing;
+
+	@include breakpoint($md) {
+		margin-left: 0;
+	}
+}
 .articles-list .thumbnail {
 	background-color: #000000;
 
