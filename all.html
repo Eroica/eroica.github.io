@@ -3,7 +3,7 @@ layout: default
 ---
 <h1 class="text--center"><span class="badge -blue">303 See Other</span></h1>
 
-<section class="spaceList">
+<section class="titles-list spaceList">
 	{% for post in site.posts %}
 	<article class="title-row -small">
 		<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}"><h2>{{ post.title }}</h2></a>
