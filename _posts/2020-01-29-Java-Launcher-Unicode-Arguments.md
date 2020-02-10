@@ -1,12 +1,11 @@
 ---
 title: Passing Unicode Characters to Java (Windows)
 layout: post
-link: https://stackoverflow.com/questions/36882559/run-java-program-with-chinese-arguments-in-eclipse
 ---
 
-If you are using `jpackage` (or similar, e.g. Launch4j) to create an executable file of your JVM program on Windows, it will have problems parsing Unicode characters that appear in command-line arguments. The link gives some closer insights into the issue.
+If you are using `jpackage` (or similar, e.g. Launch4j) to create an executable file of your JVM program on Windows, it will have problems parsing Unicode characters that appear in command-line arguments. [Here is more information about this issue](https://stackoverflow.com/questions/36882559/run-java-program-with-chinese-arguments-in-eclipse).
 
-In the case of [An Image Viewer]({% post_url 2019-12-24-An-Image-Viewer %}), I noticed that opening files with Chinese characters in them didn't work. Double-clicking a file passes that filename as an command-line argument to the Java launcher (the `.exe`) which then incorrectly modifies all characters into `?`. Before the call to Java, the filenames are still encoded correctly, but inside the program part (e.g. `fun main(args: Array<String>)` or JavaFX'es `parameters`), the arguments are already converted incorrectly.
+In the case of [An Image Viewer]({% post_url 2019-12-24-An-Image-Viewer %}), I noticed that opening files with Chinese characters in them didn't work. Double-clicking a file passes that filename as a command-line argument to the Java launcher (the `.exe`) which then incorrectly modifies all characters into `?`. Before the call to Java, the filenames are still encoded correctly, but inside the program part (e.g. `fun main(args: Array<String>)` or JavaFX'es `parameters`), the arguments are already converted incorrectly.
 
 I tried three methods to get around this problem:
 
@@ -43,6 +42,23 @@ However, when testing this on my machine, for some reason a call to this functio
 (3) Using another Java launcher: Janel
 --------------------------------------
 
-I found [Janel](https://sourceforge.net/projects/janel/) thankfully while researching this problem. It replaces the `.exe` with a launcher that will correctly pass over Unicode arguments to your program.
+I found [Janel](https://sourceforge.net/projects/janel/) thankfully while researching this problem. It replaces the `.exe` with a launcher that will correctly pass over Unicode arguments to your program. In the end I went with this solution, and added a Gradle task to do the replacement after packaging:
+
+{% highlight groovy %}
+task copyAssets(type: Copy) {
+    copy {
+        from "src/An Image Viewer.lap"
+        into "build/jpackage/An Image Viewer/"
+    }
+    delete "build/jpackage/An Image Viewer/An Image Viewer.exe"
+    copy {
+        from "src/JanelWindows64.exe"
+        rename {
+            "An Image Viewer.exe"
+        }
+        into "build/jpackage/An Image Viewer/"
+    }
+}
+{% endhighlight %}
 
 If you use `jpackage` to create a stand-alone version of your program (i.e. with bundled JRE), you may need to also use this [Shadow Jar plugin](https://imperceptiblethoughts.com/shadow/) for your program's JAR file. Otherwise Janel would not find the correct `main` implementation (in the case of Kotlin). The [badass-runtime plugin](https://badass-runtime-plugin.beryx.org/releases/latest/) (which I use for `jpackage`) will automatically use this if available.
