@@ -21,21 +21,21 @@ code, .code {
 	background-color: rgba(255, 255, 255, .07);
 }
 
-pre {
-	background-color: rgba(0, 0, 0, .05);
+figure.highlight {
 	padding: 1em;
+	background-color: rgba(0, 0, 0, .05);
+	overflow-x: scroll;
 
 	code, .code {
 		background-color: transparent;
 		padding: 0;
 	}
 }
-.-dark pre {
+.-dark figure.highlight {
 	background-color: rgba(255, 255, 255, .07);
 
 	code, .code {background-color: transparent;}
 }
-div.highlighter-rouge {overflow-x: scroll;}
 
 .text--center {text-align: center;}
 .text--right {text-align: right;}

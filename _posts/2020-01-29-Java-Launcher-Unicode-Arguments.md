@@ -17,12 +17,12 @@ I tried three methods to get around this problem:
 Instead of creating an `.exe` file (a "native launcher"), Gradle normally creates a `.bat` file on Windows to launch your program. Inside the Batch file, simply create an environment variable that holds the command-line arguments temporarily, and later access it in your program with `System.getenv`. This way you circumvent the Java launcher's wrongful conversion. Something like this:
 
 
-```batch
+{% highlight batch %}
 (... Batch file ...)
 setlocal
 	set CMD_ARGS=%* && [Java launcher]
 endlocal
-```
+{% endhighlight %}
 
 From Java/Kotlin, `System.getenv("CMD_ARGS")` would then contain the command-line parameters. Although this can get tricky to parse as well if there is whitespace.
 
