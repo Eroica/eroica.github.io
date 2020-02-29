@@ -1,9 +1,8 @@
 .container {
 	max-width: 100%;
-	width: 40rem;
+	width: 64ch;
 
-	&.-small {width: 30rem; }
-	&.-large {width: 50rem; }
+	&.-small {width: 44ch; }
 }
 
 .header {
@@ -20,6 +19,5 @@
 }
 
 .footer {
-	opacity: .7;
 	margin-bottom: 50px;
 }

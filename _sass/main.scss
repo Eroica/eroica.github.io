@@ -41,7 +41,7 @@ $easing: cubic-bezier(.02,.98,.46,.95);
 
 @import 'entities/switch';
 
-._transparent {opacity: .5;}
+._transparent {opacity: .7;}
 ._box-shadow {
 	box-shadow: 0px 3px 0px #e7e8ec;
 	transition: box-shadow .2s $easing;

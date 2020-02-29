@@ -40,7 +40,7 @@ figure.highlight {
 .text--center {text-align: center;}
 .text--right {text-align: right;}
 .text--pale {color: $font-color-pale; }
-.text--large {font-size: 1.4rem; }
+.text--large {font-size: 1.2rem; }
 .text--small {font-size: 1.0rem; }
 .text--xsmall {font-size: 15px; }
 
@@ -62,6 +62,9 @@ a {
 
 img, video {
 	max-width: 100%;
+}
+video {
+	display: block;
 }
 
 blockquote {
