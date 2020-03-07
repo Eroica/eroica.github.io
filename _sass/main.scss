@@ -1,16 +1,16 @@
 @charset "utf-8";
 
 @font-face {
-	font-family: 'Clear Sans';
-	src: url('/fonts/ClearSans-Regular-webfont.woff') format('woff');
+	font-family: "Clear Sans";
+	src: url("/fonts/ClearSans-Regular-webfont.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Clear Sans';
-	src: url('/fonts/ClearSans-Medium-webfont.woff') format('woff');
+	font-family: "Clear Sans";
+	src: url("/fonts/ClearSans-Medium-webfont.woff") format("woff");
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
@@ -34,33 +34,14 @@ $easing: cubic-bezier(.02,.98,.46,.95);
 	}
 }
 
-@import 'page';
-@import 'typography';
-@import 'lists';
-@import 'containers';
+@import "layouts";
+@import "helpers";
 
-@import 'entities/switch';
+@import "page";
+@import "typography";
+@import "containers";
 
-._transparent {opacity: .7;}
-._box-shadow {
-	box-shadow: 0px 3px 0px #e7e8ec;
-	transition: box-shadow .2s $easing;
-}
-.-dark ._box-shadow {
-	box-shadow: 0px 2px 0px rgba(170, 178, 189, .2);
-}
-
-.strip--text {padding-left: 24px; padding-right: 24px;}
-.strip--center {margin-left: auto; margin-right: auto;}
-
-.spaceList--page > * + * {margin-top: calc(1rem + 4%); }
-.spaceList > * + * {margin-top: 1em;}
-.spaceList--medium > * + * {margin-top: 2em;}
-.spaceList--small > * + * {margin-top: .5em;}
-
-.row--small > *:not(:last-child) {margin-right: .5em; }
-.block--middle > * {vertical-align: middle;}
-.switch-row {
-	> * {height: calc(1em*1.5); }
-	svg {padding: 2px; }
-}
+@import "components/badge";
+@import "components/switch";
+@import "components/article";
+@import "components/icon-links";

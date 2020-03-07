@@ -1,0 +1,29 @@
+$PREFIX: "data-";
+
+[#{$PREFIX}Alignment] {
+	&[#{$PREFIX}Alignment~="-center"] > * {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&[#{$PREFIX}Alignment~="-middle"] > * { vertical-align: middle; }
+}
+
+[#{$PREFIX}VBox] {
+	> * + * {margin-top: 1em; }
+	&[#{$PREFIX}VBox~="-small"] > * + * {margin-top: .5em; }
+	&[#{$PREFIX}VBox~="-medium"] > * + * {margin-top: 2em; }
+	&[#{$PREFIX}VBox~="-padded"] > * {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+}
+
+[#{$PREFIX}HBox] {
+	> *:not(:last-child) { margin-right: 1em; }
+	&[#{$PREFIX}HBox~="-small"] > *:not(:last-child) { margin-right: .5em; }
+}
+
+.switch-row {
+	> * {height: calc(1em*1.5); }
+	svg {padding: 2px; }
+}

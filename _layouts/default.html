@@ -3,17 +3,17 @@
 
 {% include head.html %}
 
-<body class="is-loading no-js spaceList--medium">
+<body class="is-loading no-js" data-vbox="-medium -padded" data-alignment="-center" >
 	{% include header.html %}
 
-	<main class="container spaceList--medium strip--text strip--center">
+	<main class="container" data-vbox="-medium">
 		{{ content }}
 
-		<ul class="icon-links text--pale spaceList--small text--small">
+		<ul class="icon-links text--pale text--small" data-vbox="-small">
 			{% assign twitter = site.data.urls.twitter %}
-			<li><a class="twitter block--middle row--small" href="{{ twitter.url }}">{% include {{ twitter.icon }} %}<span>Tweets</span></a></li>
+			<li><a class="twitter" href="{{ twitter.url }}" data-alignment="-middle" data-hbox="-small">{% include {{ twitter.icon }} %}<span>Tweets</span></a></li>
 			{% assign rss = site.data.urls.rss %}
-			<li><a class="rss block--middle row--small" href="{{ rss.url }}">{% include {{ rss.icon }} %}<span>RSS Posts</span></a></li>
+			<li><a class="rss" href="{{ rss.url }}" data-alignment="-middle" data-hbox="-small">{% include {{ rss.icon }} %}<span>RSS Posts</span></a></li>
 		</ul>
 	</main>
 
