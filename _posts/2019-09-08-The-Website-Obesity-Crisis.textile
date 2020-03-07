@@ -1,4 +1,0 @@
----
-layout: post
-link: https://idlewords.com/talks/website_obesity.htm
----

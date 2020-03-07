@@ -1,4 +1,0 @@
----
-layout: post
-link: https://magcius.github.io/xplain/article/index.html
----

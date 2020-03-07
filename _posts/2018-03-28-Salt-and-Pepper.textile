@@ -1,5 +1,0 @@
----
-title: "Salt & Pepper — The Art of Illustrating Texture"
-layout: post
-link: https://medium.com/google-design/salt-pepper-the-art-of-illustrating-texture-c962dc67cc35
----
