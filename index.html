@@ -3,12 +3,14 @@ layout: default
 ---
 <h1 class="text--center"><span class="badge -blue">303 See Other</span></h1>
 
-<section class="articles-list spaceList">
-	{% for post in site.categories.program %}
+<section class="articles-list" data-vbox>
+	{% for post in paginator.posts %}
 	<article class="article-row">
 		<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}"><h2>{{ post.title }}</h2></a>
 
-		{{ post.content }}
+		{% assign read_more_link = post.url | prepend: " <a href='" | append: "'>Read more …</a>" %}
+
+		{{ post.excerpt | replace: "<!--read-more-->", read_more_link }}
 
 		<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
 
@@ -16,7 +18,21 @@ layout: default
 	</article>
 	{% endfor %}
 
-	<p class="pagination text--small text--center">
-		<a href="{{ '/all' | relative_url }}">All posts</a>
-	</p>
+	<div class="text--center text--small">
+		<p data-hbox>
+			{% if paginator.previous_page %}
+			<a class="icon-span" href="{{ paginator.previous_page_path }}">{% include feather/chevron-left.svg %} Newer</a>
+			{% else %}
+			<span class="icon-span _disabled">{% include feather/chevron-left.svg %} Newer</span>
+			{% endif %}
+			<span class="current-page text--pale">({{ paginator.page }} / {{ paginator.total_pages }})</span>
+			{% if paginator.next_page %}
+			<a class="icon-span" href="{{ paginator.next_page_path }}">Older {% include feather/chevron-right.svg %}</a>
+			{% else %}
+			<span class="icon-span _disabled">Older {% include feather/chevron-right.svg %}</span>
+			{% endif %}
+		</p>
+
+		<p><a href="{% link all.html %}">All posts</a></p>
+	</div>
 </section>
