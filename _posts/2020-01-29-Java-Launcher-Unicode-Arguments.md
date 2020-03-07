@@ -1,14 +1,15 @@
 ---
 title: Passing Unicode Characters to Java (Windows)
 layout: post
+excerpt_separator: <!--more-->
 ---
 
 If you are using `jpackage` (or similar, e.g. Launch4j) to create an executable file of your JVM program on Windows, it will have problems parsing Unicode characters that appear in command-line arguments. [Here is more information about this issue](https://stackoverflow.com/questions/36882559/run-java-program-with-chinese-arguments-in-eclipse).
 
 In the case of [An Image Viewer]({% post_url 2019-12-24-An-Image-Viewer %}), I noticed that opening files with Chinese characters in them didn't work. Double-clicking a file passes that filename as a command-line argument to the Java launcher (the `.exe`) which then incorrectly modifies all characters into `?`. Before the call to Java, the filenames are still encoded correctly, but inside the program part (e.g. `fun main(args: Array<String>)` or JavaFX'es `parameters`), the arguments are already converted incorrectly.
 
-I tried three methods to get around this problem:
-
+I tried three methods to get around this problem:<!--read-more-->
+<!--more-->
 * * *
 
 (1) Batch file with environment variable
