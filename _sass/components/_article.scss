@@ -14,7 +14,7 @@
 }
 .article-row, .post, .title-row {
 	position: relative;
-	padding: 0 0 1em;
+	padding-bottom: 1em;
 	border-bottom: 2px solid #dfe4e6;
 	transition: border-color .2s $easing;
 
@@ -32,7 +32,7 @@
 		position: absolute;
 		color: #fff;
 		top: 0.25em;
-		left: -30px;
+		right: -30px;
 		width: 24px;
 		height: 24px;
 		text-align: center;
@@ -53,6 +53,9 @@
 	h1, h2, h2, h3, h4, h5, h6 {
 		@extend .text--large;
 	}
+}
+.title-row {
+	border-bottom-width: 1px;
 }
 .article-row {
 	@include breakpoint($md) {
@@ -85,11 +88,11 @@
 
 .articles-list,
 .titles-list {
-	margin-left: 12px;
-	transition: margin-left .2s $easing;
+	margin-right: 12px;
+	transition: margin-right .2s $easing;
 
 	@include breakpoint($md) {
-		margin-left: 0;
+		margin-right: 0;
 	}
 }
 .articles-list .thumbnail {
