@@ -4,7 +4,7 @@ layout: post
 excerpt_separator: <!--more-->
 ---
 
-If you are using `jpackage` (or similar, e.g. Launch4j) to create an executable file of your JVM program on Windows, it will have problems parsing Unicode characters that appear in command-line arguments. [Here is more information about this issue](https://stackoverflow.com/questions/36882559/run-java-program-with-chinese-arguments-in-eclipse).
+If you are using `jpackage`<sup id="fn1-a"><a href="#fn1">1</a></sup> to create an executable file of your JVM program on Windows, it will have problems parsing Unicode characters that appear in command-line arguments. [Here is more information about this issue](https://stackoverflow.com/questions/36882559/run-java-program-with-chinese-arguments-in-eclipse).
 
 In the case of [An Image Viewer]({% post_url 2019-12-24-An-Image-Viewer %}), I noticed that opening files with Chinese characters in them didn't work. Double-clicking a file passes that filename as a command-line argument to the Java launcher (the `.exe`) which then incorrectly modifies all characters into `?`. Before the call to Java, the filenames are still encoded correctly, but inside the program part (e.g. `fun main(args: Array<String>)` or JavaFX'es `parameters`), the arguments are already converted incorrectly.
 
@@ -15,7 +15,7 @@ I tried three methods to get around this problem:<!--read-more-->
 (1) Batch file with environment variable
 ----------------------------------------
 
-Instead of creating an `.exe` file (a "native launcher"), Gradle normally creates a `.bat` file on Windows to launch your program. Inside the Batch file, simply create an environment variable that holds the command-line arguments temporarily, and later access it in your program with `System.getenv`. This way you circumvent the Java launcher's wrongful conversion. Something like this:
+On Windows, Gradle normally creates a `.bat` file to launch your program instead of an `.exe` (a "native launcher"). Inside the Batch file, simply create an environment variable that holds the command-line arguments temporarily, and later access it in your program with `System.getenv`. This way you circumvent the Java launcher's wrongful conversion. Something like this:
 
 
 {% highlight batch %}
@@ -27,7 +27,7 @@ endlocal
 
 From Java/Kotlin, `System.getenv("CMD_ARGS")` would then contain the command-line parameters. Although this can get tricky to parse as well if there is whitespace.
 
-However, another issue with the Batch approach that I didn't like is that running the Batch file would also open a `cmd.exe` window. This is not because the program isn't run with `javaw.exe` but simply because the "main" part of the program is the Batch file which obviously gets executed in a `cmd.exe` window by default.
+However, another issue with the Batch approach that I didn't like is: Running the Batch file would also open a `cmd.exe` window. This is not because the program isn't run with `javaw.exe` but simply because the "main" part of the program is the Batch file which—that's how they function—gets executed in a `cmd.exe` window by default.
 
 * * *
 
@@ -43,7 +43,7 @@ However, when testing this on my machine, for some reason a call to this functio
 (3) Using another Java launcher: Janel
 --------------------------------------
 
-I found [Janel](https://sourceforge.net/projects/janel/) thankfully while researching this problem. It replaces the `.exe` with a launcher that will correctly pass over Unicode arguments to your program. In the end I went with this solution, and added a Gradle task to do the replacement after packaging:
+[Janel](https://sourceforge.net/projects/janel/) replaces the native launcher with one that correctly passes over Unicode arguments to your program. In the end I went with this solution, and added a Gradle task to do the replacement after packaging:
 
 {% highlight groovy %}
 task copyAssets(type: Copy) {
@@ -62,4 +62,8 @@ task copyAssets(type: Copy) {
 }
 {% endhighlight %}
 
-If you use `jpackage` to create a stand-alone version of your program (i.e. with bundled JRE), you may need to also use this [Shadow Jar plugin](https://imperceptiblethoughts.com/shadow/) for your program's JAR file. Otherwise Janel would not find the correct `main` implementation (in the case of Kotlin). The [badass-runtime plugin](https://badass-runtime-plugin.beryx.org/releases/latest/) (which I use for `jpackage`) will automatically use this if available.
+You may also need to use this [Shadow Jar plugin](https://imperceptiblethoughts.com/shadow/) if you use `jpackage` along with Janel. In the case of Kotlin, Janel wouldn't find the correct `main` implementation otherwise. The [badass-runtime plugin](https://badass-runtime-plugin.beryx.org/releases/latest/) (which I use for `jpackage`) will automatically use the Shadow Jar plugin if available.
+
+<hr>
+
+<p id="fn1" class="footnote text--small icon-span"><sup>1</sup>Or something similar, e.g. Launch4j. <a href="#fn1-a">{% include feather/chevron-up.svg %}</a></p>

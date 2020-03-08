@@ -88,15 +88,6 @@ hr {
 }
 .-dark hr {background-color: rgba(170, 178, 189, .2) }
 
-.icon-span {
-	svg {
-		width: 1em;
-		height: 1em;
-		position: relative;
-		bottom: -0.175em;
-	}
-}
-
 .headline {
 	color: $font-color-pale;
 	line-height: 1.4;
@@ -107,3 +98,12 @@ hr {
 	}
 }
 .-dark .headline::first-line {color: #fff; }
+
+#HomeLink {
+	font-size: 0;
+}
+
+.footnote {
+	text-indent: -.45em;
+}
+
