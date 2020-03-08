@@ -91,7 +91,7 @@
 	margin-right: 12px;
 	transition: margin-right .2s $easing;
 
-	@include breakpoint($md) {
+	@include breakpoint($lg) {
 		margin-right: 0;
 	}
 }
