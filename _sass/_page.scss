@@ -1,5 +1,6 @@
 // Ensures page width is always >=320px.
 html, body { min-width: 320px; }
+html {scroll-behavior: smooth; }
 
 body {
 	background-color: #F3F4F8;

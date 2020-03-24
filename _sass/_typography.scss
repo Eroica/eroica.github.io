@@ -60,12 +60,8 @@ a {
 	&:hover {color: lighten($accent-color, 10); }
 }
 
-img, video {
-	max-width: 100%;
-}
-video {
-	display: block;
-}
+img, video {max-width: 100%; }
+video {display: block; }
 
 blockquote {
 	@extend .text--pale;
@@ -99,11 +95,17 @@ hr {
 }
 .-dark .headline::first-line {color: #fff; }
 
-#HomeLink {
-	font-size: 0;
-}
+#HomeLink {font-size: 0; }
 
-.footnote {
-	text-indent: -.45em;
-}
+.footnote {text-indent: -.45em; }
 
+.article-row ul, .post ul {
+	margin-left: 50px;
+
+	li {position: relative; }
+	li::before {
+		position: absolute;
+		content: "-";
+		left: -1em;
+	}
+}
