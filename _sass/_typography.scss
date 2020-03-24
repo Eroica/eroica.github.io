@@ -23,6 +23,7 @@ code, .code {
 
 figure.highlight {
 	padding: 1em;
+	font-size: 15px;
 	background-color: rgba(0, 0, 0, .05);
 	overflow-x: scroll;
 
@@ -41,7 +42,7 @@ figure.highlight {
 .text--right {text-align: right;}
 .text--pale {color: $font-color-pale; }
 .text--large {font-size: 1.2rem; }
-.text--small {font-size: 0.9rem; }
+.text--small {font-size: 1.0rem; }
 .text--xsmall {font-size: 15px; }
 
 .text--title {
