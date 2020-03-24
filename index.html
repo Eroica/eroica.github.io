@@ -17,7 +17,7 @@ layout: default
 	</article>
 	{% endfor %}
 
-	<div class="text--center text--small">
+	<div class="text--center text--small" data-vbox="-small">
 		<p data-hbox>
 			{% if paginator.previous_page %}
 			<a class="icon-span" href="{{ paginator.previous_page_path }}">{% include feather/chevron-left.svg %} Newer</a>
