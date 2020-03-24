@@ -4,9 +4,25 @@ layout: post
 excerpt_separator: <!--more-->
 ---
 
-If you are using `jpackage`<sup id="fn1-a"><a href="#fn1">1</a></sup> to create an executable file of your JVM program on Windows, it will have problems parsing Unicode characters that appear in command-line arguments. [Here is more information about this issue](https://stackoverflow.com/questions/36882559/run-java-program-with-chinese-arguments-in-eclipse).
+Here’s a JVM program that just prints its command-line arguments:
 
-In the case of [An Image Viewer]({% post_url 2019-12-24-An-Image-Viewer %}), I noticed that opening files with Chinese characters in them didn't work. Double-clicking a file passes that filename as a command-line argument to the Java launcher (the `.exe`) which then incorrectly modifies all characters into `?`. Before the call to Java, the filenames are still encoded correctly, but inside the program part (e.g. `fun main(args: Array<String>)` or JavaFX'es `parameters`), the arguments are already converted incorrectly.
+{% highlight kotlin %}
+fun main(args: Array<String>) {
+    args.forEach(::println)
+}
+{% endhighlight %}
+
+And if I compile this to an `.exe` with `jpackage`<sup id="fn1-a"><a href="#fn1">1</a></sup> and run it from the Windows terminal:
+
+{% highlight powershell %}
+PS C:\> echo.exe Hello 你好
+Hello
+??
+{% endhighlight %}
+
+It does not work (on Windows). The reason is that the command-line arguments are encoded incorrectly as soon as they are passed from the “native launcher” to your program. [More information about this issue here.](https://stackoverflow.com/questions/36882559/run-java-program-with-chinese-arguments-in-eclipse)
+
+This is unfortunate for programs which are called when double-clicking on a file, e.g. [An Image Viewer]({% post_url 2019-12-24-An-Image-Viewer %}). Those won’t work if the filename has Chinese characters in it.
 
 I tried three methods to get around this problem:<!--read-more-->
 <!--more-->
