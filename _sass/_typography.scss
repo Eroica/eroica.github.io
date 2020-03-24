@@ -1,6 +1,6 @@
 body, input, select, textarea {
 	font-family: "Clear Sans", sans-serif;
-	font-size: 1.1rem;
+	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.7;
 	color: $font-color-dark;
@@ -41,7 +41,7 @@ figure.highlight {
 .text--right {text-align: right;}
 .text--pale {color: $font-color-pale; }
 .text--large {font-size: 1.2rem; }
-.text--small {font-size: 1.0rem; }
+.text--small {font-size: 0.9rem; }
 .text--xsmall {font-size: 15px; }
 
 .text--title {
