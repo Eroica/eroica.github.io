@@ -38,7 +38,7 @@
 		text-align: center;
 		line-height: 24px;
 		border-radius: 50%;
-		background-color: lighten($accent-color, 10);
+		background-color: $accent-color;
 		transition: background-color $easing .2s;
 
 		svg {
@@ -46,9 +46,7 @@
 			height: 12px;
 		}
 
-		&:hover {
-			background-color: $accent-color;
-		}
+		&:hover {background-color: lighten($accent-color, 10); }
 	}
 	h1, h2, h2, h3, h4, h5, h6 {
 		@extend .text--large;
