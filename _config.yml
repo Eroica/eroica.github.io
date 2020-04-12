@@ -21,9 +21,5 @@ markdown: kramdown
 sass:
   style: compressed
 
-paginate: 10
-
 plugins:
   - jekyll-feed
-  - jekyll-paginate
-  - jekyll-textile-converter

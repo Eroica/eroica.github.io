@@ -1,37 +1,33 @@
 ---
+title: 201 Created
 layout: default
 ---
 
-<section class="articles-list" data-vbox>
-	{% for post in paginator.posts %}
+<section class="articles-list colored-links" data-vbox>
+	{% assign posts = site.posts | where_exp: "post", "post.category != 'painting'" %}
+	{% for post in posts limit: 10 %}
 	<article class="article-row">
-		<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}"><h2>{{ post.title }}</h2></a>
+		<time class="articledate" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
 
-		{% assign read_more_link = post.url | prepend: " <a href='" | append: "'>Read more …</a>" %}
+		<div class="articlecontent" data-vbox>
+			{% if post.link %}
+			<a href="{{ post.link }}"><h2>{{ post.title }}</h2></a>
+			{% else %}
+			<h2>{{ post.title }}</h2>
+			{% endif %}
 
-		{{ post.excerpt | replace: "<!--read-more-->", read_more_link }}
+			{% assign read_more_link = post.url | prepend: " <a class='read-more' href='" | append: "'>Read more …</a>" %}
 
-		<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+			{{ post.excerpt | replace: "<!--read-more-->", read_more_link }}
+		</div>
 
 		{% if post.link %}<a class="article-permalink" href="{{ post.url }}" title="Permalink to this article">{% include feather/link.svg %}</a>{% endif %}
 	</article>
 	{% endfor %}
 
-	<div class="text--center text--small" data-vbox="-small">
-		<p data-hbox>
-			{% if paginator.previous_page %}
-			<a class="icon-span" href="{{ paginator.previous_page_path }}">{% include feather/chevron-left.svg %} Newer</a>
-			{% else %}
-			<span class="icon-span _disabled">{% include feather/chevron-left.svg %} Newer</span>
-			{% endif %}
-			<span class="current-page text--pale">({{ paginator.page }} / {{ paginator.total_pages }})</span>
-			{% if paginator.next_page %}
-			<a class="icon-span" href="{{ paginator.next_page_path }}">Older {% include feather/chevron-right.svg %}</a>
-			{% else %}
-			<span class="icon-span _disabled">Older {% include feather/chevron-right.svg %}</span>
-			{% endif %}
-		</p>
+	<article class="article-row">
+		<span class="articledate _transparent">{% include feather/moon.svg %}</span>
 
-		<p><a href="{% link all.html %}">All posts</a></p>
-	</div>
+		<a href="{% link paintings.html %}"><h2>Paintings</h2></a>
+	</article>
 </section>

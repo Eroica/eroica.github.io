@@ -1,0 +1,10 @@
+---
+title: 100 Continue
+layout: default
+---
+
+<section class="gallery">
+	{% for post in site.categories.painting %}
+	<a href="{{ post.url }}" title="{{ post.title}}, {{ post.date | date: '%B %d, %Y' }}">{{ post.content }}</a>
+	{% endfor %}
+</section>

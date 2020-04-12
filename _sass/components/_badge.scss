@@ -1,13 +1,13 @@
 .badge {
 	font-size: 11px;
 	text-transform: uppercase;
-	background-color: $accent-color;
+	background-color: $dark-hue-1;
 	color: white;
 	font-weight: 600;
 	letter-spacing: 1.5px;
 	padding: 6px 10px 5px;
 	border-radius: 2px;
-	border: 1px solid darken($accent-color, 10);
+	border: 1px solid $dark-hue-2;
 
 	&.-red {
 		background-color: #fa5252;

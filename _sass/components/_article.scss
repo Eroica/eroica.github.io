@@ -1,91 +1,66 @@
-.article-row, .post {
-	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-gap: 1em;
+a.article-permalink {
+	color: #fff;
+	width: 24px;
+	height: 24px;
+	display: block;
+	text-align: center;
+	line-height: 24px;
+	border-radius: 50%;
+	background-color: $blue-hue-1;
+	transition: background-color $easing .2s;
 
-	time {
-		grid-row: 1;
-		grid-column: 2;
-		white-space: nowrap;
-		text-align: right;
-		position: relative;
-		top: .15rem;
+	svg {
+		width: 12px;
+		height: 12px;
+	}
+
+	&:hover {
+		background-color: lighten($blue-hue-1, 10);
+		color: #fff;
 	}
 }
-.article-row, .post, .title-row {
+
+.article-row,
+.post {
+	> .articledate {
+		float: right;
+		padding-top: .25em;
+		margin-left: 2em;
+	}
+}
+
+.article-row {
 	position: relative;
+
+	.article-permalink {
+		position: absolute;
+		top: calc(1.2rem * 1.7 / 2 - 12px);
+		right: -2em;
+	}
+}
+
+.article-row {border-bottom: 1px solid #e0e5ea; }
+.post {border-bottom: 2px solid #e0e5ea; }
+.-dark .article-row,
+.-dark .post {border-color: rgba(170, 178, 189, .2) }
+
+.article-row,
+.post {
 	padding-bottom: 1em;
-	border-bottom: 2px solid #dfe4e6;
 	transition: border-color .2s $easing;
 
-	> * {
-		grid-column: span 2;
-	}
-	> *:first-child {
-		grid-column: 1;
-		grid-row: 1;
-	}
-	time {
-		@extend .text--pale;
-	}
-	a.article-permalink {
-		position: absolute;
-		color: #fff;
-		top: 0.25em;
-		right: -30px;
-		width: 24px;
-		height: 24px;
-		text-align: center;
-		line-height: 24px;
-		border-radius: 50%;
-		background-color: $accent-color;
-		transition: background-color $easing .2s;
-
-		svg {
-			width: 12px;
-			height: 12px;
-		}
-
-		&:hover {background-color: lighten($accent-color, 10); }
-	}
 	h1, h2, h2, h3, h4, h5, h6 {
 		@extend .text--large;
 	}
-}
-.title-row {
-	border-bottom-width: 1px;
-}
-.article-row {
-	@include breakpoint($md) {
-		> * {
-			grid-column: 1;
-		}
+
+	time {
+		@extend .text--pale;
+		white-space: nowrap;
+		text-align: right;
 	}
 }
-.title-row {
-	@include breakpoint($md) {
-		display: grid;
-		grid-template-columns: auto 1fr;
-		grid-gap: 1em;
 
-		time {
-			grid-row: 1;
-			grid-column: 2;
-			white-space: nowrap;
-			text-align: right;
-			position: relative;
-			top: .25rem;
-		}
-	}
-}
-.-dark .article-row,
-.-dark .post,
-.-dark .title-row {
-	border-color: rgba(170, 178, 189, .2)
-}
-
-.articles-list,
-.titles-list {
+.articles-list {
 	margin-right: 12px;
 	transition: margin-right .2s $easing;
 
@@ -93,6 +68,7 @@
 		margin-right: 0;
 	}
 }
+
 .articles-list .thumbnail {
 	@extend ._box-shadow;
 	position: relative;
