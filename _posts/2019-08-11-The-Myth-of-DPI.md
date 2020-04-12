@@ -3,7 +3,7 @@ title: The Myth of DPI
 layout: post
 ---
 
-My pet annoyance is other designers talking about "the PPI of this image" even though it's irrelevant for screen media (it's only relevant for physical media). Here for reference:
+A reference for every time someone is misunderstanding DPI for digital images again. <!--read-more-->
 
 [All About Digital Photos - The Myth of DPI](http://www.rideau-info.com/photos/mythdpi.html)
 

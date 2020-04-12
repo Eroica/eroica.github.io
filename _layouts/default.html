@@ -7,14 +7,9 @@
 	{% include header.html %}
 
 	<main class="container" data-vbox="-medium" data-insets="-left -right">
-		{{ content }}
+		<p class="icon-links"><a class="twitter" href="{{ site.data.urls.twitter.url }}">{% include {{ site.data.urls.twitter.icon }} %}</a> <a class="rss" href="{{ site.data.urls.rss.url }}">{% include {{ site.data.urls.rss.icon }} %}</a></p>
 
-		<ul class="icon-links text--pale text--small" data-vbox="-small">
-			{% assign twitter = site.data.urls.twitter %}
-			<li><a class="twitter" href="{{ twitter.url }}" data-alignment="-middle" data-hbox="-small">{% include {{ twitter.icon }} %}<span>Tweets</span></a></li>
-			{% assign rss = site.data.urls.rss %}
-			<li><a class="rss" href="{{ rss.url }}" data-alignment="-middle" data-hbox="-small">{% include {{ rss.icon }} %}<span>RSS Posts</span></a></li>
-		</ul>
+		{{ content }}
 	</main>
 
 	{% include footer.html %}

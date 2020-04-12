@@ -23,8 +23,13 @@ $lg: 992px;
 $xl: 1200px;
 
 $accent-color: #419BF9;
-$font-color-dark: rgb(82, 97, 115);
+$blue-hue-1: #419BF9;
+$font-color-dark: #526173;
 $font-color-pale: #AAB2BD;
+
+$dark-hue-1: #2d3741;
+$dark-hue-2: #38434c;
+$dark-hue-3: #59656b;
 
 $easing: cubic-bezier(.02,.98,.46,.95);
 
@@ -41,7 +46,8 @@ $easing: cubic-bezier(.02,.98,.46,.95);
 @import "typography";
 @import "containers";
 
-@import "components/badge";
-@import "components/switch";
 @import "components/article";
+@import "components/badge";
+@import "components/gallery";
+@import "components/switch";
 @import "components/icon-links";

@@ -1,0 +1,19 @@
+.gallery {
+	columns: 2;
+	column-gap: 10px;
+
+	> * {
+		display: block;
+		margin-bottom: 10px;
+		border-radius: 3px;
+		overflow: hidden;
+		box-shadow: 0 1px 20px rgba(0, 16, 48, 0.04)
+	}
+
+	@include breakpoint($md) {
+		columns: 3;
+		column-gap: 15px;
+
+		> * { margin-bottom: 15px; }
+	}
+}

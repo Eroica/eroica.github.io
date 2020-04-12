@@ -1,42 +1,24 @@
 button, .button {
-	@extend .-transition;
 	font-family: inherit;
-	font-size: 1.4rem;
+	font-size: .9rem;
 	cursor: pointer;
 	display: inline-block;
-	border-radius: 3px;
-	padding: .5em 1em;
+	padding: 6px 10px 5px;
+	border-radius: 2px;
+	padding: .25em .5em;
 	border: 1px solid #e7e7e9;
+	background-color: #fff;
 	color: #404040;
+	transition: background-color .2s $easing, color .2s $easing, border-color .2s $easing;
 
 	&:hover {
-		border-color: #469DF6;
-		text-decoration: none;
-	}
-
-	&.-primary {
-		background: #469DF6;
+		background-color: #469DF6;
 		border-color: darken(#469DF6, 20);
 		color: #fff;
-	}
-
-	&.-small {
-		font-size: 1.3rem;
 	}
 }
 
 .-dark button, .-dark .button {
 	border-color: rgba(#e7e7e9, .5);
-	color: #fff;
-
-	&:hover {
-		border-color: #469DF6;
-		color: #469DF6;
-	}
-
-	&.-primary {
-		background: #469DF6;
-		border-color: darken(#469DF6, 20);
-		color: #fff;
-	}
+	background-color: #242424;
 }

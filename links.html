@@ -1,0 +1,10 @@
+---
+title: 303 See Other
+layout: default
+---
+
+<ul class="link-list colored-links" data-vbox="-small">
+	{% for link in site.data.links %}
+	<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+	{% endfor %}
+</ul>
