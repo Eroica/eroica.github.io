@@ -12,14 +12,12 @@ body, input, select, textarea {
 strong, b {font-weight: 600; }
 .-dark strong, .-dark b {color: white; }
 
+code, .code, kbd { font-family: "Consolas", "Inconsolata", monospace; }
 code, .code {
 	padding: 2px 4px;
-	font-family: "Consolas", "Inconsolata", monospace;
 	background-color: rgba(0, 0, 0, .05);
 }
-.-dark code, .-dark .code {
-	background-color: rgba(255, 255, 255, .07);
-}
+.-dark code, .-dark .code {background-color: rgba(255, 255, 255, .07); }
 
 figure.highlight {
 	padding: 1em;
@@ -31,6 +29,10 @@ figure.highlight {
 		background-color: transparent;
 		padding: 0;
 	}
+
+	@include breakpoint($md) {
+		overflow-x: auto;
+	}
 }
 .-dark figure.highlight {
 	background-color: rgba(255, 255, 255, .07);
@@ -39,11 +41,10 @@ figure.highlight {
 }
 
 kbd {
-	display: inline-block;
-	padding: .5em;
+	padding: 2px 4px;
 	background-color: #fff;
 	border-radius: 5px;
-	box-shadow: 0 1px 2px rgba(0, 16, 48, .12);
+	box-shadow: 0 1px 2px rgba(0, 16, 48, .06);
 }
 
 .text--center {text-align: center;}
@@ -99,8 +100,7 @@ hr {
 .footnote {text-indent: -.45em; }
 
 .post ul {margin-left: 50px; }
-.post ul,
-.link-list {
+.post ul, .link-list {
 	li {position: relative; }
 	li::before {
 		@extend .text--pale;

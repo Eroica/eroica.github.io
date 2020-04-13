@@ -20,8 +20,7 @@ a.article-permalink {
 	}
 }
 
-.article-row,
-.post {
+.article-row, .post {
 	> .articledate {
 		float: right;
 		padding-top: .25em;
@@ -41,11 +40,9 @@ a.article-permalink {
 
 .article-row {border-bottom: 1px solid #e0e5ea; }
 .post {border-bottom: 2px solid #e0e5ea; }
-.-dark .article-row,
-.-dark .post {border-color: rgba(170, 178, 189, .2) }
+.-dark .article-row, .-dark .post {border-color: rgba(170, 178, 189, .2) }
 
-.article-row,
-.post {
+.article-row,.post {
 	padding-bottom: 1em;
 	transition: border-color .2s $easing;
 
@@ -89,6 +86,4 @@ a.article-permalink {
 		left: 0;
 	}
 }
-.-dark .articles-list .thumbnail {
-	background-color: rgba(0, 0, 0, .3);
-}
+.-dark .articles-list .thumbnail {background-color: rgba(0, 0, 0, .3); }
