@@ -3,31 +3,21 @@ title: 201 Created
 layout: default
 ---
 
-<section class="articles-list colored-links" data-vbox>
+<section class="timeline">
 	{% assign posts = site.posts | where_exp: "post", "post.category != 'painting'" %}
-	{% for post in posts limit: 10 %}
-	<article class="article-row">
-		<time class="articledate" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+	{% for post in posts %}
+	<article class="colored-links">
+		<p class="status">{%- case post.code -%}
+	{% when 200 %}<span class="badge -blue _box-shadow">200 OK</span>
+	{% when 201 %}<span class="badge -blue _box-shadow">201 Created</span>
+	{% else %}<span class="badge _box-shadow">100 Continue</span>
+{%- endcase -%}</p>
 
-		<div class="articlecontent" data-vbox>
-			{% if post.link %}
-			<a href="{{ post.link }}"><h2>{{ post.title }}</h2></a>
-			{% else %}
-			<h2>{{ post.title }}</h2>
-			{% endif %}
+		<div class="content" data-vbox>
+			<h2>{%- if post.link -%}<a href="{{ post.link }}">{{ post.title }}</a> <a class="article-permalink" href="{{ post.url }}" title="Permalink to this article">{% include feather/link.svg %}</a>{%- else -%}<a href="{{ post.url }}">{{ post.title }}</a>{%- endif -%} <time class="articledate" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></h2>
 
-			{% assign read_more_link = post.url | prepend: " <a class='read-more' href='" | append: "'>Read more …</a>" %}
-
-			{{ post.excerpt | replace: "<!--read-more-->", read_more_link }}
+			{{ post.excerpt }}
 		</div>
-
-		{% if post.link %}<a class="article-permalink" href="{{ post.url }}" title="Permalink to this article">{% include feather/link.svg %}</a>{% endif %}
 	</article>
 	{% endfor %}
-
-	<article class="article-row">
-		<span class="articledate text--pale">{% include feather/moon.svg %}</span>
-
-		<a href="{% link paintings.html %}"><h2>Paintings</h2></a>
-	</article>
 </section>

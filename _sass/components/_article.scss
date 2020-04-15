@@ -1,8 +1,66 @@
+.timeline {
+	position: relative;
+
+	.status {white-space: nowrap; }
+	.content {
+		padding-bottom: 2em;
+		padding-left: 2em;
+	}
+
+	@include breakpoint($md) {
+		article {display: table-row; }
+		.status, .content {display: table-cell; }
+		.content {padding-left: 1em;}
+
+		.status {
+			position: relative;
+			text-align: center;
+			bottom: 2px;
+
+			&::before, &::after {
+				position: absolute;
+				content: "";
+				width: 2px;
+				left: calc(50% - 1px);
+			}
+			&::after {
+				top: 0;
+				bottom: 0;
+				background-color: rgba(224, 229, 234, 1.0);
+				z-index: -1;
+			}
+		}
+
+		article:first-of-type .status::before {
+				height: 2em;
+				top: -2em;
+				background: linear-gradient(to bottom, rgba(224, 229, 234, 0), rgba(224, 229, 234, 1.0));
+		}
+		article:last-of-type .status::before {
+				height: 2em;
+				bottom: -2em;
+				background: linear-gradient(to bottom, rgba(224, 229, 234, 1.0), rgba(224, 229, 234, 0));
+		}
+	}
+
+	time {
+		@extend .text--pale;
+		@extend .text--small;
+		margin-left: .5em;
+		white-space: nowrap;
+	}
+}
+.-dark .timeline {
+	article:first-of-type .status::before {background: linear-gradient(to bottom, rgba(170, 178, 189, 0), rgba(170, 178, 189, .2));}
+	article:last-of-type .status::before {background: linear-gradient(to bottom, rgba(170, 178, 189, .2), rgba(170, 178, 189, 0));}
+	.status::after {background-color: rgba(170, 178, 189, .2);}
+}
+
 a.article-permalink {
 	color: #fff;
 	width: 24px;
 	height: 24px;
-	display: block;
+	display: inline-block;
 	text-align: center;
 	line-height: 24px;
 	border-radius: 50%;
@@ -20,29 +78,10 @@ a.article-permalink {
 	}
 }
 
-.article-row, .post {
-	> .articledate {
-		float: right;
-		padding-top: .25em;
-		margin-left: 2em;
-	}
-}
-
-.article-row {
-	position: relative;
-
-	.article-permalink {
-		position: absolute;
-		top: calc(1.2rem * 1.7 / 2 - 12px);
-		right: -2em;
-	}
-}
-
-.article-row {border-bottom: 1px solid #e0e5ea; }
 .post {border-bottom: 2px solid #e0e5ea; }
-.-dark .article-row, .-dark .post {border-color: rgba(170, 178, 189, .2) }
+.-dark .post {border-color: rgba(170, 178, 189, .2) }
 
-.article-row,.post {
+.post {
 	padding-bottom: 1em;
 	transition: border-color .2s $easing;
 
@@ -50,40 +89,12 @@ a.article-permalink {
 		@extend .text--large;
 	}
 
-	time {
+	> .articledate {
+		float: right;
 		@extend .text--pale;
 		white-space: nowrap;
 		text-align: right;
+		padding-top: .25em;
+		margin-left: 2em;
 	}
 }
-
-.articles-list {
-	margin-right: 12px;
-	transition: margin-right .2s $easing;
-
-	@include breakpoint($lg) {
-		margin-right: 0;
-	}
-}
-
-.articles-list .thumbnail {
-	@extend ._box-shadow;
-	position: relative;
-	background-color: rgba(0, 0, 0, .1);
-
-	img {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 50%;
-	}
-
-	&::after {
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-	}
-}
-.-dark .articles-list .thumbnail {background-color: rgba(0, 0, 0, .3); }

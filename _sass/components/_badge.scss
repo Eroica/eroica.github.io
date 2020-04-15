@@ -9,8 +9,24 @@
 	border-radius: 2px;
 	border: 1px solid $dark-hue-2;
 
+	&.-blue {
+		background-color: $accent-color;
+		border-color: darken($accent-color, 10);
+	}
+
 	&.-red {
 		background-color: #fa5252;
 		border-color: #e03131;
 	}
 }
+
+.tag {
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	padding: 4px 16px;
+	border-radius: 4px;
+	background-color: rgba(0, 0, 0, .05);
+	font-size: 11px;
+}
+.-dark .tag {background-color: rgba(255, 255, 255, .07)}
