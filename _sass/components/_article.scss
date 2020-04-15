@@ -1,13 +1,18 @@
 .timeline {
-	position: relative;
-
 	.status {white-space: nowrap; }
 	.content {
 		padding-bottom: 2em;
-		padding-left: 2em;
+	}
+	time {
+		@extend .text--pale;
+		@extend .text--small;
+		margin-left: .5em;
+		white-space: nowrap;
 	}
 
-	@include breakpoint($md) {
+	@include breakpoint($sm) {
+		position: relative;
+
 		article {display: table-row; }
 		.status, .content {display: table-cell; }
 		.content {padding-left: 1em;}
@@ -42,13 +47,6 @@
 				background: linear-gradient(to bottom, rgba(224, 229, 234, 1.0), rgba(224, 229, 234, 0));
 		}
 	}
-
-	time {
-		@extend .text--pale;
-		@extend .text--small;
-		margin-left: .5em;
-		white-space: nowrap;
-	}
 }
 .-dark .timeline {
 	article:first-of-type .status::before {background: linear-gradient(to bottom, rgba(170, 178, 189, 0), rgba(170, 178, 189, .2));}
@@ -78,11 +76,9 @@ a.article-permalink {
 	}
 }
 
-.post {border-bottom: 2px solid #e0e5ea; }
-.-dark .post {border-color: rgba(170, 178, 189, .2) }
-
 .post {
-	padding-bottom: 1em;
+	padding-bottom: 2em;
+	border-bottom: 2px solid #e0e5ea;
 	transition: border-color .2s $easing;
 
 	h1, h2, h2, h3, h4, h5, h6 {
@@ -90,11 +86,12 @@ a.article-permalink {
 	}
 
 	> .articledate {
-		float: right;
 		@extend .text--pale;
+		float: right;
 		white-space: nowrap;
 		text-align: right;
 		padding-top: .25em;
 		margin-left: 2em;
 	}
 }
+.-dark .post {border-color: rgba(170, 178, 189, .2) }

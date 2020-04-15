@@ -6,7 +6,7 @@ layout: default
 <section class="timeline">
 	{% assign posts = site.posts | where_exp: "post", "post.category != 'painting'" %}
 	{% for post in posts %}
-	<article class="colored-links">
+	<article class="colored-links" data-vbox>
 		<p class="status">{%- case post.code -%}
 	{% when 200 %}<span class="badge -blue _box-shadow">200 OK</span>
 	{% when 201 %}<span class="badge -blue _box-shadow">201 Created</span>
