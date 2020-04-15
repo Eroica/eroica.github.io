@@ -95,3 +95,8 @@ a.article-permalink {
 	}
 }
 .-dark .post {border-color: rgba(170, 178, 189, .2) }
+
+.timeline .tag, .post .tag {
+	position: relative;
+	bottom: .1em;
+}
