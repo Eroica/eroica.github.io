@@ -1,3 +1,6 @@
+artstation:
+  url: https://artstation.com/Eroica
+  icon: icons/artstation.svg
 github:
   url: https://github.com/Eroica
   icon: feather/github.svg
