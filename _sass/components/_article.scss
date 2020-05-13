@@ -1,14 +1,17 @@
+time.articledate {
+	@extend .text--pale;
+	@extend .text--small;
+	float: right;
+	margin-left: .5em;
+	margin-top: .45em;
+	white-space: nowrap;
+	text-align: right;
+	font-weight: 600;
+}
+
 .timeline {
 	.status {white-space: nowrap; }
-	.content {
-		padding-bottom: 2em;
-	}
-	time {
-		@extend .text--pale;
-		@extend .text--small;
-		margin-left: .5em;
-		white-space: nowrap;
-	}
+	.content {padding-bottom: 2em; }
 
 	@include breakpoint($sm) {
 		position: relative;
@@ -37,14 +40,14 @@
 		}
 
 		article:first-of-type .status::before {
-				height: 2em;
-				top: -2em;
-				background: linear-gradient(to bottom, rgba(224, 229, 234, 0), rgba(224, 229, 234, 1.0));
+			height: 2em;
+			top: -2em;
+			background: linear-gradient(to bottom, rgba(224, 229, 234, 0), rgba(224, 229, 234, 1.0));
 		}
 		article:last-of-type .status::before {
-				height: 2em;
-				bottom: -2em;
-				background: linear-gradient(to bottom, rgba(224, 229, 234, 1.0), rgba(224, 229, 234, 0));
+			height: 2em;
+			bottom: -2em;
+			background: linear-gradient(to bottom, rgba(224, 229, 234, 1.0), rgba(224, 229, 234, 0));
 		}
 	}
 }
@@ -58,12 +61,14 @@ a.article-permalink {
 	color: #fff;
 	width: 24px;
 	height: 24px;
-	display: inline-block;
-	text-align: center;
-	line-height: 24px;
+	display: inline-flex;
 	border-radius: 50%;
-	background-color: $blue-hue-1;
-	transition: background-color $easing .2s;
+	background-color: #419BF9;
+	transition: background-color cubic-bezier(0.02, 0.98, 0.46, 0.95) 0.2s;
+	vertical-align: middle;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
 
 	svg {
 		width: 12px;
@@ -80,19 +85,6 @@ a.article-permalink {
 	padding-bottom: 2em;
 	border-bottom: 2px solid #e0e5ea;
 	transition: border-color .2s $easing;
-
-	h1, h2, h2, h3, h4, h5, h6 {
-		@extend .text--large;
-	}
-
-	> .articledate {
-		@extend .text--pale;
-		float: right;
-		white-space: nowrap;
-		text-align: right;
-		padding-top: .25em;
-		margin-left: 2em;
-	}
 }
 .-dark .post {border-color: rgba(170, 178, 189, .2) }
 
