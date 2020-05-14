@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section class="timeline">
+<div class="timeline">
 	{% assign posts = site.posts | where_exp: "post", "post.category != 'painting'" %}
 	{% for post in posts %}
 	<article class="colored-links" data-vbox>
@@ -19,4 +19,4 @@ layout: default
 		</div>
 	</article>
 	{% endfor %}
-</section>
+</div>
