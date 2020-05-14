@@ -12,6 +12,6 @@ Paletti now _posterizes_ the image into as many colors as selected (currently be
 
 <span class="tag">Added</span> Use the _Copy_ button to put the posterized image into the clipboard.
 
-![Screenshot of Paletti 2.0-alpha]({{ "/images/Paletti/Paletti-2.0-alpha.png" | relative_url }})
+![Screenshot of Paletti 2.0-alpha]({{ "/images/Paletti-2.0-alpha.png" | relative_url }})
 
 <!--more-->
