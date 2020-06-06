@@ -28,5 +28,8 @@
 	border-radius: 4px;
 	background-color: rgba(0, 0, 0, .05);
 	font-size: 11px;
+	// Slightly nudge the baseline higher a little bit
+	position: relative;
+	bottom: .1em;
 }
 .-dark .tag {background-color: rgba(255, 255, 255, .07)}
