@@ -44,6 +44,9 @@ kbd {
 	background-color: #fff;
 	border-radius: 5px;
 	box-shadow: 0 1px 2px rgba(0, 16, 48, .06);
+	font-size: 14px;
+	
+	& + code {font-size: 14px;}
 }
 .-dark kbd {color: $font-color-dark;}
 
