@@ -4,7 +4,7 @@ layout: post
 excerpt_separator: <!--more-->
 ---
 
-Paletti now _posterizes_ the image into as many colors as selected (currently between 3 and 32). So the color palette will only consist of those colors that show up in the posterized image.
+Paletti now _posterizes_ the image into as many colors as selected (currently between 3 and 32). You can save or copy this modified image from Paletti to other programs.
 
 <span class="tag">Added</span> Change the color palette size with a slider.
 
