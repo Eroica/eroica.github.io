@@ -1,13 +1,11 @@
-time.articledate {
-	@extend .text--pale;
-	@extend .text--small;
-	float: right;
-	margin-left: .5em;
-	margin-top: .35em;
-	white-space: nowrap;
-	text-align: right;
-	font-weight: 600;
-	letter-spacing: 0;
+.plan {
+	position: relative;
+	padding-left: 50px;
+	svg {
+		position: absolute;
+		top: calc(1.65em/2 - 12px);
+		left: 13px;
+	}
 }
 
 .timeline {
@@ -82,14 +80,13 @@ a.article-permalink {
 	}
 }
 
-.post {
-	padding-bottom: 2em;
-	border-bottom: 2px solid #e0e5ea;
-	transition: border-color .2s $easing;
-}
-.-dark .post {border-color: rgba(170, 178, 189, .2) }
-
-.timeline .tag, .post .tag {
-	position: relative;
-	bottom: .1em;
+.articledate {
+	@extend .text--small;
+	float: right;
+	margin-left: .5em;
+	margin-top: .3em;
+	text-align: right;
+	white-space: nowrap;
+	font-weight: 600;
+	letter-spacing: 0;
 }

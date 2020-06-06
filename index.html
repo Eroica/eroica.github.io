@@ -1,6 +1,9 @@
 ---
+title: .plan
 layout: default
 ---
+
+{% include plan.html %}
 
 <div class="timeline">
 	{% assign posts = site.posts | where_exp: "post", "post.category != 'painting'" %}
