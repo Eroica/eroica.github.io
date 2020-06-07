@@ -106,7 +106,16 @@ hr {
 
 #HomeLink {font-size: 0; }
 
-.footnote {text-indent: -.45em; }
+.footnote {
+	@extend .text--small;
+	text-indent: -.45em;
+
+	svg {
+		position: relative;
+		vertical-align: middle;
+		bottom: .1em;
+	}
+}
 
 ul {
 	li {position: relative; }

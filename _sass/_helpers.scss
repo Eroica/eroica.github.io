@@ -1,10 +1,10 @@
 ._transparent {opacity: .7;}
 
 ._box-shadow {
-	box-shadow: 0px 3px 0px #e7e8ec;
+	box-shadow: 0 3px 0 #e7e8ec;
 	transition: box-shadow .2s $easing;
 }
-.-dark ._box-shadow {box-shadow: 0px 2px 0px rgba(170, 178, 189, .2); }
+.-dark ._box-shadow {box-shadow: 0 2px 0 rgba(170, 178, 189, .2); }
 
 ._disabled {
 	cursor: not-allowed;
