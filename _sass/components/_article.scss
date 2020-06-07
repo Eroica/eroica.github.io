@@ -1,10 +1,17 @@
 .plan {
 	position: relative;
-	padding-left: 50px;
+	padding-left: 35px;
+
 	svg {
 		position: absolute;
 		top: calc(1.65em/2 - 12px);
-		left: 13px;
+		left: 0;
+	}
+
+	@include breakpoint($md) {
+		padding-left: 50px;
+
+		svg { left: 13px; }
 	}
 }
 
