@@ -1,8 +1,8 @@
 .icon-links svg {
-	color: #AAB2BD;
+	color: $font-color-pale;
 	padding: 2px;
 }
-.-dark .icon-links svg {color: #AAB2BD; opacity: .5;}
+.-dark .icon-links svg {color: $font-color-pale; opacity: .5;}
 .-dark .icon-links a:hover svg {opacity: 1;}
 .icon-links svg {transition: color .2s $easing, opacity .2s $easing; }
 .icon-links .github:hover svg {color: #171515; }

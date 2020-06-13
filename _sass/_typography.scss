@@ -45,7 +45,7 @@ kbd {
 	border-radius: 5px;
 	box-shadow: 0 1px 2px rgba(0, 16, 48, .06);
 	font-size: 14px;
-	
+
 	& + code {font-size: 14px;}
 }
 .-dark kbd {color: $font-color-dark;}
@@ -84,15 +84,21 @@ img, video {max-width: 100%; }
 video {display: block; }
 
 blockquote {
-	@extend .text--pale;
 	@extend [data-VBox];
+	position: relative;
 	margin-left: 2em;
+	text-indent: -.45em;
 
-	p:first-of-type {
-		text-indent: -.45em;
-		&::before {content: "“"; }
+	&::after {
+		@extend .text--pale;
+		display: block;
+		margin-left: 1em;
+		content: "—" attr(cite);
 	}
-	p:last-of-type::after {content: "”"; }
+
+	p:not(:first-of-type) {
+		text-indent: 0;
+	}
 }
 
 hr {
@@ -105,6 +111,20 @@ hr {
 .-dark hr {background-color: rgba(170, 178, 189, .2) }
 
 #HomeLink {font-size: 0; }
+
+figure {
+	padding-top: 2em;
+	padding-bottom: 2em;
+
+	figcaption {
+		@extend .text--small;
+		@extend .text--pale;
+		margin-top: 1em;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 80%;
+	}
+}
 
 .footnote {
 	@extend .text--small;
@@ -127,4 +147,9 @@ ul {
 	}
 }
 .-dark ul li::before {color: rgba(170, 178, 189, .2); }
-.timeline ul, .post ul {margin-left: 25px; }
+.timeline ul, .post ul {margin-left: 24px; }
+
+ol {
+	list-style: decimal;
+	margin-left: 24px;
+}

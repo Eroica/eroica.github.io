@@ -10,6 +10,14 @@
 
 @font-face {
 	font-family: "Clear Sans";
+	src: url("/fonts/ClearSans-Italic-webfont.woff") format("woff");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Clear Sans";
 	src: url("/fonts/ClearSans-Medium-webfont.woff") format("woff");
 	font-weight: 600;
 	font-style: normal;
@@ -25,7 +33,7 @@ $xl: 1200px;
 $accent-color: #419BF9;
 $blue-hue-1: #419BF9;
 $font-color-dark: #526173;
-$font-color-pale: #AAB2BD;
+$font-color-pale: #8f97a3;
 
 $dark-hue-1: #2d3741;
 $dark-hue-2: #38434c;
