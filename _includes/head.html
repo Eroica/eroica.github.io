@@ -3,7 +3,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Seba.萌え{% if page.layout == "post" %} / {% case page.code %}
+	<title>{{ site.title }}{% if page.layout == "post" %} / {% case page.code %}
 	{% when 200 %}200 OK
 	{% when 201 %}201 Created
 	{% else %}100 Continue
