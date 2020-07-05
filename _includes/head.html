@@ -6,6 +6,7 @@
 	<title>{{ site.title }}{% if page.layout == "post" %} / {% case page.code %}
 	{% when 200 %}200 OK
 	{% when 201 %}201 Created
+	{% when 203 %}203 Non-Authoritative Information
 	{% else %}100 Continue
 {% endcase %} / {{ page.title }}{% else %}{% if page.title %} / {{ page.title }}{% endif %}{% endif %}</title>
 	<meta name="description" content="{{ site.description }}">
