@@ -1,5 +1,5 @@
 ---
-title: An Image Viewer 1.2
+title: An Image Viewer 1.2, Update
 layout: post
 excerpt_separator: <!--more-->
 ---
