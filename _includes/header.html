@@ -13,21 +13,5 @@
 		{% include feather/moon.svg %}
 	</p>
 
-	<script>
-		(function () {
-			var $body = document.querySelector("body");
-			var currentHours = (new Date()).getHours();
-			var isDarkHours = currentHours >= 21 || currentHours < 8
-			var wantsDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-			if (isDarkHours || wantsDarkMode) {
-				$body.classList.add("-dark");
-				document.querySelector(".switch > input").checked = true;
-			} else {
-				document.querySelector(".switch > input").checked = false;
-			}
-		})();
-	</script>
-
 	<p><a href="{% link links.html %}" class="badge _box-shadow">303 See Other</a></p>
 </header>
