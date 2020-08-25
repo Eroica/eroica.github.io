@@ -9,19 +9,24 @@ layout: default
 	{% assign posts = site.posts | where_exp: "post", "post.category != 'painting'" %}
 	{% for post in posts %}
 	<article class="colored-links" data-vbox>
-		<p class="status">{%- case post.code -%}
-	{% when 200 %}<span class="badge -blue _box-shadow">200 OK</span>
-	{% when 201 %}<span class="badge -blue _box-shadow">201 Created</span>
-	{% when 203 %}<span class="badge -blue _box-shadow">203 NAI</span>
-	{% else %}<span class="badge _box-shadow">100 Continue</span>
-{%- endcase -%}</p>
+		<p class="status Whs(nw)">{%- case post.code -%}
+			{% when 200 %}<span class="badge -blue _box-shadow">200 OK</span>
+			{% when 201 %}<span class="badge -blue _box-shadow">201 Created</span>
+			{% when 203 %}<span class="badge -blue _box-shadow">203 NAI</span>
+			{% else %}<span class="badge _box-shadow">100 Continue</span>
+			{%- endcase -%}</p>
 
 		<div class="content" data-vbox>
-			<h2 data-hbox>{%- if post.link -%}<a href="{{ post.link }}">{{ post.title }}</a> <a class="article-permalink" href="{{ post.url }}" title="Permalink to this article">{% include feather/link.svg %}</a>{%- else -%}<a href="{{ post.url }}">{{ post.title }}</a>{%- endif -%} <time class="articledate" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></h2>
+			<h2 data-hbox data-flow="baseline">{%- if post.link -%}
+				<a href="{{ post.link }}">{{ post.title }}</a>
+				<a class="article-permalink" href="{{ post.url }}" title="Permalink to this article">{% include feather/link.svg %}</a>{%- else -%}<a href="{{ post.url }}">{{ post.title }}</a>{%- endif -%}
+				<time class="articledate Mstart(a) Ta(end) Whs(nw)" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+			</h2>
 
-			{% assign read_more_link = post.url | prepend: " <a class='read-more' href='" | append: "'>Read more …</a>" %}
+			{% assign read_more_link = post.url | prepend: "
+			<a class='read-more' href='" | append: "'>Read more …</a>" %}
 
-			{{ post.excerpt | replace: "<!--read-more-->", read_more_link }}
+			{{ post.excerpt | replace: "<!--read-more--> ", read_more_link }}
 		</div>
 	</article>
 	{% endfor %}
