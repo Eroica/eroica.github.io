@@ -18,6 +18,14 @@
 .timeline {
 	.status {white-space: nowrap; }
 	.content {padding-bottom: 2em; }
+	h2 {
+		display: flex;
+		align-items: baseline;
+
+		> *:last-child {
+			margin-left: auto;
+		}
+	}
 
 	@include breakpoint($sm) {
 		position: relative;
@@ -89,9 +97,6 @@ a.article-permalink {
 
 .articledate {
 	@extend .text--small;
-	float: right;
-	margin-left: .5em;
-	margin-top: .3em;
 	text-align: right;
 	white-space: nowrap;
 	font-weight: 600;
