@@ -26,6 +26,11 @@ $PREFIX: "data-";
 	&[#{$PREFIX}HBox~="-small"] > *:not(:last-child) { margin-right: .5em; }
 }
 
+[#{$PREFIX}Flow] {
+	display: flex;
+	&[#{$PREFIX}Flow~="baseline"] {align-items: baseline}
+}
+
 .switch-row {
 	> * {height: calc(1em*1.5); }
 	svg {padding: 2px; }
