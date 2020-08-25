@@ -16,16 +16,7 @@
 }
 
 .timeline {
-	.status {white-space: nowrap; }
 	.content {padding-bottom: 2em; }
-	h2 {
-		display: flex;
-		align-items: baseline;
-
-		> *:last-child {
-			margin-left: auto;
-		}
-	}
 
 	@include breakpoint($sm) {
 		position: relative;
@@ -97,8 +88,6 @@ a.article-permalink {
 
 .articledate {
 	@extend .text--small;
-	text-align: right;
-	white-space: nowrap;
 	font-weight: 600;
 	letter-spacing: 0;
 }
