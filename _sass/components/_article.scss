@@ -91,3 +91,14 @@ a.article-permalink {
 	font-weight: 600;
 	letter-spacing: 0;
 }
+
+@media screen and (max-width: $sm) {
+	.content > p > img:only-child,
+	.post > p > img:only-child,
+	.content > video,
+	.post > video {
+		margin-left: -24px;
+		margin-right: -24px;
+		min-width: calc(100% + 48px);
+	}
+}
