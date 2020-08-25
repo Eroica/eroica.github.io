@@ -13,7 +13,6 @@ function toggleDarkness (event) {
 
 window.addEventListener("load", function () {
 	$body = document.querySelector("body");
-	$switch = document.querySelector("input[type='checkbox']");
-	$body.classList.remove("is-loading");
-	$body.classList.remove("no-js");
+	$switch = document.querySelector("header input[type='checkbox']");
+	$body.classList.remove("is-loading", "no-js");
 });
