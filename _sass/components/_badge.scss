@@ -13,10 +13,18 @@
 		background-color: $accent-color;
 		border-color: darken($accent-color, 10);
 	}
-
 	&.-red {
 		background-color: #fa5252;
 		border-color: #e03131;
+	}
+	&.-yellow {
+		background-color: #fad052;
+		border-color: #f8b248;
+		color: $dark-hue-1;
+	}
+	&.-green {
+		background-color: #59c135;
+		border-color: #14a02e;
 	}
 }
 
