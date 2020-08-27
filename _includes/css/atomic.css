@@ -10,6 +10,16 @@
 .Op\(\.7\) {
   opacity: .7;
 }
+.Px\(24px\) {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.Pe\(n\) {
+  pointer-events: none;
+}
+.Ta\(c\) {
+  text-align: center;
+}
 .Ta\(end\) {
   text-align: right;
 }

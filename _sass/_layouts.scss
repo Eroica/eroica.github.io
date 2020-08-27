@@ -8,13 +8,6 @@ $PREFIX: "data-";
 	&[#{$PREFIX}Alignment~="-middle"] > * { vertical-align: middle; }
 }
 
-[#{$PREFIX}Insets] {
-	&[#{$PREFIX}Insets~="-top"] {padding-top: 24px; }
-	&[#{$PREFIX}Insets~="-right"] {padding-right: 24px; }
-	&[#{$PREFIX}Insets~="-bottom"] {padding-bottom: 24px; }
-	&[#{$PREFIX}Insets~="-left"] {padding-left: 24px; }
-}
-
 [#{$PREFIX}VBox] {
 	> * + * {margin-top: 1em; }
 	&[#{$PREFIX}VBox~="-small"] > * + * {margin-top: .5em; }
