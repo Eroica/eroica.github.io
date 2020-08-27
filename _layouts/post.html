@@ -3,9 +3,14 @@ layout: default
 ---
 
 <article class="post container colored-links" data-vbox>
-	<time class="articledate" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+	{%- case post.code -%}
+	{% when 200 %}<span class="badge -blue _box-shadow">200 OK</span>
+	{% when 201 %}<span class="badge -blue _box-shadow">201 Created</span>
+	{% when 203 %}<span class="badge -blue _box-shadow">203 NAI</span>
+	{% else %}<span class="badge _box-shadow">100 Continue</span>
+	{%- endcase -%}
 
-	{% if page.link %}<a href="{{ page.link }}"><h1>{{ page.title }}</h1></a>{% else %}<h1>{{ page.title }}</h1>{% endif %}
+	<h1 data-hbox data-flow="baseline">{% if page.link %}<a href="{{ page.link }}">{{ page.title }}</a>{% else %}{{ page.title }}{% endif %} <time class="articledate Mstart(a) Ta(end) Whs(nw)" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></h1>
 
 	{{ content }}
 </article>
