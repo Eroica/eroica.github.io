@@ -4,7 +4,9 @@ layout: post
 excerpt_separator: <!--more-->
 ---
 
-Paletti's Vala/GTK version now has all features that I originally had planned for it. This version is now tagged as `v2.0`, and an AppImage is available from the [Releases](https://github.com/Eroica/Paletti/releases). The AppImage is built on Ubuntu 16.04 so it should run on anything that is as old or newer than that.
+Paletti's Vala/GTK version now has all features that I originally had planned for it. This version is now tagged as `v2.0`, and an AppImage is available from the [Releases](https://github.com/Eroica/Paletti/releases). The AppImage is built on Ubuntu 16.04 so it should run on anything that is as old or newer than that. <!--read-more-->
+
+<!--more-->
 
 A quick roundabout what Paletti 2.0 has added or improved upon:
 
@@ -35,5 +37,3 @@ The latest 2.0 commits worked on:
 <span class="tag">Update</span> Improvements to error handling.
 
 A note on Paletti's UI: Building on Ubuntu 16.04 also meant that the supplied GTK3 version is older than what I have. This is mostly visible in the theme that is being used. Since more recent GTK3 versions updated the look and improved support for CSS attributes, the 16.04 AppImage looks a little bit rough around the edges. For this reason, there is another AppImage built on newer dependencies. The filename refers to the minimum required version of GLib (or is omitted in the case of "as old as Ubuntu 16.04").
-
-<!--more-->

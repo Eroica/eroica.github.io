@@ -23,10 +23,9 @@ layout: default
 				<time class="articledate Mstart(a) Ta(end) Whs(nw)" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
 			</h2>
 
-			{% assign read_more_link = post.url | prepend: "
-			<a class='read-more' href='" | append: "'>Read more …</a>" %}
+			{% assign read_more_link = post.url | prepend: "<a class='read-more' href='" | append: "'>Read more …</a>" %}
 
-			{{ post.excerpt | replace: "<!--read-more--> ", read_more_link }}
+			{{ post.excerpt | replace: "<!--read-more-->", read_more_link }}
 		</div>
 	</article>
 	{% endfor %}

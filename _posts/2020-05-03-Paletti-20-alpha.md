@@ -4,7 +4,9 @@ layout: post
 excerpt_separator: <!--more-->
 ---
 
-Paletti now _posterizes_ the image into as many colors as selected (currently between 3 and 32). You can save or copy this modified image from Paletti to other programs.
+Paletti now _posterizes_ the image into as many colors as selected (currently between 3 and 32). You can save or copy this modified image from Paletti to other programs. <!--read-more-->
+
+<!--more-->
 
 <span class="tag">Added</span> Change the color palette size with a slider.
 
@@ -13,5 +15,3 @@ Paletti now _posterizes_ the image into as many colors as selected (currently be
 <span class="tag">Added</span> Use the _Copy_ button to put the posterized image into the clipboard.
 
 ![Screenshot of Paletti 2.0-alpha]({{ "/images/Paletti-2.0-alpha2.png" | relative_url }})
-
-<!--more-->
