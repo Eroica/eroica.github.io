@@ -50,7 +50,7 @@ kbd {
 }
 .-dark kbd {color: $font-color-dark;}
 
-.text--pale {color: $font-color-pale; }
+del, .text--pale {color: $font-color-pale; }
 .text--large {font-size: 1.2rem; }
 .text--small {font-size: .95rem; }
 .text--xsmall {font-size: 14px; }
@@ -59,6 +59,13 @@ kbd {
 	font-weight: bold;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+}
+
+ins {
+	text-decoration: none;
+	&::before {
+		content: "[!]";
+	}
 }
 
 h1, h2 {
