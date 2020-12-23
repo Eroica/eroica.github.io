@@ -76,10 +76,8 @@ h1, h2, h3, h4, h5, h6 {
 	letter-spacing: 0;
 }
 
-a {
-	transition: color .2s $easing;
-	color: inherit;
-}
+a {transition: color .2s $easing;}
+a, .-dark a strong {color: inherit;}
 .colored-links a {
 	color: $blue-hue-1;
 	&:hover {color: lighten($blue-hue-1, 10); }
