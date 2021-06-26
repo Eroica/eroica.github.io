@@ -5,6 +5,7 @@ body, input, select, textarea {
 	line-height: 1.8;
 	color: $font-color-dark;
 	letter-spacing: .015em;
+	hyphens: auto;
 
 	&.-dark {color: #f6f6f6; }
 }
@@ -19,26 +20,6 @@ code, .code {
 }
 .-dark code, .-dark .code {background-color: rgba(255, 255, 255, .07); }
 
-figure.highlight {
-	padding: 1em;
-	font-size: 15px;
-	background-color: rgba(0, 0, 0, .05);
-	overflow-x: scroll;
-
-	code, .code {
-		background-color: transparent;
-		padding: 0;
-	}
-
-	@include breakpoint($md) {
-		overflow-x: auto;
-	}
-}
-.-dark figure.highlight {
-	background-color: rgba(255, 255, 255, .07);
-
-	code, .code {background-color: transparent;}
-}
 kbd {
 	padding: 2px 4px;
 	background-color: #fff;
@@ -59,6 +40,12 @@ del, .text--pale {color: $font-color-pale; }
 	font-weight: bold;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+}
+
+time {
+font-size: .9em;
+font-family: Consolas,Roboto Mono,Menlo,monospace;
+letter-spacing: .5px;
 }
 
 ins {
@@ -113,31 +100,6 @@ hr {
 }
 .-dark hr {background-color: rgba(170, 178, 189, .2) }
 
-figure {
-	padding-top: 2em;
-	padding-bottom: 2em;
-
-	figcaption {
-		@extend .text--small;
-		@extend .text--pale;
-		margin-top: 1em;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 80%;
-	}
-}
-
-.footnote {
-	@extend .text--small;
-	text-indent: -.45em;
-
-	svg {
-		position: relative;
-		vertical-align: middle;
-		bottom: .1em;
-	}
-}
-
 ul {
 	li {position: relative; }
 	li::before {
@@ -153,4 +115,29 @@ ul {
 ol {
 	list-style: decimal;
 	margin-left: 24px;
+}
+
+section figure {
+	@extend [data-VBox], [data-VBox~="-small"];
+
+	img, video {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	figcaption {
+		font-size: .8em;
+		text-align: center;
+	}
+
+	@include breakpoint($md) {
+		float: right;
+		margin-bottom: .5em;
+		margin-left: 1em;
+
+		& + * {
+			margin-top: 0 !important;
+		}
+	}
 }

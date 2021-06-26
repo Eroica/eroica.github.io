@@ -1,19 +1,11 @@
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>{{ site.title }}{% if page.layout == "post" %} / {% case page.code %}
-	{% when 200 %}200 OK
-	{% when 201 %}201 Created
-	{% when 203 %}203 Non-Authoritative Information
-	{% else %}100 Continue
-{% endcase %} / {{ page.title }}{% else %}{% if page.title %} / {{ page.title }}{% endif %}{% endif %}</title>
+	<title>{{ site.title }} / {{ page.title }}</title>
 	<meta name="description" content="{{ site.description }}">
 
 	<link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
-	<link rel="canonical" href="{{ page.url | replace:'index.html','' | relative_url | prepend: site.url }}">
+	<link rel="canonical" href="{{ page.url | replace: 'index.html', '' | relative_url | prepend: 'https://groundctrl.earth' }}">
 	<link href="https://micro.blog/Eroica" rel="me" />
-
-	{% feed_meta %}
 </head>

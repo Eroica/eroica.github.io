@@ -1,6 +1,6 @@
 .container {
 	max-width: 100%;
-	width: 84ch;
+	width: 79ch;
 
 	&.-small {width: 48ch; }
 	&.-medium {width: 60ch; }
@@ -17,18 +17,27 @@
 
 .plan {
 	position: relative;
-	padding-left: 35px;
 
 	svg {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: .5em;
+		display: block;
 		color: $font-color-pale;
-		position: absolute;
-		top: calc(1.65em/2 - 12px);
-		left: 0;
+		opacity: .5;
+
+		& + * {
+			margin-top: 0;
+		}
 	}
 
 	@include breakpoint($md) {
-		padding-left: 50px;
+		padding-left: 35px;
 
-		svg { left: 13px; }
+		svg {
+			position: absolute;
+			top: calc(1.65em/2 - 12px);
+			left: 0;
+		}
 	}
 }
