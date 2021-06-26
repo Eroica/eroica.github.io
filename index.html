@@ -3,30 +3,43 @@ title: .plan
 layout: default
 ---
 
-{% include plan.html %}
+<header class="container -medium">
+	<p>Here are some things that I worked on that might be useful to you.</p>
+</header>
 
-<div class="timeline">
-	{% assign posts = site.posts | where_exp: "post", "post.category != 'painting'" %}
-	{% for post in posts %}
-	<article class="colored-links" data-vbox>
-		<p class="status Whs(nw)">{%- case post.code -%}
-			{% when 200 %}<span class="badge -blue _box-shadow">200 OK</span>
-			{% when 201 %}<span class="badge -blue _box-shadow">201 Created</span>
-			{% when 203 %}<span class="badge -blue _box-shadow">203 NAI</span>
-			{% else %}<span class="badge _box-shadow">100 Continue</span>
-			{%- endcase -%}</p>
+<section class="plan colored-links Cf" data-vbox>
+	{% include feather/triangle.svg %}
 
-		<div class="content" data-vbox>
-			<h2 data-hbox="-small" data-flow="baseline">{%- if post.link -%}
-				<a href="{{ post.link }}">{{ post.title }}</a>
-				<a class="article-permalink" href="{{ post.url }}" title="Permalink to this article">{% include feather/link.svg %}</a>{%- else -%}<a href="{{ post.url }}">{{ post.title }}</a>{%- endif -%}
-				<time class="articledate Mstart(a) Ta(end) Whs(nw)" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-			</h2>
+	<figure>
+		<video width="300" height="169" controls>
+			<source src="{{ 'blender/BisectModifier+3.mp4' | relative_url }}" type="video/mp4">
+		</video>
+		<figcaption>Bisect modifier slicing through an apple.</figcaption>
+	</figure>
 
-			{% assign read_more_link = post.url | prepend: "<a class='read-more' href='" | append: "'>Read more …</a>" %}
+	<p>I wrote a <a href="https://developer.blender.org/D8954">Bisect modifier for Blender</a> to work with large meshes at work. We often want to show and animate the inner parts of cells and other organelles, but Blender currently <time class="text--pale" datetime="2021-06-26">(June 2021)</time> only supports bisecting in Edit mode or with a Mirror and Mask modifier combination. However, our meshes can be made up from around 30&nbsp;mio vertices so that one cannot simply enter Edit mode or add Vertex groups. For the same reason, the usual approach of using Booleans can freeze Blender indefinitely.</p>
 
-			{{ post.excerpt | replace: "<!--read-more-->", read_more_link }}
-		</div>
-	</article>
-	{% endfor %}
-</div>
+	<p>The modifier can also close the bisected, open face (for manifold meshes), and can set another material for this area (similar to Booleans).</p>
+</section>
+
+<section class="plan colored-links Cf" data-vbox>
+	{% include feather/star.svg %}
+
+	<figure>
+		<img src="{{ 'images/Paletti-JavaFX+2.png' | relative_url }}" width="300" height="225">
+	</figure>
+
+	<p><a href="https://paletti.app">Paletti</a> simplifies an image into smaller amount of colors. After dragging an image into Paletti, you can customize the amount of colors with the slider. I initially wrote it to generate a color palette off an image, but now it’s more accurate to describe it as doing <em>“posterization”</em> using <a href="http://leptonica.org">Leptonica</a>. There is a small difference in which colors are yielded in this process.</p>
+
+	<p>The first version was written in <strong>Vala</strong> using Leptonica’s C API directly by a self-written <a href="https://github.com/Eroica/Paletti/blob/master/gtk/vapi/lept.vapi">Vapi</a> file. When I switched to Windows, I re-wrote it in <strong>Kotlin</strong> using JavaFX and a custom C++ backend to call Leptonica from JNI. Paletti now even has a (work-in-progress) Android version which makes use of the same C++ backend.</p>
+
+	<p>I paid special attention to make it look like a modern Windows application instead of using the default JavaFX style, going as far as implementing client-side decoration (CSD) in a combined header bar (similar to it’s original Vala/GTK roots) which minutely imitates hover effects, focus areas for accessibility, and more.</p>
+</section>
+
+<section class="plan colored-links" data-vbox>
+	<p class="Ta(c) Pe(n) text--pale">※</p>
+
+	<p class="Fz(.9em)">You can view some of my old art on <a href="https://www.artstation.com/Eroica">ArtStation</a>.</p>
+
+	<p class="Fz(.9em)">The droid you are looking for is on another protocol.</p>
+</section>

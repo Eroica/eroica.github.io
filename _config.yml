@@ -6,11 +6,11 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: eroica.github.io
+title: GROUNDCTRL
 # description: > # this means to ignore newlines until "baseurl:"
-description: Technical artist. .plan file.
+description: Hi there, I write software and do some graphics-related work.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://eroica.github.io" # the base hostname & protocol for your site
+url: "https://groundctrl.earth" # the base hostname & protocol for your site
 author: Eroica
 
 # excerpt_separator: ""
@@ -20,6 +20,3 @@ permalink: pretty
 markdown: kramdown
 sass:
   style: compressed
-
-plugins:
-  - jekyll-feed

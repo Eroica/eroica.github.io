@@ -10,9 +10,3 @@ dribbble:
 twitter:
   url: https://twitter.com/MyEroica
   icon: feather/twitter.svg
-mastodon:
-  url: https://mastodon.gamedev.place/@Eroica
-  icon: icons/mastodon.svg
-rss:
-  url: https://eroica.github.io/feed.xml
-  icon: feather/rss.svg

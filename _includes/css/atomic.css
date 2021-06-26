@@ -1,11 +1,11 @@
+.Fz\(\.9em\) {
+  font-size: .9em;
+}
 .Fz\(0\) {
   font-size: 0;
 }
 .Mb\(50px\) {
   margin-bottom: 50px;
-}
-.Mstart\(a\) {
-  margin-left: auto;
 }
 .Op\(\.7\) {
   opacity: .7;
@@ -20,9 +20,13 @@
 .Ta\(c\) {
   text-align: center;
 }
-.Ta\(end\) {
-  text-align: right;
+.Cf:before, .Cf:after {
+  content: " ";
+  display: table;
 }
-.Whs\(nw\) {
-  white-space: nowrap;
+.Cf:after {
+  clear: both;
+}
+.Cf {
+  zoom: 1;
 }
