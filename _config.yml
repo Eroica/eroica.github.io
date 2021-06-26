@@ -20,3 +20,6 @@ permalink: pretty
 markdown: kramdown
 sass:
   style: compressed
+
+exclude:
+  - site.tar.gz
