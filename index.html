@@ -10,9 +10,9 @@ layout: default
 <section class="plan colored-links Cf" data-vbox>
 	{% include feather/triangle.svg %}
 
-	<figure id="BisectGif">
-		<img src="{{ 'blender/BisectModifier+6.png' | relative_url }}" width="300" height="150">
-		<figcaption>Bisect modifier on an Apple.<br><span class="a" hx-get="{{ 'blender/bisect-modifier-gif.html' | relative_url }}" hx-target="#BisectGif" hx-swap="outerHTML">Click here for an animated example (14.3&nbsp;MB GIF).</span></figcaption>
+	<figure>
+		<img id="BisectGif" hx-swap-oob="true" src="{{ 'blender/BisectModifier+6.png' | relative_url }}" width="300" height="150">
+		<figcaption id="BisectGifCaption" hx-swap-oob="true">Bisect modifier on an Apple.<br><span class="a" hx-get="{{ 'blender/bisect-modifier-gif.html' | relative_url }}">Click here for an animated example (14.3&nbsp;MB GIF).</span></figcaption>
 	</figure>
 
 	<p>I wrote a <a href="https://developer.blender.org/D8954">Bisect modifier for Blender</a> to work with large meshes at work. We often want to show and animate the inner parts of cells and other organelles, but Blender currently <time class="text--pale" datetime="2021-06-26">(June 2021)</time> only supports bisecting in Edit mode or with a Mirror and Mask modifier combination. However, our meshes can be made up from around 30&nbsp;mio vertices so that one cannot simply enter Edit mode or add Vertex groups. For the same reason, the usual approach of using Booleans can freeze Blender indefinitely.</p>
@@ -23,9 +23,9 @@ layout: default
 <section class="plan colored-links Cf" data-vbox>
 	{% include feather/star.svg %}
 
-	<figure id="PalettiGif">
-		<img src="{{ 'images/Paletti-JavaFX+2.png' | relative_url }}" width="300" height="225">
-		<figcaption><span class="a" hx-get="{{ 'paletti/paletti-gif.html' | relative_url }}" hx-target="#PalettiGif" hx-swap="outerHTML">Click here to see an example (13.2&nbsp;MB GIF).</span></figcaption>
+	<figure>
+		<img id="PalettiGif" hx-swap-oob="true" src="{{ 'images/Paletti-JavaFX+2.png' | relative_url }}" width="300" height="225">
+		<figcaption id="PalettiGifCaption" hx-swap-oob="true"><span class="a" hx-get="{{ 'paletti/paletti-gif.html' | relative_url }}">Click here to see an example (13.2&nbsp;MB GIF).</span></figcaption>
 	</figure>
 
 	<p><a href="https://paletti.app">Paletti</a> simplifies an image into smaller amount of colors. After dragging an image into Paletti, you can customize the amount of colors with the slider. I initially wrote it to generate a color palette off an image, but now it’s more accurate to describe it as doing <em>“posterization”</em> using <a href="http://leptonica.org">Leptonica</a>. There is a small difference in which colors are yielded in this process.</p>

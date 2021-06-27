@@ -16,3 +16,14 @@ window.addEventListener("load", function () {
 	$switch = document.querySelector("header input[type='checkbox']");
 	$body.classList.remove("is-loading", "no-js");
 });
+
+for (let figure of document.getElementsByTagName("figure")) {
+	figure.addEventListener("click", (e) => {
+		if (e.target.className == "a repeat-button") {
+			const img = e.target.closest("figure").querySelector("img");
+			const currentSrc = img.src;
+			img.src = "";
+			img.src = currentSrc;
+		}
+	});
+}
