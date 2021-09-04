@@ -4,7 +4,7 @@ layout: default
 ---
 
 <header class="container -medium">
-	<p>Here are some things that I worked on that might be useful to you.</p>
+	<p>Here are some things that I wrote that might be useful to you.</p>
 </header>
 
 <section class="plan colored-links Cf" data-vbox>
@@ -15,9 +15,9 @@ layout: default
 		<figcaption id="BisectGifCaption" hx-swap-oob="true">Bisect modifier on an Apple.<br><span class="a" hx-get="{{ 'blender/bisect-modifier-gif.html' | relative_url }}">Click here for an animated example (14.3&nbsp;MB GIF).</span></figcaption>
 	</figure>
 
-	<p>I wrote a <a href="https://developer.blender.org/D8954">Bisect modifier for Blender</a> to work with large meshes at work. We often want to show and animate the inner parts of cells and other organelles, but Blender currently <time class="text--pale" datetime="2021-06-26">(June 2021)</time> only supports bisecting in Edit mode or with a Mirror and Mask modifier combination. However, our meshes can be made up from around 30&nbsp;mio vertices so that one cannot simply enter Edit mode or add Vertex groups. For the same reason, the usual approach of using Booleans can freeze Blender indefinitely.</p>
+	<p>I wrote a <a href="https://developer.blender.org/D8954">Bisect modifier for Blender</a> which allows you to bisect large meshes non-destructively. At work, we often want to show and animate inner parts of biological cells, but Blender currently <time class="text--pale" datetime="2021-09-03">(September 2021)</time> only supports bisecting in Edit mode or with a Mirror and Mask modifier combination. However, our meshes can be made up from around 30&nbsp;mio vertices so that entering Edit mode, adding Vertex groups, or using Booleans on them can freeze Blender indefinitely.</p>
 
-	<p>The modifier can also close the bisected, open face (for manifold meshes), and can set another material for this area (similar to Booleans).</p>
+	<p>With a modifier, you can easily create an animation that bisects a mesh frame by frame. It can also close the bisected, open face (for manifold meshes), and can set another material for this area (similar to Booleans)</p>
 </section>
 
 <section class="plan colored-links Cf" data-vbox>
@@ -28,11 +28,11 @@ layout: default
 		<figcaption id="PalettiGifCaption" hx-swap-oob="true"><span class="a" hx-get="{{ 'paletti/paletti-gif.html' | relative_url }}">Click here to see an example (13.2&nbsp;MB GIF).</span></figcaption>
 	</figure>
 
-	<p><a href="https://paletti.app">Paletti</a> simplifies an image into smaller amount of colors. After dragging an image into Paletti, you can customize the amount of colors with the slider. I initially wrote it to generate a color palette off an image, but now it’s more accurate to describe it as doing <em>“posterization”</em> using <a href="http://leptonica.org">Leptonica</a>. There is a small difference in which colors are yielded in this process.</p>
+	<p><a href="https://paletti.app">Paletti</a> simplifies an image into a smaller amount of colors. I initially wrote it to generate a color palette off an image, but now it’s more accurate to describe it as doing <em>“posterization”</em> using <a href="http://leptonica.org">Leptonica</a>. There is a small difference in which colors are yielded in this process.</p>
 
-	<p>The first version was written in <strong>Vala</strong> using Leptonica’s C API directly by a self-written <a href="https://github.com/Eroica/Paletti/blob/master/gtk/vapi/lept.vapi">Vapi</a> file. When I switched to Windows, I re-wrote it in <strong>Kotlin</strong> using JavaFX and a custom C++ backend to call Leptonica from JNI. Paletti now even has a (work-in-progress) Android version which makes use of the same C++ backend.</p>
+	<p>The first version was written in <strong>Vala</strong> using Leptonica’s C API directly by a self-written <a href="https://github.com/Eroica/Paletti/blob/master/gtk/vapi/lept.vapi">Vapi</a> file. When I switched to Windows, I re-wrote Paletti in <strong>Kotlin</strong> using JavaFX and a custom C++ backend to call Leptonica from JNI. Paletti now even has a (work-in-progress) Android version which makes use of the same C++ backend.</p>
 
-	<p>I paid special attention to make it look like a modern Windows application instead of using the default JavaFX style, going as far as implementing client-side decoration (CSD) in a combined header bar (similar to it’s original Vala/GTK roots) which minutely imitates hover effects, focus areas for accessibility, and more.</p>
+	<p>I paid special attention to make it look like a modern Windows application instead of using the default JavaFX style, going as far as implementing client-side decoration (CSD) in a combined header bar (similar to it’s original Vala/GTK roots), minutely imitating hover effects, and adding custom focus areas for improved accessibility.</p>
 </section>
 
 <section class="plan colored-links" data-vbox>

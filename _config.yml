@@ -8,7 +8,7 @@
 # Site settings
 title: GROUNDCTRL
 # description: > # this means to ignore newlines until "baseurl:"
-description: Hi there, I write software and do some graphics-related work.
+description: Hello, I write software and work on design-related projects.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://groundctrl.earth" # the base hostname & protocol for your site
 author: Eroica
