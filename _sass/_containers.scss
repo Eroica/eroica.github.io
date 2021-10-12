@@ -37,7 +37,7 @@
 		font-weight: 500;
 	}
 
-	@include breakpoint($md) {
+	@include breakpoint(880px) {
 		padding-top: 0;
 
 		&::before {
