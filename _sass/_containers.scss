@@ -34,15 +34,15 @@
 		border: 2px solid $font-color-pale;
 		border-radius: 50%;
 		text-align: center;
-		font-weight: 600;
+		font-weight: 500;
 	}
 
 	@include breakpoint($md) {
 		padding-top: 0;
 
 		&::before {
-			top: .1rem;
-			left: -2.5rem;
+			top: 0.2em;
+			left: -2em;
 		}
 	}
 }
