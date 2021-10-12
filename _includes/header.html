@@ -1,11 +1,13 @@
-<header class="header container Ta(c) Px(24px)" data-vbox>
+<header class="header container Ta(c)">
 	<p id="HomeLink" class="Fz(0)"><a href="/" title="Back to Home"><img src="{{ '/images/Moebots-Shadow.png' | relative_url }}" width="128" height="128" alt=""> Back to Home</a></p>
+
+	<br>
 
 	<p class="switch-row">
 		{% include feather/sun.svg %}
 
-		<label class="switch no-label" for="is_darkness">
-			<input type="checkbox" class="switch-input" onchange="toggleDarkness(event);" id="is_darkness">
+		<label class="switch no-label" for="is_darkness" title="Enable dark theme">
+			<input type="checkbox" class="switch-input" onchange="toggleDarkness(event);" id="is_darkness"> <span class="hint">Enable dark theme</span>
 			<span class="switch-trough"></span>
 			<span class="switch-handle"></span>
 		</label>

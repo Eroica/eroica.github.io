@@ -1,3 +1,8 @@
+.switch-row {
+	> * {height: calc(1em*1.5); }
+	svg {padding: 2px; }
+}
+
 .switch {
 	position: relative;
 	display: inline-block;
@@ -7,7 +12,7 @@
 	cursor: pointer;
 }
 
-.switch-input {
+.switch-input, .switch .hint {
 	position: absolute;
 	top: 0;
 	left: 0;
