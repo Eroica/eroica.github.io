@@ -2,5 +2,6 @@ _site/
 bower_components/
 .sass-cache/
 .jekyll-cache/
+site.tar.gz
 
 **/.DS_Store

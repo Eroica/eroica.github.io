@@ -17,27 +17,32 @@
 
 .plan {
 	position: relative;
+	padding-top: 3em;
 
-	svg {
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: .5em;
+	&::before {
 		display: block;
+		width: 24px;
+		height: 24px;
+		line-height: 20px;
+		counter-increment: plan;
+		content: counter(plan);
+		position: absolute;
+		top: 0;
+		left: calc(50% - 12px);
 		color: $font-color-pale;
 		opacity: .5;
-
-		& + * {
-			margin-top: 0;
-		}
+		border: 2px solid $font-color-pale;
+		border-radius: 50%;
+		text-align: center;
+		font-weight: 600;
 	}
 
 	@include breakpoint($md) {
-		padding-left: 35px;
+		padding-top: 0;
 
-		svg {
-			position: absolute;
-			top: calc(1.65em/2 - 12px);
-			left: 0;
+		&::before {
+			top: .1rem;
+			left: -2.5rem;
 		}
 	}
 }

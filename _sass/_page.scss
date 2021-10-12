@@ -5,6 +5,7 @@ html {scroll-behavior: smooth; }
 body {
 	background-color: #fafafa;
 	transition: background-color .2s $easing;
+	counter-reset: plan;
 
 	&.-dark {background-color: #212528; }
 

@@ -5,7 +5,13 @@
 	<title>{{ site.title }} / {{ page.title }}</title>
 	<meta name="description" content="{{ site.description }}">
 
-	<link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
 	<link rel="canonical" href="{{ page.url | replace: 'index.html', '' | relative_url | prepend: 'https://groundctrl.earth' }}">
 	<link href="https://micro.blog/Eroica" rel="me" />
+
+	<style>
+		{% capture include_to_scssify %}
+			{% include main.scss %}
+		{% endcapture %}
+		{{ include_to_scssify | scssify }}
+	</style>
 </head>
