@@ -13,24 +13,6 @@ body, input, select, textarea {
 strong, b, .text--strong {font-weight: 600; }
 .-dark strong, .-dark b, .-dark .text--strong {color: white; }
 
-code, .code, kbd { font-family: "Consolas", "Inconsolata", monospace; }
-code, .code {
-	padding: 2px 4px;
-	background-color: rgba(0, 0, 0, .05);
-}
-.-dark code, .-dark .code {background-color: rgba(255, 255, 255, .07); }
-
-kbd {
-	padding: 2px 4px;
-	background-color: #fff;
-	border-radius: 5px;
-	box-shadow: 0 1px 2px rgba(0, 16, 48, .06);
-	font-size: 14px;
-
-	& + code {font-size: 14px;}
-}
-.-dark kbd {color: $font-color-dark;}
-
 del, .text--pale {color: $font-color-pale; }
 .text--large {font-size: 1.2rem; }
 .text--small {font-size: .95rem; }
@@ -40,12 +22,13 @@ del, .text--pale {color: $font-color-pale; }
 	font-weight: bold;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+	font-size: 14px;
 }
 
 time {
-font-size: .9em;
-font-family: Consolas,Roboto Mono,Menlo,monospace;
-letter-spacing: .5px;
+	font-size: .9em;
+	font-family: Consolas,Roboto Mono,Menlo,monospace;
+	letter-spacing: .5px;
 }
 
 ins {
@@ -74,24 +57,6 @@ a, .-dark a strong,
 
 img, video {max-width: 100%; }
 video {display: block; }
-
-blockquote {
-	@extend [data-VBox];
-	position: relative;
-	margin-left: 2em;
-	text-indent: -.45em;
-
-	&::after {
-		@extend .text--pale;
-		display: block;
-		margin-left: 1em;
-		content: "—" attr(cite);
-	}
-
-	p:not(:first-of-type) {
-		text-indent: 0;
-	}
-}
 
 hr {
 	display: block;
@@ -128,7 +93,7 @@ section figure {
 		margin-right: auto;
 	}
 
-	figcaption {
+	figcaption, .figcaption {
 		font-size: .8em;
 		text-align: center;
 	}
@@ -142,4 +107,9 @@ section figure {
 			margin-top: 0 !important;
 		}
 	}
+}
+
+.no-js figcaption,
+.no-js .switch-row {
+	display: none;
 }
