@@ -1,14 +1,14 @@
 .switch-row {
-	> * {height: calc(1em*1.5); }
+	> * {height: 24px; }
 	svg {padding: 2px; }
 }
 
 .switch {
 	position: relative;
 	display: inline-block;
-	width: 3rem;
+	width: 40px;
 	background-color: transparent;
-	border-radius: 1em;
+	border-radius: 25px;
 	cursor: pointer;
 }
 
@@ -19,7 +19,7 @@
 	opacity: 0;
 }
 .switch-input:focus ~ .switch-handle {box-shadow: 0 0 4px 1px #469DF6, 0 1px 3px 0 rgba(0, 0, 0, 0.4); }
-.switch > .switch-input:checked ~ .switch-handle {left: calc(100% - 1em*1.5); }
+.switch > .switch-input:checked ~ .switch-handle {left: 16px; }
 
 .switch-trough {
 	position: relative;
@@ -36,9 +36,9 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: calc(1em*1.5 - .3rem);
-	height: calc(1em*1.5 - .3rem);
-	margin: .15rem;
+	width: 20px;
+	height: 20px;
+	margin: 2px;
 	background: white;
 	border-radius: 50%;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
