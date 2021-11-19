@@ -17,6 +17,10 @@ window.addEventListener("load", function () {
 	$body.classList.remove("is-loading", "no-js");
 });
 
+document.getElementById("is_darkness").addEventListener("change", function (event) {
+	toggleDarkness(event);
+});
+
 for (let figure of document.getElementsByTagName("figure")) {
 	figure.addEventListener("click", (e) => {
 		if (e.target.className == "a repeat-button") {
