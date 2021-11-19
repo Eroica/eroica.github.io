@@ -3,5 +3,6 @@ bower_components/
 .sass-cache/
 .jekyll-cache/
 site.tar.gz
+webFonts/
 
 **/.DS_Store
