@@ -3,9 +3,22 @@ title: .plan
 layout: default
 ---
 
-<p>Here you can get a glimpse on the kind of work I do and which tools or languages I use.</p>
+<p>Here are some examples of the kind of work I do:</p>
 
 <section class="plan colored-links" data-vbox>
+	<figure class="larger-than-text">
+		<picture>
+			<img src="{{ 'images/Science-Thumbnail.jpg' | relative_url }}" width="300" height="382" alt="A screenshot of the bisect modifier in action">
+		</picture>
+		<figcaption><a href="https://www.science.org/toc/science/376/6591">Science, Volume 376, Issue 6591, April 22, 2022</a></figcaption>
+	</figure>
+
+	<p>My rendering of a T&nbsp;cell and cancer cell was featured on the cover of <em>Science</em>, Issue 6591, on April 2022. The meshes were obtained from an electron microscope dataset as part of <a href="https://twitter.com/ritterlab">Alex Ritter’s</a> research. He is a Cell biologist at Genentech studying how T&nbsp;cells destroy cancer cells.</p>
+
+	<p>It was one of my most interesting projects in scientific visualization so far, and I am very thankful for getting the chance to work on this.</p>
+</section>
+
+<section class="plan colored-links" data-vbox style="clear:both;">
 	<figure>
 		<picture id="BisectGif">
 			<source srcset="{{ 'blender/BisectModifier+6.webp' | relative_url }}" type="image/webp">
@@ -18,9 +31,9 @@ layout: default
 		</noscript>
 	</figure>
 
-	<p><strong>A <a href="https://developer.blender.org/D8954">Bisect modifier for Blender</a>.</strong> You can use it to bisect large meshes non-destructively, e.g. to create animations.</p>
+	<p><strong>A <a href="https://developer.blender.org/D8954">Bisect modifier for Blender</a>.</strong> You can use it to bisect large meshes non-destructively, e.g. for creating animations.</p>
 
-	<p>Using Booleans to bisect a mesh can freeze Blender indefinitely for large meshes (e.g. 30+&nbsp;mio vertices), or is error-prone in non-manifold areas. The alternative Mirror and Mask modifier combination does not allow you to close the bisected mesh (the open face), and requires creating Vertex groups in Edit mode which can also take a long time for huge meshes.</p>
+	<p>Using Booleans to bisect a mesh can freeze Blender indefinitely for large meshes (around 30+&nbsp;mio vertices), or is error-prone in non-manifold areas. The alternative Mirror and Mask modifier combination does not allow you to close the bisected mesh (the open face), and requires creating Vertex groups in Edit mode which can also take a long time for huge meshes.</p>
 </section>
 
 <section class="plan colored-links" data-vbox>
@@ -36,15 +49,15 @@ layout: default
 		</noscript>
 	</figure>
 
-	<p><a href="https://paletti.app">Paletti</a> is a small program that <em>“posterizes”</em> an image into a smaller amount of colors and shapes. This way you can extract primary colors or simplify an image artistically. It uses <a href="http://leptonica.org">Leptonica</a> for the color quantization.</p>
+	<p><a href="https://paletti.app">Paletti</a> is a small program that <em>“posterizes”</em> an image into a smaller amount of colors and shapes. This way you can extract primary colors or simplify an image artistically. It uses <a href="http://leptonica.org">Leptonica</a> to process the image.</p>
 
-	<p>The first version was written in <strong>Vala</strong> using Leptonica’s C API directly by a <a href="https://github.com/Eroica/Paletti/blob/master/gtk/vapi/lept.vapi">custom VAPI file</a>. When I switched to Windows, I re-wrote Paletti in <strong>Kotlin using JavaFX and a custom C++ backend</strong> to call Leptonica from JNI. Paletti now even has an Android version which uses the same C++ backend.</p>
+	<p>The first version was written in <strong>Vala</strong> using Leptonica’s C API directly with a <a href="https://github.com/Eroica/Paletti/blob/master/gtk/vapi/lept.vapi">custom VAPI file</a>. When I switched to Windows, I re-wrote Paletti in <strong>Kotlin using JavaFX and a custom C++ backend</strong> to call Leptonica from JNI. There is now even an Android version which uses the same C++ backend.</p>
 
-	<p>For the JavaFX version, I paid special attention to make it look like a modern Windows application. It features client-side decoration in a combined header bar (similar to its Vala/GTK roots) where I minutely reconstructed WinUI&nbsp;3 widgets, including hover effects and animations.</p>
+	<p>For the JavaFX version, I paid special attention to make it look like a modern Windows application. All widgets are minuite reconstructions of WinUI&nbsp;3 controls, including hover effects and animations. In a recent build for Windows 11, Paletti also features a Mica-styled window chrome by calling native Windows functions from JavaFX.</p>
 </section>
 
 <section class="plan colored-links" data-vbox>
-	<p>An <a href="https://data.ariadne.ai/3d/sars-cov2/">online mesh viewer</a> for 3D segmentations. It is designed and built by me using three.js. Depending on the project, I also post-process and/or retopologize the meshes to improve visuals while keeping memory consumption low.</p>
+	<p>As part of some internal projects at my employer, I built an <a href="https://data.ariadne.ai/3d/sars-cov2/">online mesh viewer</a> for 3D segmentations using three.js. Depending on the project, my work also includes post-processing and/or manual retopology of the meshes to improve visuals while keeping memory consumption low.</p>
 </section>
 
 <section class="plan colored-links" data-vbox>
@@ -54,7 +67,7 @@ layout: default
 <section class="colored-links" data-vbox="-small">
 	<p class="Ta(c) Pe(n) text--pale">※</p>
 
-	<p class="Fz(15px)">You can view some of my <a href="https://www.artstation.com/Eroica">old art on ArtStation</a>.</p>
+	<p class="Fz(15px)">You can view some of my <a href="https://www.artstation.com/Eroica">old art on ArtStation</a>. Small status updates are on <a rel="me" href="https://toot.groundctrl.earth/@Eroica">my Mastodon</a>.</p>
 
 	<p class="Fz(15px)">The droid you are looking for is on another protocol.</p>
 </section>
