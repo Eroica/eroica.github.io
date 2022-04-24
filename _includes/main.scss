@@ -26,7 +26,12 @@ $easing: cubic-bezier(.02,.98,.46,.95);
 
 {% include css/destyle.css %}
 {% include css/atomic.css %}
+
+
+// This is to disable the custom font on GitHub pages
+{% if jekyll.environment != "production" %}
 {% include css/MyFontsWebfontsKit.css %}
+{% endif %}
 
 @import "layouts";
 @import "helpers";
