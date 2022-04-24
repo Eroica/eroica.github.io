@@ -86,7 +86,7 @@ ol {
 	margin-left: 24px;
 }
 
-section figure {
+figure {
 	@extend [data-VBox], [data-VBox~="-small"];
 
 	img, video {
@@ -107,6 +107,12 @@ section figure {
 
 		& + * {
 			margin-top: 0 !important;
+		}
+	}
+
+	&.larger-than-text {
+		@include breakpoint($md) {
+			margin-bottom: 2em;
 		}
 	}
 }
