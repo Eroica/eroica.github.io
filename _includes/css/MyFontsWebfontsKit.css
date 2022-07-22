@@ -29,14 +29,14 @@
   
 @font-face {
   font-family: "ClearSansScreen-BkIt";
-  src: url('webFonts/ClearSansScreenBkIt/font.woff2') format('woff2'), url('webFonts/ClearSansScreenBkIt/font.woff') format('woff');
+  src: url('/webFonts/ClearSansScreenBkIt/font.woff2') format('woff2'), url('/webFonts/ClearSansScreenBkIt/font.woff') format('woff');
 }
 @font-face {
   font-family: "ClearSansScreen-Bk";
-  src: url('webFonts/ClearSansScreenBk/font.woff2') format('woff2'), url('webFonts/ClearSansScreenBk/font.woff') format('woff');
+  src: url('/webFonts/ClearSansScreenBk/font.woff2') format('woff2'), url('/webFonts/ClearSansScreenBk/font.woff') format('woff');
 }
 @font-face {
   font-family: "ClearSansScreen-Md";
-  src: url('webFonts/ClearSansScreenMd/font.woff2') format('woff2'), url('webFonts/ClearSansScreenMd/font.woff') format('woff');
+  src: url('/webFonts/ClearSansScreenMd/font.woff2') format('woff2'), url('/webFonts/ClearSansScreenMd/font.woff') format('woff');
 }
 
