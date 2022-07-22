@@ -4,15 +4,12 @@
 	border-radius: 3px;
 	padding: 20px;
 	background: #fff;
-
-	&.-primary {border-color: $accent-color; }
 }
 .-dark .box {
 	background: transparent;
 	border-color: rgba(170, 178, 189, .2);
 }
-
-.box.-muted {
-	border-color: transparent;
-	box-shadow: none;
+.box.-primary,
+.-dark .box.-primary {
+	border-color: $accent-color;
 }
