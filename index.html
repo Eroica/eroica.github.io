@@ -24,6 +24,19 @@ layout: default
 
 <section class="plan colored-links" data-vbox style="clear:both;">
 	<figure>
+		<img src="{{ 'images/2022-08-05-MeritCards.png' | relative_url }}" width="349" height="240" alt="A screenshot of Merit Card’s study session">
+		<figcaption>Studying a flashcard in Merit Cards.</figcaption>
+	</figure>
+
+	<p><strong><a href="https://meritcards.app">Merit Cards</a></strong> is my latest side project. It is a flashcard application that I use to study languages.</p>
+
+	<p>There are many similar programs, but I created Merit Cards for my way of collecting and studying notes: There are no “Front” or “Back” fields that you add values to and for which you create card templates like in Anki. Instead, a note simply consists of a stack of index cards (“Facets”) that you study one-by-one. The spaced-repetition algorithm is very simple, although this hopefully makes it more approachable than Anki’s.</p>
+
+	<p>Like <a href="#Paletti">Paletti</a>, Merit Cards is <strong>written in Kotlin using JavaFX and my WinUI&nbsp;3 theme</strong>. It is currently still very basic, but since I rely on it myself I’m gradually improving it!</p>
+</section>
+
+<section class="plan colored-links" data-vbox style="clear:both;">
+	<figure>
 		<picture id="BisectGif">
 			<source srcset="{{ 'blender/BisectModifier+6.webp' | relative_url }}" type="image/webp">
 			<img hx-swap-oob="true" src="{{ 'blender/BisectModifier+6.png' | relative_url }}" width="300" height="150" alt="A screenshot of the bisect modifier in action">
@@ -35,12 +48,12 @@ layout: default
 		</noscript>
 	</figure>
 
-	<p><strong>A <a href="https://developer.blender.org/D8954">Bisect modifier for Blender</a>.</strong> You can use it to bisect large meshes non-destructively, e.g. for creating animations.</p>
+	<p><strong><a href="https://developer.blender.org/D8954">A Bisect modifier for Blender.</a></strong> You can use it to bisect large meshes non-destructively, e.g. for creating animations.</p>
 
 	<p>Using Booleans to bisect a mesh can freeze Blender indefinitely for large meshes (around 30+&nbsp;mio vertices), or is error-prone in non-manifold areas. The alternative Mirror and Mask modifier combination does not allow you to close the bisected mesh (the open face), and requires creating Vertex groups in Edit mode which can also take a long time for huge meshes.</p>
 </section>
 
-<section class="plan colored-links" data-vbox>
+<section id="Paletti" class="plan colored-links" data-vbox>
 	<figure>
 		<picture id="PalettiGif">
 			<source srcset="{{ 'images/Paletti-JavaFX+2.webp' | relative_url }}" type="image/webp">
@@ -61,7 +74,7 @@ layout: default
 </section>
 
 <section class="plan colored-links" data-vbox>
-	<p>At my employer I built an <a href="https://data.ariadne.ai/3d/sars-cov2/">online mesh viewer</a> for 3D segmentations using three.js. Compared to Google’s &lt;model-viewer&gt;, it is modelled after an ECS architecture which can dynamically switch between interaction and pause (completely skipping draw calls).</p>
+	<p>At my employer I built an <a href="https://data.ariadne.ai/3d/sars-cov2/">online mesh viewer</a> for 3D segmentations using three.js. Compared to Google’s &lt;model-viewer&gt;, it is modelled after an ECS architecture which can dynamically switch between interaction and pause (completely skipping draw calls, thus saving power).</p>
 
 	<p>Depending on the project, my work also includes post-processing, manual retopology, or texturing to improve visuals while keeping memory consumption low.</p>
 </section>

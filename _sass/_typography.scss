@@ -1,8 +1,8 @@
 body, input, select, textarea {
-	font-family: "ClearSansScreen-Bk", sans-serif;
+	font-family: "ClearSansScreen-Bk", "Segoe UI", sans-serif;
 	font-size: 16px;
 	font-weight: 400;
-	line-height: 1.8;
+	line-height: 1.7;
 	color: $font-color-dark;
 	hyphens: auto;
 
@@ -11,7 +11,7 @@ body, input, select, textarea {
 
 strong, b, .text--strong {
 	font-family: "ClearSansScreen-Md", sans-serif;
-	font-weight: 500;
+	font-weight: 400;
 }
 .-dark strong, .-dark b, .-dark .text--strong {color: white; }
 
@@ -22,9 +22,9 @@ em, i {
 
 del, .text--pale {color: $font-color-pale; }
 .text--title {
-	color: $font-color-pale;
 	font-family: "ClearSansScreen-Md", sans-serif;
-	font-weight: 500;
+	color: $font-color-pale;
+	font-weight: 400;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-size: 14px;
@@ -45,7 +45,7 @@ ins {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: "ClearSansScreen-Md", sans-serif;
-	font-weight: 500;
+	font-weight: 400;
 }
 
 .a {cursor: pointer}
@@ -88,6 +88,8 @@ ol {
 
 figure {
 	@extend [data-VBox], [data-VBox~="-small"];
+
+	min-width: 40%;
 
 	img, video {
 		display: block;
