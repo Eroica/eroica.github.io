@@ -21,8 +21,8 @@
 
 	&::before {
 		font-family: "ClearSansScreen-Md", sans-serif;
-		font-weight: 500;
 		display: block;
+		font-weight: 400;
 		width: 24px;
 		height: 24px;
 		line-height: 20px;
@@ -36,15 +36,17 @@
 		border: 2px solid $font-color-pale;
 		border-radius: 50%;
 		text-align: center;
-		font-weight: 500;
 	}
 
 	@include breakpoint(910px) {
 		padding-top: 0;
 
 		&::before {
-			top: 0.2em;
+			top: 0.1em;
 			left: -2em;
 		}
 	}
+}
+.plan + .plan {
+	margin-top: 3em;
 }
