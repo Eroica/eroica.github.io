@@ -28,9 +28,11 @@ layout: default
 		<figcaption>Studying a flashcard in Merit Cards.<br>(Click on image for large version)</figcaption>
 	</figure>
 
-	<p><strong><a href="https://meritcards.app">Merit Cards</a></strong> is my latest side project. It is a flashcard application that I use to study languages.</p>
+	<p><a href="https://meritcards.app">Merit Cards</a> is my latest side project. It is a flashcard application that I use to study languages.</p>
 
-	<p>There are many similar programs, but I created Merit Cards for my way of collecting and studying notes: There are no “Front” or “Back” fields that you add values to and for which you create card templates like in Anki. Instead, a note simply consists of a stack of index cards (“Facets”) that you study one-by-one. The spaced-repetition algorithm is very simple, although this hopefully makes it more approachable than Anki’s.</p>
+    <p>There are many similar programs, but I created Merit Cards to fit my way of collecting and studying notes: There are no “Front” or “Back” fields that you add values to and for which you create card templates like in Anki. Instead, a note simply consists of a stack of index cards (“Facets”) that you study one-by-one.</p>
+
+    <p>A note can have an individual amount of facets so that you are free to add pronunciation, example sentences, or descriptions however you want. It also schedules notes using spaced repetition, but you can also opt-out to study as if you were using a manual <a href="https://en.wikipedia.org/wiki/Leitner_system">Leitner learning box</a>.</p>
 
 	<p>Like <a href="#Paletti">Paletti</a>, Merit Cards is <strong>written in Kotlin using JavaFX and my WinUI&nbsp;3 theme</strong>. It is currently still very basic, but since I rely on it myself I’m gradually improving it!</p>
 </section>
@@ -48,7 +50,7 @@ layout: default
 		</noscript>
 	</figure>
 
-	<p><strong><a href="https://developer.blender.org/D8954">A Bisect modifier for Blender.</a></strong> You can use it to bisect large meshes non-destructively, e.g. for creating animations.</p>
+	<p><a href="https://developer.blender.org/D8954">A Bisect modifier for Blender.</a> You can use it to bisect large meshes non-destructively, e.g. for creating animations.</p>
 
 	<p>Using Booleans to bisect a mesh can freeze Blender indefinitely for large meshes (around 30+&nbsp;mio vertices), or is error-prone in non-manifold areas. The alternative Mirror and Mask modifier combination does not allow you to close the bisected mesh (the open face), and requires creating Vertex groups in Edit mode which can also take a long time for huge meshes.</p>
 </section>
@@ -66,15 +68,15 @@ layout: default
 		</noscript>
 	</figure>
 
-	<p><a href="https://paletti.app">Paletti</a> is a small program that <em>“posterizes”</em> an image into a smaller amount of colors and shapes. This way you can extract primary colors or simplify an image artistically. It uses <a href="http://leptonica.org">Leptonica</a> to process the image.</p>
+	<p><a href="https://paletti.app">Paletti</a> is a little program that <em>“posterizes”</em> an image into a smaller amount of colors and shapes. This way you can extract primary colors or simplify an image artistically. It uses <a href="http://leptonica.org">Leptonica</a> to process the image.</p>
 
-	<p>The first version was written in <strong>Vala</strong> using Leptonica’s C API directly with a <a href="https://github.com/Eroica/Paletti/blob/master/gtk/vapi/lept.vapi">custom VAPI file</a>. When I switched to Windows, I re-wrote Paletti in <strong>Kotlin using JavaFX and a custom C++ backend</strong> to call Leptonica from JNI. There is now even an Android version which uses the same C++ backend.</p>
+	<p>The first version was written in <strong>Vala</strong> and directly using Leptonica’s C API with a <a href="https://github.com/Eroica/Paletti/blob/master/gtk/vapi/lept.vapi">custom VAPI file</a>. When I switched to Windows, I re-wrote Paletti in <strong>Kotlin using JavaFX and a custom C++ backend</strong> to call Leptonica from JNI. There is now even an Android version which uses the same C++ backend.</p>
 
 	<p>For the JavaFX version, I paid special attention to make it look like a modern Windows application. All widgets are minuite reconstructions of WinUI&nbsp;3 controls, including hover effects and animations. In a recent build for Windows 11, Paletti also features a Mica-styled window chrome by calling native Windows functions from JavaFX.</p>
 </section>
 
 <section class="plan colored-links" data-vbox>
-	<p>At my employer I built an <a href="https://data.ariadne.ai/3d/sars-cov2/">online mesh viewer</a> for 3D segmentations using three.js. Compared to Google’s &lt;model-viewer&gt;, it is modelled after an ECS architecture which can dynamically switch between interaction and pause (completely skipping draw calls, thus saving power).</p>
+	<p>At my employer, I built an <a href="https://data.ariadne.ai/3d/sars-cov2/">online mesh viewer</a> for 3D segmentations using three.js. Compared to Google’s &lt;model-viewer&gt;, it is modelled after an ECS architecture which can dynamically switch between interaction and pause (completely skipping draw calls, thus saving power).</p>
 
 	<p>Depending on the project, my work also includes post-processing, manual retopology, or texturing to improve visuals while keeping memory consumption low.</p>
 </section>
