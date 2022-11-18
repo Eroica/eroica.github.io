@@ -1,14 +1,11 @@
-.Fz\(13px\) {
-  font-size: 13px;
-}
-.Fz\(14px\) {
-  font-size: 14px;
-}
-.Fz\(15px\) {
-  font-size: 15px;
+.Fz\(\.95rem\) {
+  font-size: .95rem;
 }
 .Fz\(0\) {
   font-size: 0;
+}
+.Fz\(14px\) {
+  font-size: 14px;
 }
 .Mb\(50px\) {
   margin-bottom: 50px;
@@ -25,14 +22,4 @@
 }
 .Ta\(c\) {
   text-align: center;
-}
-.Cf:before, .Cf:after {
-  content: " ";
-  display: table;
-}
-.Cf:after {
-  clear: both;
-}
-.Cf {
-  zoom: 1;
 }

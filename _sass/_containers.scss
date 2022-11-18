@@ -1,9 +1,8 @@
 .container {
 	max-width: 100%;
-	width: 99ch;
+	width: 79ch;
 
-	&.-small {width: 48ch; }
-	&.-medium {width: 60ch; }
+	&.-small {width: 73ch; }
 }
 
 .header {
@@ -13,40 +12,4 @@
 	@include breakpoint($md) {
 		margin-top: 50px;
 	}
-}
-
-.plan {
-	position: relative;
-	padding-top: 3em;
-
-	&::before {
-		font-family: "ClearSansScreen-Md", sans-serif;
-		display: block;
-		font-weight: 400;
-		width: 24px;
-		height: 24px;
-		line-height: 20px;
-		counter-increment: plan;
-		content: counter(plan);
-		position: absolute;
-		top: 0;
-		left: calc(50% - 12px);
-		color: $font-color-pale;
-		opacity: .5;
-		border: 2px solid $font-color-pale;
-		border-radius: 50%;
-		text-align: center;
-	}
-
-	@include breakpoint(910px) {
-		padding-top: 0;
-
-		&::before {
-			top: 0.1em;
-			left: -2em;
-		}
-	}
-}
-.plan + .plan {
-	margin-top: 3em;
 }

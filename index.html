@@ -9,88 +9,61 @@ layout: default
 
 <p>Here are some examples of the kind of work I do:</p>
 
-<section class="plan colored-links" data-vbox>
-	<figure class="larger-than-text">
-		<picture>
-			<img src="{{ 'images/Science-Thumbnail.jpg' | relative_url }}" width="300" height="382" alt="A screenshot of the bisect modifier in action">
-		</picture>
-		<figcaption><a href="https://www.science.org/toc/science/376/6591">Science, Volume 376, Issue 6591, April 22, 2022</a></figcaption>
-	</figure>
+<section class="plan colored-links" data-vbox="-medium">
+	<p class="starred">{% include feather/star.svg %} <a href="https://meritcards.app">Merit Cards</a>, a new flashcard application for Windows. I use it to study languages because I don’t really like how Anki works. A note is made up of individual cards (“facets”) and are scheduled after a basic spaced-repetition algorithm. You can also schedule your notes freely just like traditional <a href="https://en.wikipedia.org/wiki/Leitner_system">Leitner learning boxes</a>. <span class="tag">Kotlin</span> <span class="tag">JavaFX</span> <span class="tag">SQLite</span></p>
 
-	<p>My rendering of a T&nbsp;cell and cancer cell was featured on the cover of <em>Science</em>, Issue 6591, on April 2022. The meshes were obtained from an electron microscope dataset as part of <a href="https://twitter.com/ritterlab">Alex Ritter’s</a> research. He is a Cell biologist at Genentech studying how T&nbsp;cells destroy cancer cells.</p>
+	<div class="dated" data-date="April 2022" data-vbox>
+		<p>My rendering of a T&nbsp;cell and cancer cell was featured on the cover of <em>Science</em>, Issue 6591, on April 2022. The meshes were obtained from an electron microscope dataset as part of <a href="https://twitter.com/ritterlab">Alex Ritter’s</a> research about how T&nbsp;cells destroy cancer cells.</p>
 
-	<p>It was one of my most interesting projects in scientific visualization so far, and I am very thankful for getting the chance to work on this.</p>
+		<figure>
+			<picture>
+				<img src="{{ 'images/Science-Thumbnail.jpg' | relative_url }}" width="300" height="382" alt="A screenshot of the bisect modifier in action">
+			</picture>
+			<figcaption><a href="https://www.science.org/toc/science/376/6591">Science, Volume 376, Issue 6591, April 22, 2022</a></figcaption>
+		</figure>
+	</div>
+
+	<p class="dated" data-date="May 2021"><a href="https://data.ariadne.ai/3d/sars-cov2/">An online mesh viewer</a> for 3D segmentations (here used with example meshes). Compared to Google’s &lt;model-viewer&gt;, it is modelled after an ECS architecture which can dynamically switch between interaction and pause (completely skipping draw calls, thus saving power). <span class="tag">JavaScript</span> <span class="tag">three.js</span> <span class="tag">KnockoutJS</span></p>
+
+	<div class="dated" data-date="September 2020" data-vbox>
+		<p><a href="https://developer.blender.org/D8954">A Bisect modifier for Blender</a>. It allows you to bisect large meshes (30+&nbsp;mio vertices) non-destructively, e.g. for creating animations. <span class="tag">C++</span></p>
+
+		<figure>
+			<picture id="BisectGif">
+				<source srcset="{{ 'blender/BisectModifier+6.webp' | relative_url }}" type="image/webp">
+				<img hx-swap-oob="true" src="{{ 'blender/BisectModifier+6.png' | relative_url }}" width="300" height="150" alt="A screenshot of the bisect modifier in action">
+			</picture>
+			<figcaption id="BisectGifCaption" hx-swap-oob="true">Bisect modifier on an apple.<br><span class="a" hx-get="{{ 'blender/bisect-modifier-gif.html' | relative_url }}">Click here for an animated example (14.3&nbsp;MB GIF).</span></figcaption>
+
+			<noscript>
+				<p class="figcaption">Bisect modifier on an Apple.<br><a href="{{ 'blender/BisectModifier+6.gif' | relative_url }}">Click here for an animated example (14.3&nbsp;MB GIF).</a></p>
+			</noscript>
+		</figure>
+	</div>
+
+	<p class="dated" data-date="April 2020"><a href="https://paletti.app">Paletti</a> is a little program that <em>“posterizes”</em> an image into a smaller amount of colors and shapes. This way you can extract primary colors or simplify an image artistically. It uses <a href="http://leptonica.org">Leptonica</a> to process the image. <span class="tag">Kotlin</span> <span class="tag">JavaFX</span> <span class="tag">SQLite</span> <span class="tag">C++</span> <span class="tag">Vala</span> <span class="tag">GTK</span> <span class="tag">Android</span></p>
+
+	<p class="dated" data-date="April 2020">I made a small contribution to <a href="https://keplerproject.github.io/luafilesystem/">LuaFileSystem</a> which improved Windows support. <span class="tag">Lua</span> <span class="tag">C</span></p>
 </section>
 
-<section class="plan colored-links" data-vbox style="clear:both;">
-	<figure>
-        <a href="{{ 'images/2022-08-02-Session.png' | relative_url }}"><img src="{{ 'images/2022-08-05-MeritCards.png' | relative_url }}" width="349" height="241" alt="A screenshot of Merit Card’s study session"></a>
-		<figcaption>Studying a flashcard in Merit Cards.<br>(Click on image for large version)</figcaption>
-	</figure>
+<section class="colored-links" data-vbox>
+	<h1>Experience</h1>
 
-	<p><a href="https://meritcards.app">Merit Cards</a> is my latest side project. It is a flashcard application that I use to study languages.</p>
-
-    <p>There are many similar programs, but I created Merit Cards to fit my way of collecting and studying notes: There are no “Front” or “Back” fields that you add values to and for which you create card templates like in Anki. Instead, a note simply consists of a stack of index cards (“Facets”) that you study one-by-one.</p>
-
-    <p>A note can have an individual amount of facets so that you are free to add pronunciation, example sentences, or descriptions however you want. It also schedules notes using spaced repetition, but you can also opt-out to study as if you were using a manual <a href="https://en.wikipedia.org/wiki/Leitner_system">Leitner learning box</a>.</p>
-
-	<p>Like <a href="#Paletti">Paletti</a>, Merit Cards is <strong>written in Kotlin using JavaFX and my WinUI&nbsp;3 theme</strong>. It is currently still very basic, but since I rely on it myself I’m gradually improving it!</p>
+	<ul class="dates">
+		<li data-date="2018">Technical Artist</li>
+		<li data-date="2017">Frontend Developer</li>
+		<li data-date="2015">Android Developer</li>
+		<li data-date="2015">B.A. Computational Linguistics</li>
+		<li data-date="2014">Graphic Designer</li>
+	</ul>
 </section>
 
-<section class="plan colored-links" data-vbox style="clear:both;">
-	<figure>
-		<picture id="BisectGif">
-			<source srcset="{{ 'blender/BisectModifier+6.webp' | relative_url }}" type="image/webp">
-			<img hx-swap-oob="true" src="{{ 'blender/BisectModifier+6.png' | relative_url }}" width="300" height="150" alt="A screenshot of the bisect modifier in action">
-		</picture>
-		<figcaption id="BisectGifCaption" hx-swap-oob="true">Bisect modifier on an apple.<br><span class="a" hx-get="{{ 'blender/bisect-modifier-gif.html' | relative_url }}">Click here for an animated example (14.3&nbsp;MB GIF).</span></figcaption>
+<p class="Ta(c) Pe(n) text--pale">※</p>
 
-		<noscript>
-			<p class="figcaption">Bisect modifier on an Apple.<br><a href="{{ 'blender/BisectModifier+6.gif' | relative_url }}">Click here for an animated example (14.3&nbsp;MB GIF).</a></p>
-		</noscript>
-	</figure>
+<section class="Fz(.95rem) colored-links" data-vbox="-small">
+	<p style="font-family: 'Microsoft JhengHei', sans-serif;">為了守護咱的夢 成做更加勇敢的人 現在是彼一工 勇敢的台灣人。</p>
 
-	<p><a href="https://developer.blender.org/D8954">A Bisect modifier for Blender.</a> You can use it to bisect large meshes non-destructively, e.g. for creating animations.</p>
+	<p>You can view some of my <a href="https://www.artstation.com/Eroica">old art on ArtStation</a>. Small status updates are on <a rel="me" href="https://toot.groundctrl.earth/@Eroica">my Mastodon</a>.</p>
 
-	<p>Using Booleans to bisect a mesh can freeze Blender indefinitely for large meshes (around 30+&nbsp;mio vertices), or is error-prone in non-manifold areas. The alternative Mirror and Mask modifier combination does not allow you to close the bisected mesh (the open face), and requires creating Vertex groups in Edit mode which can also take a long time for huge meshes.</p>
-</section>
-
-<section id="Paletti" class="plan colored-links" data-vbox>
-	<figure>
-		<picture id="PalettiGif">
-            <source srcset="{{ 'images/2022-09-30-PalettiWindows.webp' | relative_url }}" type="image/webp">
-			<img hx-swap-oob="true" src="{{ 'images/2022-09-30-PalettiWindows.png' | relative_url }}" width="300" height="250" alt="A screenshot of Paletti">
-		</picture>
-		<figcaption id="PalettiGifCaption" hx-swap-oob="true"><span class="a" hx-get="{{ 'paletti/paletti-gif.html' | relative_url }}">Click here to see an example (13.2&nbsp;MB GIF).</span></figcaption>
-
-		<noscript>
-            <p class="figcaption"><a href="{{ 'images/2022-09-30-PalettiWindows.png' | relative_url }}">Click here to see an example (13.2&nbsp;MB GIF).</a></p>
-		</noscript>
-	</figure>
-
-	<p><a href="https://paletti.app">Paletti</a> is a little program that <em>“posterizes”</em> an image into a smaller amount of colors and shapes. This way you can extract primary colors or simplify an image artistically. It uses <a href="http://leptonica.org">Leptonica</a> to process the image.</p>
-
-	<p>The first version was written in <strong>Vala</strong> and directly using Leptonica’s C API with a <a href="https://github.com/Eroica/Paletti/blob/master/gtk/vapi/lept.vapi">custom VAPI file</a>. When I switched to Windows, I re-wrote Paletti in <strong>Kotlin using JavaFX and a custom C++ backend</strong> to call Leptonica from JNI. There is now even an Android version which uses the same C++ backend.</p>
-
-	<p>For the JavaFX version, I paid special attention to make it look like a modern Windows application. All widgets are minuite reconstructions of WinUI&nbsp;3 controls, including hover effects and animations. In a recent build for Windows 11, Paletti also features a Mica-styled window chrome by calling native Windows functions from JavaFX.</p>
-</section>
-
-<section class="plan colored-links" data-vbox>
-	<p>At my employer, I built an <a href="https://data.ariadne.ai/3d/sars-cov2/">online mesh viewer</a> for 3D segmentations using three.js. Compared to Google’s &lt;model-viewer&gt;, it is modelled after an ECS architecture which can dynamically switch between interaction and pause (completely skipping draw calls, thus saving power).</p>
-
-	<p>Depending on the project, my work also includes post-processing, manual retopology, or texturing to improve visuals while keeping memory consumption low.</p>
-</section>
-
-<section class="plan colored-links" data-vbox>
-	<p>I made a small contribution to <a href="https://keplerproject.github.io/luafilesystem/">LuaFileSystem</a> which improved Windows support.</p>
-</section>
-
-<section class="colored-links" data-vbox="-small">
-	<p class="Ta(c) Pe(n) text--pale">※</p>
-
-	<p class="Fz(15px)">You can view some of my <a href="https://www.artstation.com/Eroica">old art on ArtStation</a>. Small status updates are on <a rel="me" href="https://toot.groundctrl.earth/@Eroica">my Mastodon</a>.</p>
-
-	<p class="Fz(15px)">The droid you are looking for is on another protocol.</p>
-
-	<p class="Fz(15px)">Always get enough sleep.</p>
+	<p>The droid you are looking for is on another protocol.</p>
 </section>

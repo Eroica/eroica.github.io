@@ -21,20 +21,6 @@ em, i {
 }
 
 del, .text--pale {color: $font-color-pale; }
-.text--title {
-	font-family: "ClearSansScreen-Md", sans-serif;
-	color: $font-color-pale;
-	font-weight: 400;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	font-size: 14px;
-}
-
-time {
-	font-size: 14px;
-	font-family: Consolas, Roboto Mono, Menlo,monospace;
-	letter-spacing: .5px;
-}
 
 ins {
 	text-decoration: none;
@@ -46,6 +32,10 @@ ins {
 h1, h2, h3, h4, h5, h6 {
 	font-family: "ClearSansScreen-Md", sans-serif;
 	font-weight: 400;
+	color: #484848;
+}
+.-dark h1 {
+	color: #fff;
 }
 
 .a {cursor: pointer}
@@ -78,7 +68,7 @@ ul {
 		left: -1em;
 	}
 }
-.-dark ul li::before {color: rgba(170, 178, 189, .2); }
+.-dark ul:not(.dates) > li::before {color: rgba(170, 178, 189, .2); }
 .timeline ul, .post ul {margin-left: 24px; }
 
 ol {
@@ -86,10 +76,51 @@ ol {
 	margin-left: 24px;
 }
 
+.dated {
+	&::before {
+		@extend .text--pale;
+		font-size: .9rem;
+		width: 20ch;
+		display: block;
+		margin-bottom: .5em;
+		content: attr(data-date);
+	}
+
+	@include breakpoint($md + 300px) {
+		position: relative;
+
+		&::before {
+			text-align: right;
+			position: absolute;
+			top: .1rem;
+			left: calc(-20ch - 1em);
+			margin-bottom: 0;
+			display: inline-block;
+		}
+	}
+}
+ul.dates > li {
+	margin-left: 4em;
+
+	&::before {
+		@extend .text--pale;
+		font-size: .9rem;
+		width: 20ch;
+		content: attr(data-date);
+		text-align: right;
+		position: absolute;
+		top: .1rem;
+		left: calc(-20ch - 1em);
+	}
+
+	@include breakpoint($md + 300px) {
+		margin-left: 0;
+	}
+}
+
+
 figure {
 	@extend [data-VBox], [data-VBox~="-small"];
-
-	min-width: 40%;
 
 	img, video {
 		display: block;
@@ -98,28 +129,45 @@ figure {
 	}
 
 	figcaption, .figcaption {
-		font-size: 14px;
+		font-size: .9rem;
 		text-align: center;
-	}
-
-	@include breakpoint($md) {
-		float: right;
-		margin-bottom: .5em;
-		margin-left: 2em;
-
-		& + * {
-			margin-top: 0 !important;
-		}
-	}
-
-	&.larger-than-text {
-		@include breakpoint($md) {
-			margin-bottom: 2em;
-		}
 	}
 }
 
 .no-js figcaption,
 .no-js .switch-row {
 	display: none;
+}
+
+.starred {
+	position: relative;
+	margin-left: 2em;
+
+	svg {
+		position: absolute;
+		left: -2rem;
+		top: .15rem;
+		width: 20px;
+		height: 20px;
+		stroke: #ffb436;
+		fill: #ffb436;
+	}
+
+	@include breakpoint($md + 300px) {
+		margin-left: 0;
+	}
+}
+
+.tag {
+	color: #555;
+	font-size: .8rem;
+	background-color: #efefef;
+	border-radius: 8px;
+	padding: 2px 6px;
+	letter-spacing: .05rem;
+	display: inline-block;
+}
+.-dark .tag {
+	@extend .text--pale;
+	background-color: rgba(0, 0, 0, .33);
 }
