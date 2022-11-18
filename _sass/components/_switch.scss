@@ -18,7 +18,7 @@
 	left: 0;
 	opacity: 0;
 }
-.switch-input:focus ~ .switch-handle {box-shadow: 0 0 4px 1px #469DF6, 0 1px 3px 0 rgba(0, 0, 0, 0.4); }
+.switch-input:focus ~ .switch-handle {box-shadow: 0 0 0 2px rgba(0, 0, 0, .5), 0 1px 3px 0 rgba(0, 0, 0, 0.4); }
 .switch > .switch-input:checked ~ .switch-handle {left: 16px; }
 
 .switch-trough {

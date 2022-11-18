@@ -12,6 +12,7 @@ $PREFIX: "data-";
 	> * + * {margin-top: 1em; }
 	&[#{$PREFIX}VBox~="-small"] > * + * {margin-top: .5em; }
 	&[#{$PREFIX}VBox~="-medium"] > * + * {margin-top: 2em; }
+	&[#{$PREFIX}VBox~="-large"] > * + * {margin-top: 3em; }
 }
 
 [#{$PREFIX}HBox] {
