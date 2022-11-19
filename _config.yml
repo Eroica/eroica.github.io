@@ -23,3 +23,5 @@ sass:
 
 exclude:
   - site.tar.gz
+  - package-lock.json
+  - package.json
