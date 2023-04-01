@@ -69,7 +69,6 @@ ul {
 	}
 }
 .-dark ul:not(.dates) > li::before {color: rgba(170, 178, 189, .2); }
-.timeline ul, .post ul {margin-left: 24px; }
 
 ol {
 	list-style: decimal;
@@ -100,7 +99,7 @@ ol {
 	}
 }
 ul.dates > li {
-	margin-left: 4em;
+	margin-left: 6em;
 
 	&::before {
 		@extend .text--pale;
