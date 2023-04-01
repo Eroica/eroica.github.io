@@ -127,13 +127,13 @@ figure {
 		margin-right: auto;
 	}
 
-	figcaption, .figcaption {
+	figcaption {
 		font-size: .9rem;
 		text-align: center;
 	}
 }
 
-.no-js figcaption,
+.no-js .htmx,
 .no-js .switch-row {
 	display: none;
 }

@@ -33,11 +33,14 @@ layout: default
 				<source srcset="{{ 'blender/BisectModifier+6.webp' | relative_url }}" type="image/webp">
 				<img hx-swap-oob="true" src="{{ 'blender/BisectModifier+6.png' | relative_url }}" width="300" height="150" alt="A screenshot of the bisect modifier in action">
 			</picture>
-			<figcaption id="BisectGifCaption" hx-swap-oob="true">Bisect modifier on an apple.<br><span class="a" hx-get="{{ 'blender/bisect-modifier-gif.html' | relative_url }}">Click here for an animated example (14.3&nbsp;MB GIF).</span></figcaption>
 
-			<noscript>
-				<p class="figcaption">Bisect modifier on an Apple.<br><a href="{{ 'blender/BisectModifier+6.gif' | relative_url }}">Click here for an animated example (14.3&nbsp;MB GIF).</a></p>
-			</noscript>
+			<figcaption id="BisectGifCaption" hx-swap-oob="true">
+				<p class="htmx">Bisect modifier on an apple.<br><span class="a" hx-get="{{ 'blender/bisect-modifier-gif.html' | relative_url }}">Click here for an animated example (14.3&nbsp;MB GIF).</span></p>
+
+				<noscript>
+					<p>Bisect modifier on an Apple.<br><a href="{{ 'blender/BisectModifier+6.gif' | relative_url }}">Click here for an animated example (14.3&nbsp;MB GIF).</a></p>
+				</noscript>
+			</figcaption>
 		</figure>
 	</div>
 
