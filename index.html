@@ -10,7 +10,16 @@ layout: default
 <p>My work mostly involves GUI design and development, graphics programming, 2D/3D visualization, and general graphics design. Here are some examples:</p>
 
 <section class="plan colored-links" data-vbox="-medium">
-	<p class="starred">{% include feather/star.svg %} <a href="https://meritcards.app">Merit Cards</a>, a new flashcard application for Windows. I use it to study languages because I don’t really like how Anki works. A note is made up of individual cards (“facets”) and are scheduled after a basic spaced-repetition algorithm. You can also schedule your notes freely just like traditional <a href="https://en.wikipedia.org/wiki/Leitner_system">Leitner learning boxes</a>. <span class="tag">Kotlin</span> <span class="tag">JavaFX</span> <span class="tag">SQLite</span></p>
+	<div class="starred" data-vbox>
+		{% include feather/star.svg %}
+
+		<p><a href="https://meritcards.app">Merit Cards</a>, a new flashcard application for Windows. I use it to study languages because I don’t really like how Anki works. A note is made up of individual cards (“facets”) and are scheduled after a basic spaced-repetition algorithm. You can also schedule your notes freely just like traditional <a href="https://en.wikipedia.org/wiki/Leitner_system">Leitner learning boxes</a>. <span class="tag">Kotlin</span> <span class="tag">JavaFX</span> <span class="tag">SQLite</span></p>
+
+		<figure>
+			<a href="{{ 'images/2022-08-02-Session.png' | relative_url }}"><img src="{{ 'images/2022-08-05-MeritCards.png' | relative_url }}" width="349" height="241" alt="A screenshot of Merit Card’s study session"></a>
+			<figcaption>Studying a flashcard in Merit Cards.<br>(Click on image for large version)</figcaption>
+		</figure>
+	</div>
 
 	<div class="dated" data-date="April 2022" data-vbox>
 		<p>My rendering of a T&nbsp;cell and cancer cell was featured on the cover of <em>Science</em>, Issue 6591, on April 2022. The meshes were obtained from an electron microscope dataset as part of <a href="https://twitter.com/ritterlab">Alex Ritter’s</a> research about how T&nbsp;cells destroy cancer cells.</p>
@@ -44,7 +53,24 @@ layout: default
 		</figure>
 	</div>
 
-	<p class="dated" data-date="April 2020"><a href="https://paletti.app">Paletti</a> is a little program that <em>“posterizes”</em> an image into a smaller amount of colors and shapes. This way you can extract primary colors or simplify an image artistically. It uses <a href="http://leptonica.org">Leptonica</a> to process the image. <span class="tag">Kotlin</span> <span class="tag">JavaFX</span> <span class="tag">SQLite</span> <span class="tag">C++</span> <span class="tag">Vala</span> <span class="tag">GTK</span> <span class="tag">Android</span></p>
+	<div class="dated" data-date="April 2020" data-vbox>
+		<p><a href="https://paletti.app">Paletti</a> is a little program that <em>“posterizes”</em> an image into a smaller amount of colors and shapes. This way you can extract primary colors or simplify an image artistically. It uses <a href="http://leptonica.org">Leptonica</a> to process the image. <span class="tag">Kotlin</span> <span class="tag">JavaFX</span> <span class="tag">SQLite</span> <span class="tag">C++</span> <span class="tag">Vala</span> <span class="tag">GTK</span> <span class="tag">Android</span></p>
+
+		<figure>
+			<picture id="PalettiGif">
+				<source srcset="{{ 'images/Paletti-JavaFX+2.webp' | relative_url }}" type="image/webp">
+				<img data-hx-swap-oob="true" src="{{ 'images/Paletti-JavaFX+2.png' | relative_url }}" width="300" height="225" alt="A screenshot of Paletti">
+			</picture>
+
+			<figcaption id="PalettiGifCaption" data-hx-swap-oob="true">
+				<p class="htmx"><span class="a" data-hx-get="{{ 'paletti/paletti-gif.html' | relative_url }}">Click here to see an example (13.2&nbsp;MB GIF).</span></p>
+
+				<noscript>
+					<p><a href="{{ 'images/Paletti-JavaFX+2.png' | relative_url }}">Click here to see an example (13.2&nbsp;MB GIF).</a></p>
+				</noscript>
+			</figcaption>
+		</figure>
+	</div>
 
 	<p class="dated" data-date="April 2020">I made a small contribution to <a href="https://keplerproject.github.io/luafilesystem/">LuaFileSystem</a> which improved Windows support. <span class="tag">Lua</span> <span class="tag">C</span></p>
 </section>
