@@ -1,5 +1,8 @@
 .switch-row {
-	> * {height: 24px; }
+	> * {
+		height: 24px;
+		vertical-align: middle;
+	}
 	svg {padding: 2px; }
 }
 

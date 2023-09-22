@@ -1,0 +1,13 @@
+.badge {
+	font-size: .875rem;
+	background-color: #e7e7e9;
+	padding: 4px 10px;
+	border-radius: 16px;
+	font-weight: 600;
+	border: 1px solid transparent;
+}
+.-dark .badge {
+	background-color: #212528;
+	border-color: rgba(170, 178, 189, .2);
+}
+.badge abbr {text-decoration: none;}

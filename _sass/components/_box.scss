@@ -1,12 +1,12 @@
 .box {
 	border: 1px solid #e7e7e9;
 	border-bottom-color: #dfdfe2;
-	border-radius: 3px;
+	border-radius: 5px;
 	padding: 20px;
-	background: #fff;
+	margin-left: -1em;
+	margin-right: -1em;
 }
 .-dark .box {
-	background: transparent;
 	border-color: rgba(170, 178, 189, .2);
 }
 .box.-primary,
