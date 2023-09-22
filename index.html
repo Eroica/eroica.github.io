@@ -7,44 +7,76 @@ layout: default
 <p class="colored-links box -primary">GitHub automatically builds a website for this public repository. My self-hosted version is available at <a href="https://groundctrl.earth">groundctrl.earth</a>.</p>
 {% endif %}
 
-<p>Software & visualization projects</p>
-
-<p class="colored-links underlined-links">I’m <strong>@Eroica</strong> on <a href="https://github.com/Eroica">GitHub</a> and some other places. I work as a web developer and also on a few software and 3D visualization projects.</p>
+<p class="Fz(.875rem) box">Small software and visualization projects created somewhere between Heidelberg, Germany, and Taipei, Taiwan.</p>
 
 <section class="colored-links underlined-links" data-vbox>
 	<h2>Software</h2>
 
-	<p class="starred star">{% include feather/star.svg %}<a href="https://meritcards.app">Merit Cards</a> — a new flashcard application for Windows. I use it to study languages because I needed something different to Anki. A note is made up of individual cards (“facets”) and are scheduled after a basic spaced-repetition algorithm. You can also schedule your notes freely just like traditional <a href="https://en.wikipedia.org/wiki/Leitner_system">Leitner learning boxes</a>.</p>
+	<div class="gallery">
+		<div data-vbox="-small">
+			<img class="D(b) Mx(a)" src="{{ 'images/2023-03-31-Session-small.png' | relative_url }}" alt="Screenshot of Merit Cards">
+			<p class="Ta(c)"><a href="https://meritcards.app">Merit Cards</a></p>
+			<p>A new flashcard application for Windows supporting spaced-repetition and traditional <a href="https://en.wikipedia.org/wiki/Leitner_system">Leitner learning boxes</a>.</p>
+		</div>
 
-	<p><a href="https://paletti.app">Paletti</a> — a little program that <em>“posterizes”</em> an image into a smaller amount of colors and shapes. This way you can extract primary colors or simplify an image artistically. It uses <a href="http://leptonica.org">Leptonica</a> to process the image.</p>
+		<div data-vbox="-small">
+			<img class="D(b) Mx(a)" src="{{ 'images/2023-09-22-Paletti.png' | relative_url }}" alt="Screenshot of Paletti">
+			<p class="Ta(c)"><a href="https://paletti.app">Paletti</a></p>
+			<p>Posterize images and create color palettes using <a href="http://leptonica.org">Leptonica</a>.</p>
+		</div>
+	</div>
 </section>
 
-<section class="colored-links underlined-links" data-vbox>
+<section class="Cf colored-links underlined-links" data-vbox>
 	<h2>Libraries</h2>
 
-	<p>I published the WinUI-inspired theme from my JavaFX applications as a separate library: <a href="https://github.com/Eroica/javafx-fluent-theme">javafx-fluent-theme</a>.</p>
+	<figure data-vbox="-small">
+		<img class="D(b) Mx(a)" src="{{ 'images/Demo.png' | relative_url }}" alt="Screenshot of javafx-fluent-theme’s demo application">
+	</figure>
+
+	<ul data-vbox>
+		<li><a href="https://github.com/Eroica/javafx-fluent-theme">javafx-fluent-theme</a>: A Windows 11/WinUI theme for your JavaFX application, with a demo application designed after Microsoft’s <em>WinUI 3 Gallery</em>.</li>
+	</ul>
 </section>
 
-<section class="colored-links underlined-links" data-vbox>
+<section class="Cf colored-links underlined-links" data-vbox>
 	<h2>Plugins/Extensions</h2>
 
-	<p><a href="https://developer.blender.org/D8954">A Bisect modifier for Blender</a> — it allows bisecting large meshes (30+&nbsp;mio vertices) non-destructively, e.g. for creating animations.</p>
+	<figure data-vbox="-small">
+		<img class="D(b) Mx(a)" src="{{ 'blender/BisectModifier+6.png' | relative_url }}" alt="Blender using a custom Bisect modifier">
+	</figure>
+
+	<ul data-vbox>
+		<li><a href="https://developer.blender.org/D8954">A Bisect modifier for Blender</a> — it allows bisecting large meshes (30+&nbsp;mio vertices) non-destructively, e.g. for creating animations.</li>
+	</ul>
 </section>
 
-<section class="colored-links underlined-links" data-vbox>
+<section class="Cf colored-links" data-vbox>
 	<h2>3D Visualization</h2>
 
-	<p><a href="https://groundctrl.earth/pub/gallery#f8sCJYniekQtd_CMarkwndSq">Scientific visualizations</a> — for example, the front cover of <a href="https://www.science.org/toc/science/376/6591"><em>Science</em>, Volume 376, Issue 6591, April 22, 2022</a>. I created more than 200 renderings and animations while working at <a href="https://ariadne.ai">ariadne.ai</a>.</p>
+	<figure data-vbox="-small">
+		<img class="D(b) Mx(a)" src="{{ 'images/Science-Thumbnail.jpg' | relative_url }}" alt="Cover of Science, Volume 376, Issue 6591, April 22, 2022">
+		<figcaption class="Ta(c)"><a href="https://www.science.org/toc/science/376/6591">Cover image for <em>Science</em>, Volume 376, Issue 6591, April 22, 2022</a></figcaption>
+	</figure>
 
-	<p><a href="https://3d.ariadne.ai/sars-cov2/">An online mesh viewer</a> for 3D segmentations (here with example meshes) — compared to Google’s &lt;model-viewer&gt;, it is modelled after an <abbr title="Entity component system">ECS</abbr> architecture which can dynamically switch between interaction and pause (completely skipping draw calls, thus saving power).</p>
-
-	<p><strong class="badge"><abbr title="Work in progress">WIP</abbr></strong> Come back soon for more!</p>
+	<ul class="underlined-links" data-vbox>
+		<li><a href="https://groundctrl.earth/pub/gallery#f8sCJYniekQtd_CMarkwndSq">Scientific visualizations</a>. I created more than 200 renderings and animations while working at <a href="https://ariadne.ai">ariadne.ai</a>.</li>
+		<li><a href="https://3d.ariadne.ai/sars-cov2/">An online mesh viewer</a> for 3D segmentations (here with example meshes)</li>
+		<li><strong class="badge"><abbr title="Work in progress">WIP</abbr></strong> Come back soon for more!</li>
+	</ul>
 </section>
 
 <section class="colored-links underlined-links" data-vbox>
 	<h2>Other contributions</h2>
 
-	<p><a href="https://keplerproject.github.io/luafilesystem/">LuaFileSystem</a> — improving support on Windows.</p>
-
-	<p><a href="https://knossos.app">KNOSSOS</a> — web and graphics design, creating build scripts for OS&nbsp;X.</p>
+	<ul data-vbox>
+		<li><a href="https://keplerproject.github.io/luafilesystem/">LuaFileSystem</a> — improving support on Windows.</li>
+		<li><a href="https://knossos.app">KNOSSOS</a> — web and graphics design, creating build scripts for OS&nbsp;X.</li>
+	</ul>
 </section>
+
+<div class="Fz(.875rem) box colored-links" data-vbox="-small">
+	<p>You can view some of my <a href="https://www.artstation.com/Eroica">old art on ArtStation</a>. Small status updates are on <a rel="me" href="https://toot.groundctrl.earth/@Eroica">my Mastodon</a>.</p>
+	<p>The droid you are looking for is on another protocol.</p>
+	<p style="font-family: 'Microsoft JhengHei', sans-serif;">為了守護咱的夢 成做更加勇敢的人 現在是彼一工 勇敢的台灣人。</p>
+</div>
