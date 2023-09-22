@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+$xs: 0;
+$sm: 544px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+$accent-color: #419BF9;
+$blue-hue-1: #419BF9;
+$font-color-dark: #323346;
+$font-color-pale: #8f97a3;
+$text-pale: #8f97a3;
+
+$easing: cubic-bezier(.02,.98,.46,.95);
+
+@mixin breakpoint($device) {
+	@media screen and (min-width: $device) {
+		@content;
+	}
+}
+
+@import "destyle";
+@import "notosans";
+
+@import "layout";
+@import "page";
+@import "typography";
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	line-height: 1.8;
+	padding: 25px;
+	font-family: "NotoSans", "Segoe UI", sans-serif;
+	font-size: 16px;
+	color: #323346;
+	hyphens: auto;
+}
+
+.colored-links {
+	a {
+		color: #419BF9;
+	}
+	a:hover {
+		color: lighten(#419BF9, 10);
+	}
+}
+
+.container #FillWidthCheckbox:not(:checked) ~ section,
+.container #FillWidthCheckbox:not(:checked) ~ article {
+	max-width: 79ch;
+}
+
+ul.actions {
+	li ~ li {
+		margin-top: .5em;
+	}
+
+	.button, button {
+		width: 100%;
+	}
+
+	@include breakpoint($sm) {
+		text-align: center;
+
+		li {
+			display: inline-block;
+		}
+	}
+}
+
+ol {
+	margin-left: 1em;
+	list-style: decimal;
+}
+
+@media screen and (min-width: 800px) {
+	body {
+		padding: 50px 50px 25px 50px;
+	}
+}
+
+nav {
+	margin-top: 0 !important;
+}
+
+@media screen and (min-width: 800px) {
+	nav {
+		position: absolute;
+		top: 1em;
+		right: calc(100% - 79ch - 50px);
+	}
+
+	.container #FillWidthCheckbox:checked ~ nav {
+		right: 3em;
+	}
+}
+
+@import "buttons";
+
+figure {
+	position: relative;
+	max-width: 640px;
+
+	img {
+		display: block;
+		max-width: 100%;
+	}
+
+	.tip {
+		position: absolute;
+		pointer-events: none;
+		top: 0;
+		left: 0;
+		background-color: #292929;
+		border-radius: 50%;
+		width: 24px;
+		height: 24px;
+		text-align: center;
+		line-height: 24px;
+		font-size: 12px;
+		color: #fff;
+
+		&:nth-of-type(1) {
+			left: 32%;
+			top: 17%;
+		}
+		&:nth-of-type(2) {
+			left: 54%;
+			top: 17%;
+		}
+		&:nth-of-type(3) {
+			left: 79%;
+			top: 17%;
+		}
+		&:nth-of-type(4) {
+			left: 80%;
+			top: 30%;
+		}
+		&:nth-of-type(5) {
+			left: 88%;
+			top: 73%;
+		}
+	}
+}

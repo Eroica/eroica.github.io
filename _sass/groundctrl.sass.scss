@@ -25,19 +25,19 @@ $easing: cubic-bezier(.02,.98,.46,.95);
 }
 
 @import "destyle";
-{% include css/atomic.css %}
+@import "groundctrl/atomic";
 @import "notosans";
 
-@import "layouts";
-@import "helpers";
+@import "groundctrl/layouts";
+@import "groundctrl/helpers";
 
-@import "page";
-@import "typography";
-@import "containers";
+@import "groundctrl/page";
+@import "groundctrl/typography";
+@import "groundctrl/containers";
 
-@import "components/badge";
-@import "components/box";
-@import "components/switch";
+@import "groundctrl/components/badge";
+@import "groundctrl/components/box";
+@import "groundctrl/components/switch";
 
 blockquote {
 	@extend [data-VBox];
