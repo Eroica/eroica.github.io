@@ -24,7 +24,7 @@ $easing: cubic-bezier(.02,.98,.46,.95);
 	}
 }
 
-@import "destyle";
+{% include css/destyle.css %}
 {% include css/atomic.css %}
 @import "notosans";
 
@@ -38,16 +38,3 @@ $easing: cubic-bezier(.02,.98,.46,.95);
 @import "components/badge";
 @import "components/box";
 @import "components/switch";
-
-blockquote {
-	@extend [data-VBox];
-	margin-left: 24px;
-	border-left: 2px solid #e7e7e9;
-	padding-left: 24px;
-
-	footer {
-		@extend .text--pale;
-		@extend .colored-links;
-		font-size: .875rem;
-	}
-}

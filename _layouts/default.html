@@ -3,54 +3,44 @@
 
 {% include head.html %}
 
-
 <body class="is-loading no-js Px(24px)" data-vbox="-medium" data-alignment="-center" >
-{% include header.html %}
+	{% include header.html %}
 
-<main class="container" data-vbox="-large">
-	{% if page.url != "/" %}
-		<nav><span><a href="/">Home</a></span> / <span>Posts</span> / <span><%= yield(:title) %></span></nav>
-	{% endif %}
+	<main class="container" data-vbox="-large">
+		{% if page.url != "/" %}
+		<nav><span><a href="/">Home</a></span> / <span>Posts</span> / <span>{{ page.title }}</span></nav>
+		{% endif %}
 
-	{{ content }}
+		{{ content }}
+	</main>
 
-	<div class="Fz(.875rem) box colored-links" data-vbox="-small">
-		<p>You can view some of my <a href="https://www.artstation.com/Eroica">old art on ArtStation</a>. Small status updates are on <a rel="me" href="https://toot.groundctrl.earth/@Eroica">my Mastodon</a>.</p>
-		<p>The droid you are looking for is on another protocol.</p>
-		<p style="font-family: 'Microsoft JhengHei', sans-serif;">為了守護咱的夢 成做更加勇敢的人 現在是彼一工 勇敢的台灣人。</p>
-	</div>
-</main>
-<p class="Ta(c) Pe(n) text--pale">※</p>
+	<p class="Ta(c) Pe(n) text--pale">※</p>
 
-<footer class="Fz(.875rem) footer container -small colored-links Op(.7) Mb(50px)" data-vbox="-small">
-	<p class="Ta(c)">Always get enough sleep.</p>
-	<p class="Ta(c)">© 2021–2023. Last update: August  4th, 2023</p>
-	<p class="">The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons</a> 3.0 Attribution License.</p>
-</footer>
+	{% include footer.html %}
 
-<script nonce="dG1wOTM2Qy50bXA=">
-	"use strict";
+	<script nonce="dG1wOTM2Qy50bXA=">
+		"use strict";
 
-	let $body;
-	let $switch;
+		let $body;
+		let $switch;
 
-	if (sessionStorage.getItem("dark") === "true") {
-		document.querySelector("body").classList.add("-dark");
-		document.querySelector("input[type='checkbox']").checked = true;
-	}
+		if (sessionStorage.getItem("dark") === "true") {
+			document.querySelector("body").classList.add("-dark");
+			document.querySelector("input[type='checkbox']").checked = true;
+		}
 
-	function toggleDarkness (_) {
-		$body.classList.toggle("-dark");
-		sessionStorage.setItem("dark", $switch.checked);
-	}
+		function toggleDarkness (_) {
+			$body.classList.toggle("-dark");
+			sessionStorage.setItem("dark", $switch.checked);
+		}
 
-	window.addEventListener("load", function () {
-		$body = document.querySelector("body");
-		$switch = document.querySelector("header input[type='checkbox']");
-		$body.classList.remove("is-loading", "no-js");
-	});
+		window.addEventListener("load", function () {
+			$body = document.querySelector("body");
+			$switch = document.querySelector("header input[type='checkbox']");
+			$body.classList.remove("is-loading", "no-js");
+		});
 
-	document.getElementById("is_darkness").addEventListener("change", toggleDarkness);
-</script>
+		document.getElementById("is_darkness").addEventListener("change", toggleDarkness);
+	</script>
 </body>
 </html>
