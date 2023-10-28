@@ -1,6 +1,3 @@
-.D\(b\) {
-  display: block;
-}
 .Fz\(\.875rem\) {
   font-size: .875rem;
 }
@@ -17,20 +14,12 @@
 .Op\(\.7\) {
   opacity: .7;
 }
-.Px\(24px\) {
-  padding-left: 24px;
-  padding-right: 24px;
-}
 .Pe\(n\) {
   pointer-events: none;
 }
+.Pos\(r\) {
+  position: relative;
+}
 .Ta\(c\) {
   text-align: center;
-}
-.Cf:before, .Cf:after {
-  content: " ";
-  display: table;
-}
-.Cf:after {
-  clear: both;
 }
