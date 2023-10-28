@@ -1,16 +1,6 @@
 .container {
 	max-width: 100%;
-	width: 88ch;
+	width: 50rem;
 
-	&.-small {width: 73ch; }
-	&.-large {width: 99ch; }
-}
-
-.header {
-	margin-top: 10px;
-	transition: margin-top .2s $easing;
-
-	@include breakpoint($md) {
-		margin-top: 50px;
-	}
+	&.-small {width: 37rem; }
 }
