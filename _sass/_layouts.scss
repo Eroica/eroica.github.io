@@ -1,26 +1,15 @@
-$PREFIX: "data-";
+[data-VBox] > * + * {margin-top: 1em;}
+[data-VBox="-small"] > * + * {margin-top: .5em;}
+[data-VBox="-medium"] > * + * {margin-top: 2em;}
+[data-VBox="-large"] > * + * {margin-top: 3em;}
 
-[#{$PREFIX}Alignment] {
-	&[#{$PREFIX}Alignment~="-center"] > * {
-		margin-left: auto;
-		margin-right: auto;
-	}
-	&[#{$PREFIX}Alignment~="-middle"] > * { vertical-align: middle; }
-}
-
-[#{$PREFIX}VBox] {
-	> * + * {margin-top: 1em; }
-	&[#{$PREFIX}VBox~="-small"] > * + * {margin-top: .5em; }
-	&[#{$PREFIX}VBox~="-medium"] > * + * {margin-top: 2em; }
-	&[#{$PREFIX}VBox~="-large"] > * + * {margin-top: 3em; }
-}
-
-[#{$PREFIX}HBox] {
+[data-HBox] {
 	> *:not(:last-child) { margin-right: 1em; }
-	&[#{$PREFIX}HBox~="-small"] > *:not(:last-child) { margin-right: .5em; }
+	&[data-HBox~="-small"] > *:not(:last-child) { margin-right: .5em; }
+	&[data-HBox~="-medium"] > *:not(:last-child) { margin-right: 2em; }
 }
 
-[#{$PREFIX}Flow] {
-	display: flex;
-	&[#{$PREFIX}Flow~="baseline"] {align-items: baseline}
+[data-Flow] {
+	display: inline-flex;
+	&[data-Flow~="-center"] {align-items: center}
 }
