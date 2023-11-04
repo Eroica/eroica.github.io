@@ -1,82 +1,42 @@
 ---
-title: .plan
+title: Home
 layout: default
 ---
 
-{% if site.github %}
-<p class="colored-links box -primary">GitHub automatically builds a website for this public repository. My self-hosted version is available at <a href="https://groundctrl.earth">groundctrl.earth</a>.</p>
-{% endif %}
+<div class="colored-links underlined-links" data-vbox>
+	<h1>GROUNDCTRL</h1>
 
-<p class="Fz(.875rem) box">Small software and visualization projects created somewhere between Heidelberg, Germany, and Taipei, Taiwan.</p>
+	<p>I favor <em>Cathedral-style</em> development models, and providing pre-compiled binaries without installers and all dependencies included. SQLite is my role model in this regard. An application should be downloadable directly from the vendor without relying on system package managers. If I need a program or library, I download or compile from upstream sources, and put them into a directory managed by <a href="https://www.gnu.org/software/stow/">GNU Stow</a>. This allows me to have different versions of the same library installed at the same time, without any name mangling, and which can be activated and deactivated with <code>stow [-D]</code>. I think the <a href="https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard">Filesystem Hierarchy Standard</a> should be replaced by what <a href="https://www.gobolinux.org/at_a_glance.html">GoboLinux</a> does. Those who do not understand Objective-C are bound to reinvent it.</p>
+</div>
 
-<section class="colored-links underlined-links" data-vbox>
-	<h2>Software</h2>
+<div class="colored-links underlined-links" data-vbox>
+	<h2>Recent projects</h2>
 
-	<div class="gallery">
-		<div data-vbox="-small">
-			<img class="D(b) Mx(a)" src="{{ 'images/2023-03-31-Session-small.png' | relative_url }}" alt="Screenshot of Merit Cards">
-			<p class="Ta(c)"><a href="https://meritcards.app">Merit Cards</a></p>
-			<p>A new flashcard application for Windows supporting spaced-repetition and traditional <a href="https://en.wikipedia.org/wiki/Leitner_system">Leitner learning boxes</a>.</p>
-		</div>
-
-		<div data-vbox="-small">
-			<img class="D(b) Mx(a)" src="{{ 'images/2023-09-22-Paletti.png' | relative_url }}" alt="Screenshot of Paletti">
-			<p class="Ta(c)"><a href="https://paletti.app">Paletti</a></p>
-			<p>Posterize images and create color palettes using <a href="http://leptonica.org">Leptonica</a>.</p>
-		</div>
-	</div>
-</section>
-
-<section class="Cf colored-links underlined-links" data-vbox>
-	<h2>Libraries</h2>
-
-	<figure data-vbox="-small">
-		<img class="D(b) Mx(a)" src="{{ 'images/Demo.png' | relative_url }}" alt="Screenshot of javafx-fluent-theme’s demo application">
-	</figure>
-
-	<ul data-vbox>
-		<li><a href="https://github.com/Eroica/javafx-fluent-theme">javafx-fluent-theme</a>: A Windows 11/WinUI theme for your JavaFX application, with a demo application designed after Microsoft’s <em>WinUI 3 Gallery</em>.</li>
-	</ul>
-</section>
-
-<section class="Cf colored-links underlined-links" data-vbox>
-	<h2>Plugins/Extensions</h2>
-
-	<figure data-vbox="-small">
-		<img class="D(b) Mx(a)" src="{{ 'blender/BisectModifier+6.png' | relative_url }}" alt="Blender using a custom Bisect modifier">
-	</figure>
-
-	<ul data-vbox>
+	<ul data-vbox="-small">
+		<li><a href="https://meritcards.app">Merit Cards</a>: A new flashcard application for Windows supporting spaced-repetition and traditional <a href="https://en.wikipedia.org/wiki/Leitner_system">Leitner learning boxes</a>.</li>
+		<li><a href="https://paletti.app">Paletti</a>: A small program to posterize images and create color palettes using <a href="http://leptonica.org">Leptonica</a>.</li>
+		<li><a href="https://github.com/Eroica/Mr.-Unhyde">Mr. Unhyde</a>, a reboot of my first OS X application — automatically hide and <del>un-hyde</del> <ins>un-hide</ins> the Dock depending on mouse speed and position.</li>
+		<li><a href="https://github.com/Eroica/javafx-fluent-theme">javafx-fluent-theme</a>: A Windows 11/WinUI theme for JavaFX, with a demo application designed after Microsoft’s <em>WinUI 3 Gallery</em>.</li>
 		<li><a href="https://developer.blender.org/D8954">A Bisect modifier for Blender</a> — it allows bisecting large meshes (30+&nbsp;mio vertices) non-destructively, e.g. for creating animations.</li>
+		<li><strong class="badge -primary"><abbr title="Work in progress">WIP</abbr></strong> Come back soon for more!</li>
 	</ul>
-</section>
+</div>
 
-<section class="Cf colored-links" data-vbox>
-	<h2>3D Visualization</h2>
+<div class="colored-links" data-vbox>
+	<h2>Recent visualizations</h2>
 
-	<figure data-vbox="-small">
-		<img class="D(b) Mx(a)" src="{{ 'images/Science-Thumbnail.jpg' | relative_url }}" alt="Cover of Science, Volume 376, Issue 6591, April 22, 2022">
-		<figcaption class="Ta(c)"><a href="https://www.science.org/toc/science/376/6591">Cover image for <em>Science</em>, Volume 376, Issue 6591, April 22, 2022</a></figcaption>
-	</figure>
-
-	<ul class="underlined-links" data-vbox>
-		<li><a href="https://groundctrl.earth/pub/gallery#f8sCJYniekQtd_CMarkwndSq">Scientific visualizations</a>. I created more than 200 renderings and animations while working at <a href="https://ariadne.ai">ariadne.ai</a>.</li>
-		<li><a href="https://3d.ariadne.ai/sars-cov2/">An online mesh viewer</a> for 3D segmentations (here with example meshes)</li>
-		<li><strong class="badge"><abbr title="Work in progress">WIP</abbr></strong> Come back soon for more!</li>
+	<ul data-vbox="-small">
+		<li>Cover image for <em>Journal of Clinical Investigation</em>, Volume 133, Issue 1, January 3, 2023</li>
+		<li>Cover image for <a href="https://www.science.org/toc/science/376/6591"><em>Science</em>, Volume 376, Issue 6591, April 22, 2022</a></li>
+		<li><a data-flow="-center" href="https://groundctrl.earth/pub/gallery#f8sCJYniekQtd_CMarkwndSq">More visualizations {% include feather/arrow-right.svg %}</a></li>
 	</ul>
-</section>
+</div>
 
-<section class="colored-links underlined-links" data-vbox>
-	<h2>Other contributions</h2>
+<div class="Fz(.875rem) colored-links" data-vbox>
+	<h2 class="Fz(.875rem)">Other contributions</h2>
 
-	<ul data-vbox>
+	<ul data-vbox="-small">
 		<li><a href="https://keplerproject.github.io/luafilesystem/">LuaFileSystem</a> — improving support on Windows.</li>
 		<li><a href="https://knossos.app">KNOSSOS</a> — web and graphics design, creating build scripts for OS&nbsp;X.</li>
 	</ul>
-</section>
-
-<div class="Fz(.875rem) box colored-links" data-vbox="-small">
-	<p>You can view some of my <a href="https://www.artstation.com/Eroica">old art on ArtStation</a>. Small status updates are on <a rel="me" href="https://toot.groundctrl.earth/@Eroica">my Mastodon</a>.</p>
-	<p>The droid you are looking for is on another protocol.</p>
-	<p style="font-family: 'Microsoft JhengHei', sans-serif;">為了守護咱的夢 成做更加勇敢的人 現在是彼一工 勇敢的台灣人。</p>
 </div>
