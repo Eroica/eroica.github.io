@@ -3,18 +3,57 @@
 
 {% include head.html %}
 
-<body class="is-loading no-js Px(24px)" data-vbox="-medium" data-alignment="-center" >
+<body class="is-loading no-js" data-vbox="-medium">
+	<div class="container Pos(r)">
+		<p class="switch-row">
+			{% include feather/sun.svg %}
+
+			<label class="switch no-label" for="is_darkness" title="Enable dark theme">
+				<input type="checkbox" class="switch-input" id="is_darkness" onchange="toggleDarkness()"> <span class="hint Fz(0)">Enable dark theme</span>
+				<span class="switch-trough"></span>
+				<span class="switch-handle"></span>
+			</label>
+
+			{% include feather/moon.svg %}
+		</p>
+	</div>
+
+	{% if page.url != "/" %}
+	<p class="colored-links back-link"><a href="/" data-flow="-center">{% include feather/arrow-left.svg %} Back to main page</a></p>
+	{% endif %}
+
+	<input id="FillWidthCheckbox" type="checkbox"><label for="FillWidthCheckbox">Let text fill entire width</label>
+
+	<script>
+		"use strict";
+
+		if (sessionStorage.getItem("fluid") === "true") {
+			document.getElementById("FillWidthCheckbox").checked = true;
+		}
+
+		document.getElementById("FillWidthCheckbox").addEventListener("change", (e) => {
+			sessionStorage.setItem("fluid", e.target.checked);
+		});
+	</script>
+
 	{% include header.html %}
 
-	<main class="container" data-vbox="-large">
-		{% if page.url != "/" %}
-		<nav><span><a href="/">Home</a></span> / <span>Posts</span> / <span>{{ page.title }}</span></nav>
+	<main data-vbox="-large">
+		{% if site.github %}
+		<p class="container colored-links box -primary">GitHub automatically builds a website for this public repository. My self-hosted version is available at <a href="https://groundctrl.earth">groundctrl.earth</a>.</p>
 		{% endif %}
 
-		{{ content }}
+		<section data-vbox="-large">
+			{{ content }}
+		</section>
+
+		<div class="Fz(.875rem) container box colored-links" data-vbox="-small">
+			<p>The droid you are looking for is on another protocol.</p>
+			<p style="font-family: 'Microsoft JhengHei', sans-serif;">為了守護咱的夢 成做更加勇敢的人 現在是彼一工 勇敢的台灣人。</p>
+		</div>
 	</main>
 
-	<p class="Ta(c) Pe(n) text--pale">※</p>
+	<p class="container Ta(c) Pe(n) text--pale">※</p>
 
 	{% include footer.html %}
 
@@ -26,7 +65,7 @@
 
 		if (sessionStorage.getItem("dark") === "true") {
 			document.querySelector("body").classList.add("-dark");
-			document.querySelector("input[type='checkbox']").checked = true;
+			document.querySelector("#is_darkness").checked = true;
 		}
 
 		function toggleDarkness (_) {
@@ -36,11 +75,9 @@
 
 		window.addEventListener("load", function () {
 			$body = document.querySelector("body");
-			$switch = document.querySelector("header input[type='checkbox']");
+			$switch = document.querySelector("#is_darkness");
 			$body.classList.remove("is-loading", "no-js");
 		});
-
-		document.getElementById("is_darkness").addEventListener("change", toggleDarkness);
 	</script>
 </body>
 </html>
