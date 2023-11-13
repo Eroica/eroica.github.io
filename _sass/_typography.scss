@@ -37,6 +37,7 @@ a, .-dark a strong,
 .a, .-dark .a strong {color: inherit;}
 .colored-links a, .colored-links .a {
 	color: $blue-hue-1;
+	&:visited {color: $blue-hue-2;}
 	&:hover {color: lighten($blue-hue-1, 10);}
 }
 .underlined-links a, .underlined-links .a {
