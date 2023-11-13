@@ -102,6 +102,7 @@ article p + h2 {
 
 blockquote {
 	@extend [data-VBox];
+	font-style: italic;
 	margin-left: 24px;
 	border-left: 2px solid #e7e7e9;
 	padding-left: 24px;
