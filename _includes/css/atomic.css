@@ -14,12 +14,6 @@
 .Op\(\.7\) {
   opacity: .7;
 }
-.Pe\(n\) {
-  pointer-events: none;
-}
-.Pos\(r\) {
-  position: relative;
-}
 .Ta\(c\) {
   text-align: center;
 }
