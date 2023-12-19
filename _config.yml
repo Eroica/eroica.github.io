@@ -17,11 +17,13 @@ author: Eroica
 permalink: pretty
 
 # Build settings
+theme: jekyll-hypertext-theme
+remote_theme: Eroica/jekyll-hypertext-theme
+
 markdown: kramdown
 sass:
   style: compressed
 
 exclude:
-  - site.tar.gz
   - package-lock.json
   - package.json
