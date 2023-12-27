@@ -1,0 +1,182 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{{ site.title }} / Status</title>
+	<meta name="description" content="{{ site.description }}">
+
+	<style>
+		{% capture include_to_scssify %}
+		{% include main.scss %}
+		.status-table {
+			border: 1px solid rgb(233, 233, 233);
+			border-collapse: separate;
+			border-radius: 5px;
+		}
+		.status-table tr + tr {
+			margin-top: 0;
+		}
+		.status-table td:last-of-type {
+			border-bottom: 1px solid rgb(233, 233, 233);
+		}
+		.status-table th {
+			background-color: #f9fafb;
+			border-bottom: 1px solid #d1d5db;
+		}
+		.status-table th {
+			padding: .5em 1em;
+		}
+		.status-table td {
+			padding: 0.25em 1em;
+		}
+		@media screen and (min-width: 800px) {
+			.status-table td {
+				padding: .5em 1em;
+				border-bottom: 1px solid rgb(233, 233, 233);
+			}
+		}
+		.status-table th:first-of-type {
+			border-top-left-radius: 4px;
+		}
+		.status-table th:last-of-type {
+			border-top-right-radius: 4px;
+		}
+		.status-table tr:last-of-type td {
+			border-bottom: 0;
+		}
+		.status-table tr:last-of-type td:first-of-type {
+			border-bottom-left-radius: 4px;
+		}
+		.status-table tr:last-of-type td:last-of-type {
+			border-bottom-right-radius: 4px;
+		}
+		.-dark .status-table {
+			border-color: rgba(170, 178, 189, .2);
+		}
+		.-dark .status-table th {
+			background-color: #212528;
+			border-color: rgba(170, 178, 189, .2);
+		}
+		@media (prefers-color-scheme: dark) {
+			.status-table {
+				border-color: rgba(170, 178, 189, .2);
+			}
+			.status-table th {
+				background-color: #212528;
+				border-color: rgba(170, 178, 189, .2);
+			}
+		}
+		{% endcapture %}
+		{{ include_to_scssify | scssify }}
+	</style>
+</head>
+
+<body class="is-loading no-js" data-vbox="-medium">
+	<div class="container Pos(r)">
+		<p class="switch-row">
+			{% include feather/sun.svg %}
+
+			<label class="switch no-label" for="ThemeSwitch" title="Enable dark theme">
+				<input type="checkbox" class="switch-input" id="ThemeSwitch" onchange="toggleDarkness()"> <span class="hint Fz(0)">Enable dark theme</span>
+				<span class="switch-trough"></span>
+				<span class="switch-handle"></span>
+			</label>
+
+			{% include feather/moon.svg %}
+		</p>
+	</div>
+
+	<input id="FillWidthCheckbox" type="checkbox"><label for="FillWidthCheckbox">Let text fill entire width</label>
+
+	{% include custom-header.html %}
+
+	<script>
+		"use strict";
+
+		if (sessionStorage.getItem("isFillWidth") === "true") {
+			document.getElementById("FillWidthCheckbox").checked = true;
+		}
+
+		document.getElementById("FillWidthCheckbox").addEventListener("change", (e) => {
+			sessionStorage.setItem("isFillWidth", e.target.checked);
+		});
+	</script>
+
+	<main data-vbox="-large">
+		<section class="colored-links underlined-links" data-vbox>
+			<h1>Status</h1>
+
+			<p>No recent issues or events to report.</p>
+
+			<h2>Planned maintenances</h2>
+
+			<table class="status-table">
+				<tr>
+					<th>Date, Time (CET)</th>
+					<th></th>
+					<th>Approx. time</th>
+				</tr>
+			</table>
+
+			<h2>Recent maintenances</h2>
+
+			<table class="status-table">
+				<tr>
+					<th>Date, Time (CET)</th>
+					<th></th>
+					<th>Approx. time</th>
+				</tr>
+
+				<tr>
+					<td>2023-12-22, 0:00</td>
+					<td>Server reboot and check</td>
+					<td>5 minutes</td>
+				</tr>
+
+				<tr>
+					<td>2023-12-19, 0:00</td>
+					<td>ISP maintenance work</td>
+					<td>4 hours</td>
+				</tr>
+			</table>
+		</section>
+	</main>
+
+	<p class="container Ta(c) Pe(n) text--pale">※</p>
+
+	<footer class="Fz(.875rem) footer container colored-links Op(.7) Mb(50px)">
+		<p>Last update: December 23rd, 2023</p>
+	</footer>
+
+	<script>
+		"use strict";
+
+		function isDarkMode () {
+			return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+		}
+
+		let $body;
+		let $switch;
+
+		if (sessionStorage.getItem("dark") === "true" || isDarkMode()) {
+			document.querySelector("body").classList.add("-dark");
+			document.querySelector("#ThemeSwitch").checked = true;
+		}
+
+		function toggleDarkness (_) {
+			$body.classList.toggle("-dark");
+			sessionStorage.setItem("dark", $switch.checked);
+		}
+
+		window.addEventListener("load", function () {
+			$body = document.querySelector("body");
+			$switch = document.querySelector("#ThemeSwitch");
+			$body.classList.remove("is-loading", "no-js");
+		});
+	</script>
+</body>
+</html>
