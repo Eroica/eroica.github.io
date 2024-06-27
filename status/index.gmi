@@ -4,19 +4,16 @@ Attention: GROUNDCTRL is moving into a new building on June 17th, 2024!
 
 ## Planned maintenances
 
-```
-+------------------+-------------------------+--------------+
-| Date, Time (CET) |                         | Approx. time |
-+------------------+-------------------------+--------------+
-| 2024-06-17       | Office relocation       | 1-3 days     |
-+------------------+-------------------------+--------------+
-```
+No planned maintenances.
 
 ## Recent maintenances
 
 ```
 +------------------+-------------------------+--------------+
 | Date, Time (CET) |                         | Approx. time |
++------------------+-------------------------+--------------+
+| 2024-06-17       | Office relocation       |              |
+| to 2024-06-25    |                         |              |
 +------------------+-------------------------+--------------+
 | 2023-12-22       | Server reboot and check | 5 minutes    |
 +------------------+-------------------------+--------------+
@@ -25,5 +22,5 @@ Attention: GROUNDCTRL is moving into a new building on June 17th, 2024!
 ```
 
 ``` Versioning data
-- Last update: 2024-06-16
+- Last update: 2024-06-27
 ```
