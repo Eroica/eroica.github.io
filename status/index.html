@@ -16,6 +16,7 @@
 			border: 1px solid rgb(233, 233, 233);
 			border-collapse: separate;
 			border-radius: 5px;
+			width: 100%;
 		}
 		.status-table tr + tr {
 			margin-top: 0;
@@ -26,19 +27,28 @@
 		.status-table th {
 			background-color: #f9fafb;
 			border-bottom: 1px solid #d1d5db;
+			white-space: nowrap;
 		}
 		.status-table th {
 			padding: .5em 1em;
 		}
+		.status-table th:nth-of-type(2), .status-table td:nth-of-type(2) {
+			width: 100%;
+		}
 		.status-table td {
 			padding: 0.25em 1em;
 		}
-		@media screen and (min-width: 800px) {
+
+		@media screen and (min-width: 900px) {
+			.status-table, .status-table th {
+				width: initial;
+			}
 			.status-table td {
 				padding: .5em 1em;
 				border-bottom: 1px solid rgb(233, 233, 233);
 			}
 		}
+
 		.status-table th:first-of-type {
 			border-top-left-radius: 4px;
 		}
@@ -110,32 +120,11 @@
 		<section class="colored-links underlined-links" data-vbox>
 			<h1>Status</h1>
 
-			<p><strong>Attention:</strong> GROUNDCTRL is moving into a new building on June 17th, 2024!</p>
-
-			<p>Around that time, all my domains redirect to status.groundctrl.earth. This affects:</p>
-
-			<ul>
-				<li>groundctrl.earth</li>
-				<li>toot.groundctrl.earth</li>
-				<li>meritcards.app</li>
-				<li>paletti.app</li>
-			</ul>
+			<p>No recent issues or events to report.</p>
 
 			<h2>Planned maintenances</h2>
 
-			<table class="status-table">
-				<tr>
-					<th>Date, Time (CET)</th>
-					<th></th>
-					<th>Approx. time</th>
-				</tr>
-
-				<tr>
-					<td>2024-06-17</td>
-					<td>Office relocation</td>
-					<td>1-3 days</td>
-				</tr>
-			</table>
+			<p>No planned maintenances.</p>
 
 			<h2>Recent maintenances</h2>
 
@@ -144,6 +133,12 @@
 					<th>Date, Time (CET)</th>
 					<th></th>
 					<th>Approx. time</th>
+				</tr>
+
+				<tr>
+					<td>2024-06-17 to 2024-06-25</td>
+					<td>Office relocation</td>
+					<td>—</td>
 				</tr>
 
 				<tr>
@@ -164,7 +159,7 @@
 	<p class="container Ta(c) Pe(n) text--pale">※</p>
 
 	<footer class="Fz(.875rem) footer container colored-links Op(.7) Mb(50px)">
-		<p>Last update: June 16th, 2024</p>
+		<p>Last update: June 27th, 2024</p>
 	</footer>
 
 	<script>
