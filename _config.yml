@@ -17,7 +17,6 @@ author: Eroica
 permalink: pretty
 
 # Build settings
-theme: jekyll-hypertext-theme
 remote_theme: Eroica/jekyll-hypertext-theme
 
 markdown: kramdown
@@ -28,3 +27,6 @@ exclude:
   - package-lock.json
   - package.json
   - status/index.gmi
+
+plugins:
+  - jekyll-remote-theme
