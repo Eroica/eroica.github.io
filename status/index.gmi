@@ -4,7 +4,13 @@ Attention: GROUNDCTRL is moving into a new building on June 17th, 2024!
 
 ## Planned maintenances
 
-No planned maintenances.
+```
++------------------+-----------------------------------------+--------------+
+| Date, Time (CET) |                                         | Approx. time |
++------------------+-----------------------------------------+--------------+
+| 2024-11-29       | GROUNDCTRL is down due to an ISP outage |              |
++------------------+-----------------------------------------+--------------+
+```
 
 ## Recent maintenances
 
