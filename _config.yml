@@ -27,6 +27,7 @@ exclude:
   - package-lock.json
   - package.json
   - status/index.gmi
+  - vendor
 
 plugins:
   - jekyll-remote-theme
