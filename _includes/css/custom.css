@@ -6,3 +6,11 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1.2px;
 }
+
+.\?\?\?\? {
+	color: #fff;
+	transition: color .2s cubic-bezier(0.02, 0.98, 0.46, 0.95);
+}
+.-dark .\?\?\?\? {
+	color: #212528;
+}
