@@ -22,6 +22,9 @@ remote_theme: Eroica/jekyll-hypertext-theme
 markdown: kramdown
 sass:
   style: compressed
+  load_paths:
+    - _sass
+    - node_modules
 
 exclude:
   - package-lock.json

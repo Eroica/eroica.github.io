@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "atomizer": "^3.21.2"
+    "atomizer": "^3.21.2",
+    "jekyll-hypertext-theme": "github:Eroica/jekyll-hypertext-theme"
   }
 }
