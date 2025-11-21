@@ -14,3 +14,23 @@ h2 {
 .-dark .\?\?\?\? {
 	color: #212528;
 }
+
+.three-columns > *,
+.three-columns > * > * + h2 {
+	margin-top: 2rem;
+}
+#FillWidthCheckbox:not(:checked) ~ main .three-columns {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+#FillWidthCheckbox:not(:checked) ~ main .three-columns > *:first-child {
+	flex: 1 1 50rem;
+	max-width: 50rem;
+}
+#FillWidthCheckbox:not(:checked) ~ main .three-columns > * {
+	flex: 1 1 32rem;
+	max-width: 32rem;
+	margin-top: 0;
+}
